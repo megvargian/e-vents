@@ -5,6 +5,8 @@
   </template>
 
 <script setup lang="ts">
+import { useAnime } from '#imports';
+
 onMounted(() => {
     useAnime({ targets: '.title', translateX: 250, duration: 800 })
 })
