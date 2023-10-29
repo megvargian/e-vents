@@ -11,5 +11,11 @@ export default defineNuxtConfig({
   },
   anime: {
     composables: true
-  }
+  },
+  plugins: [
+    {
+      src: '~/plugins/vue3-particles.ts',
+      mode: 'client',
+    },
+  ],
 })

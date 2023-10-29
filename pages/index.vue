@@ -3,10 +3,14 @@
 <template>
   <div>
     <TheHeader />
-    test
     <div class="grid gap-8 grid-cols-1 lg:grid-cols-3 p-6">
      <Post v-for="post in data" :key="post.uri" :post="post"></Post>
     </div>
+      <div class="grid gap-8 grid-cols-1 lg:grid-cols-3 p-6">
+        <NuxtLink to="/particles" >
+          See Particles
+        </NuxtLink>
+      </div>
   </div>
 </template>
 <script setup lang="ts">
@@ -27,11 +31,8 @@
         }
       }`
   },
-  transform(data){
+  transform(data: any){
     return data.data.posts.nodes as Array<Record<'title' | 'date' | 'excerpt' | 'uri', string>>;
   }
   });
-// onMounted(async() => {
-//   await refresh();
-// })
 </script>
