@@ -6,11 +6,50 @@
     <div class="grid gap-8 grid-cols-1 lg:grid-cols-3 p-6">
      <Post v-for="post in data" :key="post.uri" :post="post"></Post>
     </div>
-      <div class="grid gap-8 grid-cols-1 lg:grid-cols-3 p-6">
-        <NuxtLink to="/particles" >
-          See Particles
-        </NuxtLink>
-      </div>
+    <div class="grid gap-8 grid-cols-1 lg:grid-cols-3 p-6">
+      <NuxtLink to="/particles" class="
+        flex
+        items-center
+        bg-gradient-to-r
+        from-cyan-500
+        to-blue-500
+        p-8
+        rounded-lg
+        text-white
+        transition-all
+        hover:-translate-y-1
+        hover:scale-105" >
+        See Particles
+      </NuxtLink>
+      <NuxtLink to="/confetti-explosions" class="
+        flex
+        items-center
+        bg-gradient-to-r
+        from-cyan-500
+        to-blue-500
+        p-8
+        rounded-lg
+        text-white
+        transition-all
+        hover:-translate-y-1
+        hover:scale-105" >
+        See Confetti explosions
+      </NuxtLink>
+      <NuxtLink to="/confetti" class="
+        flex
+        items-center
+        bg-gradient-to-r
+        from-cyan-500
+        to-blue-500
+        p-8
+        rounded-lg
+        text-white
+        transition-all
+        hover:-translate-y-1
+        hover:scale-105" >
+        See confetti
+      </NuxtLink>
+    </div>
   </div>
 </template>
 <script setup lang="ts">
