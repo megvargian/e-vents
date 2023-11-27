@@ -1,0 +1,126 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "peax-bold";
+  src: url("../fonts/Peax-Handwritingbold.woff2") format("woff2"),
+    url("../fonts/Peax-Handwritingbold.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "peax-light";
+  src: url("../fonts/Peax-Handwritinglight.woff2") format("woff2"),
+    url("../fonts/Peax-Handwritinglight.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "amsterdam";
+  src: url("../fonts/Amsterdam-Handwriting.woff2") format("woff2"),
+    url("../fonts/Amsterdam-Handwriting.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "greatvibe-regular";
+  src: url("../fonts/GreatVibes-Regular.woff2") format("woff2"),
+    url("../fonts/GreatVibes-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+section#sec_story .swipe_indicator,
+section#sec_story .swipe_indicator div {
+  height: auto;
+}
+
+section#sec_story .story_slide.helperSlide {
+  position: relative;
+}
+
+.story_slide.helperSlide.hlpIndicShow .swipe_indicator.mob {
+  display: block;
+}
+
+.swipe_indicator {
+  position: absolute;
+  left: 50%;
+  bottom: 10%;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+  text-align: center;
+}
+
+.swipe_indicator.desk {
+  display: block;
+}
+
+.swipe_indicator .si_icons span {
+  display: inline-block;
+  margin: 0 4px;
+  opacity: 0.6;
+  -webkit-transition: all 200ms ease-in-out;
+  -moz-transition: all 200ms ease-in-out;
+  -o-transition: all 200ms ease-in-out;
+  -ms-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+}
+
+.swipe_indicator .si_icons span svg {
+  width: 13px;
+  height: auto;
+  display: block;
+}
+
+.swipe_indicator.desk .si_icons span svg {
+  width: 22px;
+  height: auto;
+  display: block;
+}
+
+.swipe_indicator .si_icons span {
+  -webkit-animation: flash 800ms infinite linear;
+  -ms-animation: flash 800ms infinite linear;
+  animation: flash 800ms infinite linear;
+}
+
+.swipe_indicator .si_label {
+  font-size: 12px;
+  color: #fff;
+  padding-top: 2px;
+}
+
+.swipe_indicator.desk .si_label {
+  font-size: 9px;
+  color: #fff;
+  padding-top: 0px;
+}
+
+.swipe_indicator.mob.dir-vertical span svg {
+  width: 22px;
+}
+
+.page-start {
+  .swipe_indicator {
+    position: relative;
+    left: 0;
+    bottom: 0;
+    transform: translate(0);
+    webkit-transform: translateX(0);
+  }
+}
+
+@keyframes flash {
+  0% {
+    opacity: 0.6;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.6;
+  }
+}

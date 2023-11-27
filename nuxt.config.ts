@@ -1,6 +1,11 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  modules: ["nuxt-particles", "@nuxtjs/tailwindcss", "@hypernym/nuxt-anime"],
+  modules: [
+    "nuxt-particles",
+    "@nuxtjs/tailwindcss",
+    "@hypernym/nuxt-anime",
+    "nuxt-swiper",
+  ],
   runtimeConfig: {
     public: {
       wordpressUrl: "https://sarpysevents.com/graphql",
@@ -17,5 +22,12 @@ export default defineNuxtConfig({
   ],
   build: {
     transpile: ["gsap"],
+  },
+  css: ["~/assets/css/main.scss"],
+  postcss: {
+    plugins: {
+      tailwindcss: {},
+      autoprefixer: {},
+    },
   },
 });

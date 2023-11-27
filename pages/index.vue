@@ -29,6 +29,12 @@
       >
         See test gsap
       </NuxtLink>
+      <NuxtLink
+        to="/example-one"
+        class="flex items-center bg-gradient-to-r from-cyan-500 to-blue-500 p-8 rounded-lg text-white transition-all hover:-translate-y-1 hover:scale-105"
+      >
+        See Example One
+      </NuxtLink>
     </div>
   </div>
 </template>
