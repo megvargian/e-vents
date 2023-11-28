@@ -10,7 +10,7 @@ module.exports = {
   ],
   theme: {
     fontFamily: {
-      peaxBold: "peax-bold",
+      peaxBold: "peaxBold",
       peaxLight: "peaxLight",
       amsterdam: "amsterdam",
       greatvibe: "greatvibe",

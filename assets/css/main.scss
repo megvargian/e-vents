@@ -3,14 +3,14 @@
 @tailwind utilities;
 
 @font-face {
-  font-family: "peax-bold";
+  font-family: "peaxBold";
   src: url("../fonts/Peax-Handwritingbold.woff2") format("woff2"),
     url("../fonts/Peax-Handwritingbold.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
-  font-family: "peax-light";
+  font-family: "peaxLight";
   src: url("../fonts/Peax-Handwritinglight.woff2") format("woff2"),
     url("../fonts/Peax-Handwritinglight.woff") format("woff");
   font-weight: normal;
@@ -24,7 +24,7 @@
   font-style: normal;
 }
 @font-face {
-  font-family: "greatvibe-regular";
+  font-family: "greatvibe";
   src: url("../fonts/GreatVibes-Regular.woff2") format("woff2"),
     url("../fonts/GreatVibes-Regular.woff") format("woff");
   font-weight: normal;
