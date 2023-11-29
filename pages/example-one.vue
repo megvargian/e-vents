@@ -1,5 +1,7 @@
 <template>
-  <section class="example-one relative h-full flex m-auto sm:w-[500px] w-100">
+  <section
+    class="example-one relative flex m-auto sm:w-[500px] w-100 full-custom-height"
+  >
     <Swiper :options="swiperOprions">
       <SwiperSlide>
         <div

@@ -31,6 +31,11 @@
   font-style: normal;
 }
 
+.full-custom-height {
+  height: 100vh;
+  height: calc(var(--doc-height) - 50px);
+}
+
 section#sec_story .swipe_indicator,
 section#sec_story .swipe_indicator div {
   height: auto;
