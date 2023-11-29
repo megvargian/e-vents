@@ -9,7 +9,9 @@
             class="font-amsterdam text-center text-2xl bg-white add-animation"
           >
             <span>Dr.</span> <span>George</span>
-            <p class="font-greatvibe"><br /><span>&</span> <br /></p>
+            <span>
+              <p class="font-greatvibe"><br />&<br /></p>
+            </span>
             <span>Mrs. </span><span>Randa</span> <span>Rammouz</span>
           </h2>
           <img
