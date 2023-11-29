@@ -1,14 +1,16 @@
 <template>
-  <section class="example-one relative h-full flex m-auto w-[500px]">
-    <Swiper :slides-per-view="1" :loop="false">
+  <section class="example-one relative h-full flex m-auto sm:w-[500px] w-100">
+    <Swiper :options="swiperOprions">
       <SwiperSlide>
         <div
           class="page-start h-full w-full relative items-center flex justify-center"
         >
-          <h2 class="font-amsterdam text-center text-2xl bg-white">
-            Dr. George
-            <p class="font-greatvibe"><br />& <br /></p>
-            Mrs. Randa Rammouz
+          <h2
+            class="font-amsterdam text-center text-2xl bg-white add-animation"
+          >
+            <span>Dr.</span> <span>George</span>
+            <p class="font-greatvibe"><br /><span>&</span> <br /></p>
+            <span>Mrs. </span><span>Randa</span> <span>Rammouz</span>
           </h2>
           <img
             class="w-[200px] absolute bottom-10 left-0 z-10"
@@ -21,7 +23,9 @@
       </SwiperSlide>
       <SwiperSlide>
         <div class="page-start h-full w-full relative">
-          <h2 class="font-amsterdam text-center text-2xl bg-white pt-60">
+          <h2
+            class="font-amsterdam text-center text-2xl bg-white md:pt-60 sm:pt-16 pt-8"
+          >
             Samir
             <span class="font-greatvibe">&</span>
             Lily RammouZ
@@ -56,8 +60,20 @@
           <Wave />
         </div>
       </SwiperSlide>
+      <div class="swiper-pagination" slot="pagination"></div>
     </Swiper>
   </section>
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+const swiperOprions = {
+  slidesPerView: 1,
+  spaceBetween: 0,
+  loop: false,
+  navigation: true,
+  SwiperPagination: {
+    el: ".swiper-pagination",
+    type: "progressbar",
+  },
+};
+</script>
