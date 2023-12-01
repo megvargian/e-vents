@@ -1,6 +1,6 @@
 <template>
   <section
-    class="example-one relative flex m-auto sm:w-[500px] w-100 full-custom-height"
+    class="example-one relative flex m-auto sm:w-[500px] w-100 sm:h-[calc(var(--doc-height) - 56px)] h-[calc(100vh - 56px)]"
   >
     <Swiper :options="swiperOprions">
       <SwiperSlide>

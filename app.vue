@@ -3,7 +3,7 @@
 </template>
 
 <script setup lang="ts">
-onMounted(() => {
+onBeforeMount(() => {
   const documentHeight = () => {
     document.documentElement.style.setProperty(
       "--doc-height",
@@ -11,6 +11,5 @@ onMounted(() => {
     );
   };
   window.addEventListener("resize", documentHeight);
-  console.log(window.innerHeight);
 });
 </script>

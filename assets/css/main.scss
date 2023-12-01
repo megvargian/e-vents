@@ -32,8 +32,8 @@
 }
 
 .full-custom-height {
-  height: 100vh;
-  height: calc(var(--doc-height) - 50px);
+  height: calc(var(--doc-height) - 56px);
+  height: calc(100vh - 56px);
 }
 
 section#sec_story .swipe_indicator,
