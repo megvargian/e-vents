@@ -168,7 +168,10 @@
           </div>
           <div
             class="rsvpMain"
-            :class="transition ? ' page-enter-from hidden' : ''"
+            :class="[
+              alreadySubmited ? 'hidden' : '',
+              transition ? ' page-enter-from hidden' : '',
+            ]"
           >
             <div class="date flex justify-center align-middle mt-4 mb-5">
               <h3 class="font-peaxBold text-3xl text-center pt-12">
@@ -252,7 +255,10 @@
           </div>
           <div
             class="thankYou"
-            :class="transition ? '' : 'page-leave-to hidden'"
+            :class="[
+              alreadySubmited ? 'block' : 'hidden',
+              transition ? '' : 'page-leave-to hidden',
+            ]"
           >
             <div class="flex justify-center align-middle mt-4 mb-5">
               <h3 class="font-peaxBold text-3xl text-center pt-12">
@@ -311,6 +317,19 @@ const rsvp = ref({
 });
 const loading = ref(false);
 const transition = ref(false);
+const rsvpCookie = useCookie<{ value: string }>("0");
+const alreadySubmited = ref(false);
+onMounted(() => {
+  if (rsvpCookie.value) {
+    if (rsvpCookie.value.value === "1") {
+      alreadySubmited.value = true;
+    }
+  }
+  if (alreadySubmited.value) {
+    transition.value = true;
+  }
+  console.log(alreadySubmited.value);
+});
 
 const submitRsvp = async () => {
   loading.value = true;
@@ -331,7 +350,9 @@ const submitRsvp = async () => {
     console.error("Error:", error);
   } else {
     loading.value = false;
+    alreadySubmited.value = true;
     transition.value = true;
+    rsvpCookie.value = { value: "1" };
   }
 };
 </script>
