@@ -17,11 +17,11 @@
             <span>Mrs. </span><span>Randa</span> <span>Rammouz</span>
           </h2>
           <img
-            class="w-[200px] absolute bottom-10 left-0 z-10"
+            class="w-[180px] absolute bottom-10 left-0 z-10"
             src="../assets/images/car.svg"
             alt="car"
           />
-          <arrow-right class="absolute bottom-0 left-[45%]" />
+          <arrow-right class="absolute bottom-0 left-[43%]" />
           <Wave :class="`h-[150px]`" />
         </div>
       </SwiperSlide>
@@ -49,11 +49,11 @@
             Jessica
           </h1>
           <img
-            class="w-[200px] absolute bottom-20 left-40 z-10"
+            class="w-[180px] absolute bottom-20 left-40 z-10"
             src="../assets/images/car.svg"
             alt="car"
           />
-          <arrow-right class="absolute bottom-0 left-[45%]" />
+          <arrow-right class="absolute bottom-0 left-[43%]" />
           <Wave :class="`h-[150px]`" />
         </div>
       </SwiperSlide>
@@ -69,9 +69,9 @@
               at 6:00 pm
             </h3>
           </div>
-          <div class="relative w-full h-[22rem]">
+          <div class="relative w-full h-[19rem]">
             <img
-              class="w-full h-[22rem]"
+              class="w-full h-[19rem]"
               src="../assets/images/church.svg"
               alt="church"
             />
@@ -82,20 +82,20 @@
             </p>
           </div>
           <img
-            class="w-[200px] absolute bottom-[27%] left-[50%] z-10"
+            class="w-[180px] absolute bottom-[27%] left-[50%] z-10"
             src="../assets/images/car.svg"
             alt="car"
           />
-          <arrow-right class="absolute bottom-4 left-[45%]" />
+          <arrow-right class="absolute bottom-4 left-[43%]" />
           <div class="bg-[#002e51] absolute h-[15rem] bottom-0 left-0 w-full">
             <h4
-              class="font-peaxBold text-2xl text-center text-white mt-5 flex justify-center"
+              class="font-peaxBold text-2xl text-center text-white mt-10 flex justify-center"
             >
               Saint Joseph School <br />
               - Cornet Chehwan
             </h4>
             <a
-              class="font-peaxBold text-2xl text-center text-white mt-5 bg-[#66c1e8] flex justify-center mx-auto rounded-2xl w-64"
+              class="font-peaxBold text-2xl text-center text-white mt-2 bg-[#66c1e8] flex justify-center mx-auto rounded-[30px] w-56 py-2"
               href="https://goo.gl/maps/5FpasbGdnv6aP63Z7"
               target="_blank"
               >View on map</a
@@ -115,7 +115,7 @@
             </h3>
           </div>
           <a
-            class="font-peaxBold text-2xl text-center text-white mt-5 bg-[#66c1e8] flex justify-center mx-auto rounded-2xl w-64"
+            class="font-peaxBold text-2xl text-center text-white mt-5 bg-[#66c1e8] flex justify-center mx-auto rounded-[30px] w-56 py-2"
             href="https://goo.gl/maps/5FpasbGdnv6aP63Z7"
             target="_blank"
             >View on map</a
@@ -125,7 +125,7 @@
             src="../assets/images/venue.png"
             alt="venue"
           />
-          <arrow-right class="absolute bottom-[1.5%] left-[45%]" />
+          <arrow-right class="absolute bottom-[1.5%] left-[43%]" />
           <Wave :class="`h-[150px]`" />
         </div>
       </SwiperSlide>
@@ -141,7 +141,7 @@
           </div>
           <div class="flex align-middle justify-center items-center pt-32">
             <img
-              class="w-48 h-48"
+              class="w-32 h-32"
               src="../assets/images/whish.svg"
               alt="whish"
             />
@@ -153,11 +153,11 @@
             </h3>
           </div>
           <img
-            class="w-[200px] absolute bottom-20 left-40 z-10"
+            class="w-[180px] absolute bottom-20 left-40 z-10"
             src="../assets/images/car.svg"
             alt="car"
           />
-          <arrow-right class="absolute bottom-[1.5%] left-[45%]" />
+          <arrow-right class="absolute bottom-[1.5%] left-[43%]" />
           <Wave :class="`h-[150px]`" />
         </div>
       </SwiperSlide>
@@ -215,7 +215,7 @@
                   >
                   <div class="relative">
                     <select
-                      class="appearance-none rounded-[30px] font-peaxBold text-[#707070] text-xl py-3 px-5 w-full border border-solid border-gray-700"
+                      class="appearance-none rounded-[30px] font-peaxBold text-[#707070] text-xl py-3 px-5 w-full border border-solid border-gray-700 bg-transparent"
                       id="attendence"
                       required
                       v-model="rsvp.attendence"
@@ -261,7 +261,7 @@
               </h3>
             </div>
           </div>
-          <arrow-right class="absolute bottom-[1.5%] left-[45%]" />
+          <arrow-right class="absolute bottom-[1.5%] left-[43%]" />
           <Wave :class="`h-[150px]`" />
         </div>
       </SwiperSlide>
@@ -277,12 +277,12 @@
             </h3>
           </div>
           <img
-            class="w-full h-[25rem] absolute left-[20%] bottom-[15%] z-10"
+            class="w-full h-[25rem] absolute left-[20%] bottom-[5%] z-10"
             src="../assets/images/vacation.svg"
             alt="vacation"
           />
           <div
-            class="bg-[#002e51] absolute h-[19rem] bottom-0 left-0 w-full"
+            class="bg-[#002e51] absolute h-[13rem] bottom-0 left-0 w-full"
           ></div>
         </div>
       </SwiperSlide>
