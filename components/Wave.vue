@@ -1,5 +1,8 @@
 <template>
-  <div class="h-[150px] w-full overflow-hidden absolute bottom-[-3px] z-0">
+  <div
+    class="w-full overflow-hidden absolute bottom-[-3px] z-0"
+    :class="props.class"
+  >
     <svg
       viewBox="0 0 500 150"
       preserveAspectRatio="none"
@@ -12,3 +15,11 @@
     </svg>
   </div>
 </template>
+<script setup lang="ts">
+const props = defineProps({
+  class: {
+    type: String,
+    required: true,
+  },
+});
+</script>

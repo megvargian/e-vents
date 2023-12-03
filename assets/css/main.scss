@@ -32,8 +32,12 @@
 }
 
 .full-custom-height {
-  height: calc(var(--doc-height) - 56px);
-  height: calc(100vh - 56px);
+  height: 100vh;
+}
+@media (max-width: 600px) {
+  .full-custom-height {
+    height: calc(100vh - 56px);
+  }
 }
 
 section#sec_story .swipe_indicator,
@@ -117,7 +121,19 @@ section#sec_story .story_slide.helperSlide {
     webkit-transform: translateX(0);
   }
 }
-
+.rsvpMain,
+.thankYou {
+  transition: all 0.4s;
+}
+.page-enter-from,
+.page-leave-to {
+  opacity: 0;
+  filter: blur(1rem);
+}
+.loading-spinner {
+  color: #d1d5db;
+  fill: #c8102e;
+}
 @keyframes flash {
   0% {
     opacity: 0.6;
