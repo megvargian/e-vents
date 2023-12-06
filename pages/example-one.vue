@@ -181,35 +181,6 @@
             </div>
             <div class="w-full">
               <form @submit.prevent="submitRsvp">
-                <div class="block w-full">
-                  <label
-                    class="block font-peaxBold text-[#66c1eb] text-2xl py-2 px-4"
-                    for="names"
-                    >Name(s)</label
-                  >
-                  <input
-                    class="rounded-[30px] font-peaxBold text-[#707070] text-xl py-3 px-5 w-full border border-solid border-gray-700"
-                    type="text"
-                    v-model="rsvp.names"
-                    required
-                  />
-                </div>
-                <div>
-                  <label
-                    class="block font-peaxBold text-[#66c1eb] text-2xl py-2 px-4"
-                    for="numberOfPeople"
-                    >Number of people</label
-                  >
-                  <input
-                    class="rounded-[30px] font-peaxBold text-[#707070] text-xl py-3 px-5 w-full border border-solid border-gray-700"
-                    type="number"
-                    v-model="rsvp.numberOfPeople"
-                    minlength="1"
-                    min="1"
-                    max="4"
-                    required
-                  />
-                </div>
                 <div>
                   <label
                     class="block font-peaxBold text-[#66c1eb] text-2xl py-2 px-4"
@@ -221,12 +192,45 @@
                       class="appearance-none rounded-[30px] font-peaxBold text-[#707070] text-xl py-3 px-5 w-full border border-solid border-gray-700 bg-transparent"
                       id="attendence"
                       required
-                      v-model="rsvp.attendence"
+                      v-model="attendence"
                     >
-                      <option class="w-[500px]" value="yes" selected>
-                        Yes
-                      </option>
-                      <option class="w-full" value="no">no</option>
+                      <option value="yes" selected>Yes</option>
+                      <option value="no">no</option>
+                    </select>
+                    <div
+                      class="absolute inset-y-0 right-2 flex items-center px-2 pointer-events-none w-10"
+                    >
+                      <arrow-down />
+                    </div>
+                  </div>
+                </div>
+                <div v-if="showNumberOfPeopleAndNames" class="block w-full">
+                  <label
+                    class="block font-peaxBold text-[#66c1eb] text-2xl py-2 px-4"
+                    for="names"
+                    >Name(s)</label
+                  >
+                  <input
+                    class="rounded-[30px] font-peaxBold text-[#707070] text-xl py-3 px-5 w-full border border-solid border-gray-700"
+                    type="text"
+                    v-model="rsvp.names"
+                  />
+                </div>
+                <div v-if="showNumberOfPeopleAndNames">
+                  <label
+                    class="block font-peaxBold text-[#66c1eb] text-2xl py-2 px-4"
+                    for="numberOfPeople"
+                    >Number of people</label
+                  >
+                  <div class="relative">
+                    <select
+                      class="appearance-none rounded-[30px] font-peaxBold text-[#707070] text-xl py-3 px-5 w-full border border-solid border-gray-700 bg-transparent"
+                      v-model="rsvp.numberOfPeople"
+                    >
+                      <option value="1" selected>1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                      <option value="4">4</option>
                     </select>
                     <div
                       class="absolute inset-y-0 right-2 flex items-center px-2 pointer-events-none w-10"
@@ -263,12 +267,26 @@
             <div class="flex justify-center align-middle mt-4 mb-5">
               <h3 class="font-peaxBold text-3xl text-center pt-12">
                 Thank you <br />
-                Kol khara
               </h3>
             </div>
           </div>
           <arrow-right class="absolute bottom-[1.5%] left-[43%]" />
           <Wave :class="`h-[150px]`" />
+        </div>
+      </SwiperSlide>
+      <SwiperSlide>
+        <div class="page-start h-full w-full relative">
+          <div class="initilas flex justify-end align-end mt-4 mx-4">
+            <h5 class="text-2xl font-amsterdam">CJ</h5>
+          </div>
+          <button
+            class="font-peaxBold text-2xl text-center text-white mt-5 bg-[#66c1e8] flex justify-center mx-auto rounded-[30px] w-64 py-3"
+            :disabled="loading"
+            type="submit"
+            @click="saveOnGoogleCalendar()"
+          >
+            <span> Save on Google Calendar </span>
+          </button>
         </div>
       </SwiperSlide>
       <SwiperSlide>
@@ -309,16 +327,17 @@ const swiperOprions = {
   },
   allowSlidePrev: false,
 };
-
+const attendence = ref("");
 const rsvp = ref({
   names: "",
   numberOfPeople: 0,
-  attendence: "",
+  attendence: attendence,
 });
 const loading = ref(false);
 const transition = ref(false);
 const rsvpCookie = useCookie<{ value: string }>("0");
 const alreadySubmited = ref(false);
+const showNumberOfPeopleAndNames = ref(false);
 onMounted(() => {
   if (rsvpCookie.value) {
     if (rsvpCookie.value.value === "1") {
@@ -328,7 +347,14 @@ onMounted(() => {
   if (alreadySubmited.value) {
     transition.value = true;
   }
-  console.log(alreadySubmited.value);
+});
+
+watch(attendence, (newAttendence) => {
+  if (newAttendence === "yes") {
+    showNumberOfPeopleAndNames.value = true;
+  } else {
+    showNumberOfPeopleAndNames.value = false;
+  }
 });
 
 const submitRsvp = async () => {
@@ -338,8 +364,8 @@ const submitRsvp = async () => {
     method: "POST",
     body: {
       title: "this is a test",
-      name: rsvp.value.names,
-      number_guests: String(rsvp.value.numberOfPeople),
+      name: showNumberOfPeopleAndNames.value ? rsvp.value.names : `there's no name`,
+      number_guests: showNumberOfPeopleAndNames.value ? String(rsvp.value.numberOfPeople) : '0',
       isattending: rsvp.value.attendence,
     },
     server: false,
@@ -355,4 +381,8 @@ const submitRsvp = async () => {
     rsvpCookie.value = { value: "1" };
   }
 };
+
+const saveOnGoogleCalendar = () => {
+  console.log('still didnt add any shit');
+}
 </script>
