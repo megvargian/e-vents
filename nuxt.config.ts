@@ -30,4 +30,12 @@ export default defineNuxtConfig({
       autoprefixer: {},
     },
   },
+  nitro: {
+    routeRules: {
+      '/api/**': {
+        cors: true,
+        proxy: 'http://localhost:8080/api/**',
+      },
+    },
+  },
 });
