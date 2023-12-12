@@ -279,14 +279,38 @@
           <div class="initilas flex justify-end align-end mt-4 mx-4">
             <h5 class="text-2xl font-amsterdam">CJ</h5>
           </div>
-          <button
+          <a
+            target="_blank"
+            rel="noopener"
+            href="https://calendar.google.com/calendar/render?action=TEMPLATE&dates=20220112T180000Z%2F20220112T200000Z&details=Learn%20all%20about%20the%20rules%20of%20the%20Motorway%20and%20how%20to%20access%20the%20fast%20lane.%0A%0Ahttps%3A%2F%2Fen.wikipedia.org%2Fwiki%2FGridlock_%28Doctor_Who%29&location=New%20Earth&text=Welcome%20to%20the%20Motorway"
             class="font-peaxBold text-2xl text-center text-white mt-5 bg-[#66c1e8] flex justify-center mx-auto rounded-[30px] w-64 py-3"
-            :disabled="loading"
-            type="submit"
-            @click="saveOnGoogleCalendar()"
-          >
-            <span> Save on Google Calendar </span>
-          </button>
+            >
+            <span>Add to your Google Calendar</span>
+          </a>
+          <a
+            target="_blank"
+            rel="noopener"
+            href="https://outlook.office.com/calendar/0/deeplink/compose?body=Learn%20all%20about%20the%20rules%20of%20the%20Motorway%20and%20how%20to%20access%20the%20fast%20lane.%0A%0Ahttps%3A%2F%2Fen.wikipedia.org%2Fwiki%2FGridlock_%28Doctor_Who%29&enddt=2022-01-12T20%3A00%3A00%2B00%3A00&location=New%20Earth&path=%2Fcalendar%2Faction%2Fcompose&rru=addevent&startdt=2022-01-12T18%3A00%3A00%2B00%3A00&subject=Welcome%20to%20the%20Motorway"
+            class="font-peaxBold text-2xl text-center text-white mt-5 bg-[#66c1e8] flex justify-center mx-auto rounded-[30px] w-64 py-3"
+            >
+            <span>Add to your Outlook Calendar</span>
+          </a>
+          <a
+            target="_blank"
+            rel="noopener"
+            href="https://calendar.aol.com/?desc=Learn%20all%20about%20the%20rules%20of%20the%20Motorway%20and%20how%20to%20access%20the%20fast%20lane.%0A%0Ahttps%3A%2F%2Fen.wikipedia.org%2Fwiki%2FGridlock_%28Doctor_Who%29&dur=&et=20220112T190000Z&in_loc=New%20Earth&st=20220112T170000Z&title=Welcome%20to%20the%20Motorway&v=60"
+            class="font-peaxBold text-2xl text-center text-white mt-5 bg-[#66c1e8] flex justify-center mx-auto rounded-[30px] w-64 py-3"
+            >
+            <span>Add to your AOL Calendar</span>
+          </a>
+          <a
+            target="_blank"
+            rel="noopener"
+            href="https://calendar.yahoo.com/?desc=Learn%20all%20about%20the%20rules%20of%20the%20Motorway%20and%20how%20to%20access%20the%20fast%20lane.%0A%0Ahttps%3A%2F%2Fen.wikipedia.org%2Fwiki%2FGridlock_%28Doctor_Who%29&dur=&et=20220112T190000Z&in_loc=New%20Earth&st=20220112T170000Z&title=Welcome%20to%20the%20Motorway&v=60"
+            class="font-peaxBold text-2xl text-center text-white mt-5 bg-[#66c1e8] flex justify-center mx-auto rounded-[30px] w-64 py-3"
+            >
+            <span>Add to your Yahoo Calendar</span>
+          </a>
         </div>
       </SwiperSlide>
       <SwiperSlide>
@@ -381,8 +405,4 @@ const submitRsvp = async () => {
     rsvpCookie.value = { value: "1" };
   }
 };
-
-const saveOnGoogleCalendar = () => {
-  console.log('still didnt add any shit');
-}
 </script>
