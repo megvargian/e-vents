@@ -39,10 +39,12 @@
             <span class="font-greatvibe">&</span>
             Josiane Hanna
           </h2>
-          <p class="font-peaxLight text-base p-8 text-center text-xl">
-            Request the honor of your presence at the wedding ceremony of their
-            children
-          </p>
+          <div class="flex justify-between items-center m-0">
+            <div class="typing mx-3 font-peaxLight text-base p-8 text-xl">
+              <h6 class="first-line">Request the honor of your presence at the wedding</h6>
+              <h6 class="second-line">ceremony of their children</h6>
+            </div>
+          </div>
           <h1 class="font-amsterdam font-bold text-3xl text-center">
             Chris
             <span class="font-greatvibe font-semi-bold">&</span>
@@ -204,7 +206,9 @@
                     </div>
                   </div>
                 </div>
-                <div v-if="showNumberOfPeopleAndNames" class="block w-full">
+                <div
+                  class="block w-full"
+                  :class="!showNumberOfPeopleAndNames ? `opacity-30` : `opacity-100`">
                   <label
                     class="block font-peaxBold text-[#66c1eb] text-2xl py-2 px-4"
                     for="names"
@@ -214,9 +218,11 @@
                     class="rounded-[30px] font-peaxBold text-[#707070] text-xl py-3 px-5 w-full border border-solid border-gray-700"
                     type="text"
                     v-model="rsvp.names"
+                    :disabled="!showNumberOfPeopleAndNames"
                   />
                 </div>
-                <div v-if="showNumberOfPeopleAndNames">
+                <div
+                  :class="!showNumberOfPeopleAndNames ? `opacity-30` : `opacity-100`">
                   <label
                     class="block font-peaxBold text-[#66c1eb] text-2xl py-2 px-4"
                     for="numberOfPeople"
@@ -226,6 +232,7 @@
                     <select
                       class="appearance-none rounded-[30px] font-peaxBold text-[#707070] text-xl py-3 px-5 w-full border border-solid border-gray-700 bg-transparent"
                       v-model="rsvp.numberOfPeople"
+                      :disabled="!showNumberOfPeopleAndNames"
                     >
                       <option value="1" selected>1</option>
                       <option value="2">2</option>
@@ -262,7 +269,8 @@
             :class="[
               alreadySubmited ? 'block' : 'hidden',
               transition ? '' : 'page-leave-to hidden',
-            ]"
+            ]
+              "
           >
             <div class="flex justify-center align-middle mt-4 mb-5">
               <h3 class="font-peaxBold text-3xl text-center pt-12">
@@ -311,6 +319,8 @@
             >
             <span>Add to your Yahoo Calendar</span>
           </a>
+          <arrow-right class="absolute bottom-[1.5%] left-[43%]" />
+          <Wave :class="`h-[150px]`" />
         </div>
       </SwiperSlide>
       <SwiperSlide>

@@ -34,6 +34,32 @@
 .full-custom-height {
   height: 100vh;
 }
+.typing {
+  h6{
+    overflow: hidden;
+    white-space: nowrap;
+  }
+}
+.swiper-slide-active{
+  .first-line {
+    animation: typing 4s steps(90, end);
+  }
+  .second-line {
+    animation: typing 4s steps(90, end);
+    animation-delay: 4s;
+    width: 0;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+  }
+}
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
 @media (max-width: 600px) {
   .full-custom-height {
     height: calc(100vh - 56px);
