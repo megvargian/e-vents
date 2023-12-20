@@ -1,6 +1,6 @@
 <template>
   <section
-    class="example-one relative flex m-auto sm:w-[500px] w-100 full-custom-height"
+    class="example-one relative flex m-auto full-custom-height overflow-hidden"
   >
     <Swiper :options="swiperOprions">
       <SwiperSlide>
@@ -8,7 +8,7 @@
           class="page-start h-full w-full relative items-center flex justify-center"
         >
           <h2
-            class="font-amsterdam text-center text-2xl bg-white add-animation"
+            class="font-amsterdam text-center ssm:text-base msm:text-2xl bg-white add-animation"
           >
             <span>Dr.</span> <span>George</span>
             <span>
@@ -17,55 +17,55 @@
             <span>Mrs. </span><span>Randa</span> <span>Rammouz</span>
           </h2>
           <img
-            class="w-[180px] absolute bottom-10 left-0 z-10"
+            class="w-[140px] absolute bottom-10 left-0 z-10"
             src="../assets/images/car.svg"
             alt="car"
           />
           <arrow-right class="absolute bottom-0 left-[43%]" />
-          <Wave :class="`h-[150px]`" />
+          <Wave :class="`ssm:h-[9rem] msm:h-[10.6rem]`" />
         </div>
       </SwiperSlide>
       <SwiperSlide>
         <div class="page-start h-full w-full relative">
           <h2
-            class="font-amsterdam text-center text-2xl bg-white md:pt-60 sm:pt-16 pt-8"
+            class="font-amsterdam text-center ssm:text-base msm:text-2xl bg-white md:pt-60 sm:pt-16 pt-8"
           >
             Samir
             <span class="font-greatvibe">&</span>
             Lily RammouZ
           </h2>
-          <h2 class="font-amsterdam text-center text-2xl bg-white pt-12">
+          <h2 class="font-amsterdam text-center ssm:text-base msm:text-2xl bg-white pt-12">
             Dr. Rebel
             <span class="font-greatvibe">&</span>
             Josiane Hanna
           </h2>
           <div class="flex justify-between items-center m-0">
-            <div class="typing mx-3 font-peaxLight text-base p-8 text-xl">
-              <h6 class="first-line">Request the honor of your presence at the wedding</h6>
-              <h6 class="second-line">ceremony of their children</h6>
+            <div class="mx-3 font-peaxLight ssm:text-base msm:text-xl text-center p-8">
+              <h6>Request the honor of your presence at the wedding</h6>
+              <h6>ceremony of their children</h6>
             </div>
           </div>
-          <h1 class="font-amsterdam font-bold text-3xl text-center">
+          <h1 class="font-amsterdam font-bold ssm:text-2xl msm:text-3xl text-center">
             Chris
             <span class="font-greatvibe font-semi-bold">&</span>
             Jessica
           </h1>
           <img
-            class="w-[180px] absolute bottom-20 left-40 z-10"
+            class="w-[140px] absolute left-40 z-10 custom-buttom"
             src="../assets/images/car.svg"
             alt="car"
           />
           <arrow-right class="absolute bottom-0 left-[43%]" />
-          <Wave :class="`h-[150px]`" />
+          <Wave :class="`ssm:h-[9rem] msm:h-[10.6rem]`" />
         </div>
       </SwiperSlide>
       <SwiperSlide>
         <div class="page-start h-full w-full relative">
           <div class="initilas flex justify-end align-end mt-4 mx-4">
-            <h5 class="text-2xl font-amsterdam">CJ</h5>
+            <h5 class="ssm:text-base msm:text-2xl font-amsterdam">CJ</h5>
           </div>
           <div class="date flex justify-center align-middle mt-4 mb-5">
-            <h3 class="font-peaxBold text-3xl text-center">
+            <h3 class="font-peaxBold ssm:text-xl msm:text-3xl text-center">
               Monday <br />
               August 14th <br />
               at 6:00 pm
@@ -73,31 +73,31 @@
           </div>
           <div class="relative w-full h-[19rem]">
             <img
-              class="w-full h-[19rem]"
+              class="w-full custom-church-height"
               src="../assets/images/church.svg"
               alt="church"
             />
             <p
-              class="font-peaxBold text-xl text-center absolute left-[32%] bottom-[7%]"
+              class="font-peaxBold ssm:text-base msm:text-xl text-center absolute left-[32%] bottom-[7%]"
             >
               Where it all began
             </p>
           </div>
           <img
-            class="w-[180px] absolute bottom-[27%] left-[50%] z-10"
+            class="w-[140px] absolute bottom-[30%] left-[50%] z-10"
             src="../assets/images/car.svg"
             alt="car"
           />
           <arrow-right class="absolute bottom-4 left-[43%]" />
-          <div class="bg-[#002e51] absolute h-[15rem] bottom-0 left-0 w-full">
+          <div class="bg-[#002e51] absolute custom-height bottom-0 left-0 w-full">
             <h4
-              class="font-peaxBold text-2xl text-center text-white mt-10 flex justify-center"
+              class="font-peaxBold ssm:text-base msm:text-2xl text-center text-white custom-margin flex justify-center"
             >
               Saint Joseph School <br />
               - Cornet Chehwan
             </h4>
             <a
-              class="font-peaxBold text-2xl text-center text-white mt-2 bg-[#66c1e8] flex justify-center mx-auto rounded-[30px] w-56 py-2"
+              class="font-peaxBold ssm:text-base msm:text-2xl text-center text-white mt-2 bg-[#66c1e8] flex justify-center mx-auto rounded-[30px] w-56 py-2"
               href="https://goo.gl/maps/5FpasbGdnv6aP63Z7"
               target="_blank"
               >View on map</a
@@ -108,65 +108,81 @@
       <SwiperSlide>
         <div class="page-start h-full w-full relative">
           <div class="initilas flex justify-end align-end mt-4 mx-4">
-            <h5 class="text-2xl font-amsterdam">CJ</h5>
+            <h5 class="ssm:text-base msm:text-2xl font-amsterdam">CJ</h5>
           </div>
           <div class="date flex justify-center align-middle mt-4 mb-5">
-            <h3 class="font-peaxBold text-3xl text-center">
+            <h3 class="font-peaxBold ssm:text-xl msm:text-3xl text-center">
               Followed by a dinner <br />
               @ Aurelia Venue,<br />Bhersaf
             </h3>
           </div>
           <a
-            class="font-peaxBold text-2xl text-center text-white mt-5 bg-[#66c1e8] flex justify-center mx-auto rounded-[30px] w-56 py-2"
+            class="font-peaxBold ssm:text-base msm:text-2xl text-center text-white mt-5 bg-[#66c1e8] flex justify-center mx-auto rounded-[30px] w-56 py-2"
             href="https://goo.gl/maps/5FpasbGdnv6aP63Z7"
             target="_blank"
             >View on map</a
           >
           <img
-            class="w-100 h-100 pt-32"
+            class="w-100 h-100 ssm:pt-28 msm:pt-32 custom-padding"
             src="../assets/images/venue.png"
             alt="venue"
           />
-          <arrow-right class="absolute bottom-[1.5%] left-[43%]" />
-          <Wave :class="`h-[150px]`" />
+          <arrow-right class="absolute bottom-4 left-[43%]" />
+          <Wave :class="`ssm:h-[9rem] msm:h-[10.6rem]`" />
         </div>
       </SwiperSlide>
       <SwiperSlide>
         <div class="page-start h-full w-full relative">
           <div class="initilas flex justify-end align-end mt-4 mx-4">
-            <h5 class="text-2xl font-amsterdam">CJ</h5>
+            <h5 class="ssm:text-base msm:text-2xl font-amsterdam">CJ</h5>
           </div>
           <div class="date flex justify-center align-middle mt-4 mb-5">
-            <h3 class="font-peaxBold text-3xl text-center pt-12">
+            <h3 class="font-peaxBold ssm:text-xl msm:text-3xl text-center pt-12">
               For those who desire:
             </h3>
           </div>
           <div class="flex align-middle justify-center items-center pt-32">
             <img
-              class="w-32 h-32"
+              class="ssm:w-28 msm:w-32 ssm:w-28 msm:h-32"
               src="../assets/images/whish.svg"
               alt="whish"
             />
             <h3
-              class="font-peaxBold text-3xl text-center justify-center flex items-center ml-5"
+              class="font-peaxBold ssm:text-xl msm:text-3xl text-center justify-center flex items-center ml-5"
             >
               Whish account: <br />
               20547435-03
             </h3>
           </div>
           <img
-            class="w-[180px] absolute bottom-20 left-40 z-10"
+            class="w-[140px] absolute custom-buttom left-40 z-10"
             src="../assets/images/car.svg"
             alt="car"
           />
-          <arrow-right class="absolute bottom-[1.5%] left-[43%]" />
-          <Wave :class="`h-[150px]`" />
+          <arrow-right class="absolute bottom-4 left-[43%]" />
+          <Wave :class="`ssm:h-[9rem] msm:h-[10.6rem]`" />
         </div>
       </SwiperSlide>
       <SwiperSlide>
         <div class="page-start h-full w-full relative">
+          <ConfettiExplosion
+              :particleCount="100"
+              :particleSize="5"
+              :duration="5000"
+              :force="0.3"
+              style="position: absolute; right: 0; top: 0;"
+              v-if="confettiExplosion"
+          />
+          <ConfettiExplosion
+              :particleCount="100"
+              :particleSize="5"
+              :duration="5000"
+              :force="0.3"
+              style="position: absolute; left: 0; top: 0;"
+              v-if="confettiExplosion"
+          />
           <div class="initilas flex justify-end align-end mt-4 mx-4">
-            <h5 class="text-2xl font-amsterdam">CJ</h5>
+            <h5 class="ssm:text-base msm:text-2xl font-amsterdam">CJ</h5>
           </div>
           <div
             class="rsvpMain"
@@ -175,23 +191,23 @@
               transition ? ' page-enter-from hidden' : '',
             ]"
           >
-            <div class="date flex justify-center align-middle mt-4 mb-5">
-              <h3 class="font-peaxBold text-3xl text-center pt-12">
+            <div class="date flex justify-center align-middle ssm:mt-2 msm:mt-4 mb-5">
+              <h3 class="font-peaxBold ssm:text-xl msm:text-3xl text-center pt-12">
                 Kindly R.S.V.P <br />
                 Before July 30th
               </h3>
             </div>
-            <div class="w-full">
+            <div class="w-full px-2">
               <form @submit.prevent="submitRsvp">
                 <div>
                   <label
-                    class="block font-peaxBold text-[#66c1eb] text-2xl py-2 px-4"
+                    class="block font-peaxBold text-[#66c1eb] ssm:text-base msm:text-2xl py-2 px-4"
                     for="attendence"
-                    >Attanding</label
+                    >Attending</label
                   >
                   <div class="relative">
                     <select
-                      class="appearance-none rounded-[30px] font-peaxBold text-[#707070] text-xl py-3 px-5 w-full border border-solid border-gray-700 bg-transparent"
+                      class="appearance-none rounded-[30px] font-peaxBold text-[#707070] ssm:text-base msm:text-xl ssm:py-2 msm:py-3 ssm:px-3 msm:px-5 custom-input-padding w-full border border-solid border-gray-700 bg-transparent"
                       id="attendence"
                       required
                       v-model="attendence"
@@ -210,12 +226,12 @@
                   class="block w-full"
                   :class="!showNumberOfPeopleAndNames ? `opacity-30` : `opacity-100`">
                   <label
-                    class="block font-peaxBold text-[#66c1eb] text-2xl py-2 px-4"
+                    class="block font-peaxBold text-[#66c1eb] ssm:text-base msm:text-2xl py-2 px-4"
                     for="names"
                     >Name(s)</label
                   >
                   <input
-                    class="rounded-[30px] font-peaxBold text-[#707070] text-xl py-3 px-5 w-full border border-solid border-gray-700"
+                    class="rounded-[30px] font-peaxBold text-[#707070] ssm:text-base msm:text-xl ssm:py-2 msm:py-3 ssm:px-3 msm:px-5 custom-input-padding w-full border border-solid border-gray-700"
                     type="text"
                     v-model="rsvp.names"
                     :disabled="!showNumberOfPeopleAndNames"
@@ -224,13 +240,13 @@
                 <div
                   :class="!showNumberOfPeopleAndNames ? `opacity-30` : `opacity-100`">
                   <label
-                    class="block font-peaxBold text-[#66c1eb] text-2xl py-2 px-4"
+                    class="block font-peaxBold text-[#66c1eb] ssm:text-base msm:text-2xl py-2 px-4"
                     for="numberOfPeople"
                     >Number of people</label
                   >
                   <div class="relative">
                     <select
-                      class="appearance-none rounded-[30px] font-peaxBold text-[#707070] text-xl py-3 px-5 w-full border border-solid border-gray-700 bg-transparent"
+                      class="appearance-none rounded-[30px] font-peaxBold text-[#707070] ssm:text-base msm:text-xl ssm:py-2 msm:py-3 ssm:px-3 msm:px-5 custom-input-padding w-full border border-solid border-gray-700 bg-transparent outline-none focus:outline-none"
                       v-model="rsvp.numberOfPeople"
                       :disabled="!showNumberOfPeopleAndNames"
                     >
@@ -248,14 +264,14 @@
                 </div>
                 <div>
                   <button
-                    class="font-peaxBold text-2xl text-center text-white mt-5 bg-[#66c1e8] flex justify-center mx-auto rounded-[30px] w-64 py-3"
+                    class="font-peaxBold ssm:text-base msm:text-2xl text-center text-white mt-5 bg-[#66c1e8] flex justify-center mx-auto rounded-[30px] w-56 py-2"
                     :disabled="loading"
                     type="submit"
                   >
                     <img
                       v-if="loading"
                       src="../assets/images/loading.svg"
-                      class="animate-spin loading-spinner w-8 h-8 flex m-auto"
+                      class="animate-spin loading-spinner w-6 h-6 flex m-auto"
                       alt="loading"
                     />
                     <span v-else> RSVP </span>
@@ -278,20 +294,20 @@
               </h3>
             </div>
           </div>
-          <arrow-right class="absolute bottom-[1.5%] left-[43%]" />
-          <Wave :class="`h-[150px]`" />
+          <arrow-right class="absolute bottom-4 left-[43%]" />
+          <Wave :class="`ssm:h-[9rem] msm:h-[10.6rem]`" />
         </div>
       </SwiperSlide>
       <SwiperSlide>
         <div class="page-start h-full w-full relative">
           <div class="initilas flex justify-end align-end mt-4 mx-4">
-            <h5 class="text-2xl font-amsterdam">CJ</h5>
+            <h5 class="ssm:text-base msm:text-2xl font-amsterdam">CJ</h5>
           </div>
           <a
             target="_blank"
             rel="noopener"
             href="https://calendar.google.com/calendar/render?action=TEMPLATE&dates=20220112T180000Z%2F20220112T200000Z&details=Learn%20all%20about%20the%20rules%20of%20the%20Motorway%20and%20how%20to%20access%20the%20fast%20lane.%0A%0Ahttps%3A%2F%2Fen.wikipedia.org%2Fwiki%2FGridlock_%28Doctor_Who%29&location=New%20Earth&text=Welcome%20to%20the%20Motorway"
-            class="font-peaxBold text-2xl text-center text-white mt-5 bg-[#66c1e8] flex justify-center mx-auto rounded-[30px] w-64 py-3"
+            class="font-peaxBold ssm:text-base msm:text-2xl text-center text-white mt-5 bg-[#66c1e8] flex justify-center mx-auto rounded-[30px] w-64 py-3"
             >
             <span>Add to your Google Calendar</span>
           </a>
@@ -299,7 +315,7 @@
             target="_blank"
             rel="noopener"
             href="https://outlook.office.com/calendar/0/deeplink/compose?body=Learn%20all%20about%20the%20rules%20of%20the%20Motorway%20and%20how%20to%20access%20the%20fast%20lane.%0A%0Ahttps%3A%2F%2Fen.wikipedia.org%2Fwiki%2FGridlock_%28Doctor_Who%29&enddt=2022-01-12T20%3A00%3A00%2B00%3A00&location=New%20Earth&path=%2Fcalendar%2Faction%2Fcompose&rru=addevent&startdt=2022-01-12T18%3A00%3A00%2B00%3A00&subject=Welcome%20to%20the%20Motorway"
-            class="font-peaxBold text-2xl text-center text-white mt-5 bg-[#66c1e8] flex justify-center mx-auto rounded-[30px] w-64 py-3"
+            class="font-peaxBold ssm:text-base msm:text-2xl text-center text-white mt-5 bg-[#66c1e8] flex justify-center mx-auto rounded-[30px] w-64 py-3"
             >
             <span>Add to your Outlook Calendar</span>
           </a>
@@ -307,7 +323,7 @@
             target="_blank"
             rel="noopener"
             href="https://calendar.aol.com/?desc=Learn%20all%20about%20the%20rules%20of%20the%20Motorway%20and%20how%20to%20access%20the%20fast%20lane.%0A%0Ahttps%3A%2F%2Fen.wikipedia.org%2Fwiki%2FGridlock_%28Doctor_Who%29&dur=&et=20220112T190000Z&in_loc=New%20Earth&st=20220112T170000Z&title=Welcome%20to%20the%20Motorway&v=60"
-            class="font-peaxBold text-2xl text-center text-white mt-5 bg-[#66c1e8] flex justify-center mx-auto rounded-[30px] w-64 py-3"
+            class="font-peaxBold ssm:text-base msm:text-2xl text-center text-white mt-5 bg-[#66c1e8] flex justify-center mx-auto rounded-[30px] w-64 py-3"
             >
             <span>Add to your AOL Calendar</span>
           </a>
@@ -315,32 +331,32 @@
             target="_blank"
             rel="noopener"
             href="https://calendar.yahoo.com/?desc=Learn%20all%20about%20the%20rules%20of%20the%20Motorway%20and%20how%20to%20access%20the%20fast%20lane.%0A%0Ahttps%3A%2F%2Fen.wikipedia.org%2Fwiki%2FGridlock_%28Doctor_Who%29&dur=&et=20220112T190000Z&in_loc=New%20Earth&st=20220112T170000Z&title=Welcome%20to%20the%20Motorway&v=60"
-            class="font-peaxBold text-2xl text-center text-white mt-5 bg-[#66c1e8] flex justify-center mx-auto rounded-[30px] w-64 py-3"
+            class="font-peaxBold ssm:text-base msm:text-2xl text-center text-white mt-5 bg-[#66c1e8] flex justify-center mx-auto rounded-[30px] w-64 py-3"
             >
             <span>Add to your Yahoo Calendar</span>
           </a>
-          <arrow-right class="absolute bottom-[1.5%] left-[43%]" />
-          <Wave :class="`h-[150px]`" />
+          <arrow-right class="absolute bottom-4 left-[43%]" />
+          <Wave :class="`ssm:h-[9rem] msm:h-[10.6rem]`" />
         </div>
       </SwiperSlide>
       <SwiperSlide>
         <div class="page-start h-full w-full relative">
           <div class="initilas flex justify-end align-end mt-4 mx-4">
-            <h5 class="text-2xl font-amsterdam">CJ</h5>
+            <h5 class="ssm:text-base msm:text-2xl font-amsterdam">CJ</h5>
           </div>
           <div class="date flex justify-center align-middle mt-4 mb-5">
-            <h3 class="font-peaxBold text-3xl text-center pt-24">
+            <h3 class="font-peaxBold ssm:text-xl msm:text-3xl text-center pt-24">
               See you there!<br />&amp;<br />Cheers to our happy <br />
               ever after!
             </h3>
           </div>
           <img
-            class="w-full h-[25rem] absolute left-[20%] bottom-[5%] z-10"
+            class="w-full h-[25rem] absolute left-[20%] custom-last-page-buttom z-10"
             src="../assets/images/vacation.svg"
             alt="vacation"
           />
           <div
-            class="bg-[#002e51] absolute h-[13rem] bottom-0 left-0 w-full"
+            class="bg-[#002e51] absolute custom-last-page-height bottom-0 left-0 w-full"
           ></div>
         </div>
       </SwiperSlide>
@@ -350,6 +366,8 @@
 </template>
 
 <script setup lang="ts">
+import ConfettiExplosion from "vue-confetti-explosion";
+
 const swiperOprions = {
   slidesPerView: 1,
   spaceBetween: 0,
@@ -372,6 +390,7 @@ const transition = ref(false);
 const rsvpCookie = useCookie<{ value: string }>("0");
 const alreadySubmited = ref(false);
 const showNumberOfPeopleAndNames = ref(false);
+const confettiExplosion = ref(false);
 onMounted(() => {
   if (rsvpCookie.value) {
     if (rsvpCookie.value.value === "1") {
@@ -413,6 +432,8 @@ const submitRsvp = async () => {
     alreadySubmited.value = true;
     transition.value = true;
     rsvpCookie.value = { value: "1" };
+    await nextTick();
+    confettiExplosion.value = true;
   }
 };
 </script>

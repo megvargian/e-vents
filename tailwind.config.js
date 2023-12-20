@@ -18,6 +18,14 @@ module.exports = {
     extend: {
       colors: {},
     },
+    screens: {
+      xllmd: '700px',
+      xxlsm: '540px',
+      xlsm: '500px',
+      lsm: '470px',
+      msm: '395px',
+      ssm: '360px'
+    },
   },
   plugins: [],
 };
