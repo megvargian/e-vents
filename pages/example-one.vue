@@ -123,7 +123,7 @@
             >View on map</a
           >
           <img
-            class="w-100 h-100 ssm:pt-28 msm:pt-32 custom-padding"
+            class="w-100 h-100 custom-padding ssm:pt-28"
             src="../assets/images/venue.png"
             alt="venue"
           />

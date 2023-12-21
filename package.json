@@ -25,7 +25,7 @@
   "dependencies": {
     "@nuxtjs/tailwindcss": "^6.8.0",
     "gsap": "^3.12.2",
-    "netlify-cli": "^17.8.1",
+    "netlify-cli": "^17.10.1",
     "nuxt-swiper": "^1.2.2",
     "react-tsparticles": "^2.12.2",
     "swiper": "^11.0.5",

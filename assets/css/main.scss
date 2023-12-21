@@ -226,6 +226,27 @@ section#sec_story .story_slide.helperSlide {
   }
 }
 
+// custom classes for desktop
+
+.custom-buttom{
+  bottom: 10%;
+}
+.custom-height{
+  height: 17rem;
+}
+.custom-church-height{
+  height: 19rem;
+}
+.custom-margin{
+  margin-top: 2.5rem;
+}
+.custom-padding{
+  padding-top: 5rem;
+}
+.custom-last-page-height{
+  height: 15rem;
+}
+
 @media (max-width: 600px) {
   .full-custom-height {
     max-height: calc(100vh - 56px);
@@ -267,7 +288,7 @@ section#sec_story .story_slide.helperSlide {
 
 @media (max-height: 700px) {
   .full-custom-height {
-    min-height: calc(100vh - 80px);
+    max-height: calc(100vh - 80px);
     width: 100%;
   }
   .custom-buttom{
