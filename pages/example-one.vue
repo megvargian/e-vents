@@ -212,7 +212,7 @@
               </h3>
             </div>
             <div class="w-full px-2">
-              <form @submit.prevent="sendEmail">
+              <form @submit.prevent="submitRsvp">
                 <div>
                   <label
                     class="block font-peaxBold text-[#66c1eb] ssm:text-base msm:text-2xl py-2 px-4"
@@ -433,51 +433,51 @@ watch(attendence, (newAttendence) => {
 
 const submitRsvp = async () => {
   loading.value = true;
-  const { data, refresh, error } = useFetch("/rsvp1", {
-    baseURL: "https://sarpysevents.com/",
-    method: "POST",
-    body: {
-      title: "this is a test",
-      name: showNumberOfPeopleAndNames.value
+  const info = {
+    From: "e-vents@sarpysevents.com",
+    To: "kouyoumdjianmike@gmail.com",
+    Subject: "RSVP from E-vents",
+    HtmlBody: `
+      <p>Name/Names: ${showNumberOfPeopleAndNames.value
         ? rsvp.value.names
-        : `there's no name`,
-      number_guests: showNumberOfPeopleAndNames.value
-        ? String(rsvp.value.numberOfPeople)
-        : "0",
-      isattending: rsvp.value.attendence,
-    },
+        : `there's no name`}
+      </p>
+      <p>
+        Number of Guests: ${showNumberOfPeopleAndNames.value
+          ? String(rsvp.value.numberOfPeople)
+          : "0"
+        }
+      </p>
+      <p>
+        Attending: ${rsvp.value.attendence}
+      </p>
+    `,
+    TextBody: "Hello from E-vents!",
+  };
+  const { data, refresh, error } = useFetch("/.netlify/functions/sendEmails", {
+    method: 'POST',
+    body: info,
     server: false,
     immediate: false,
   });
   await refresh();
+
+  const config = data as {
+    value: {
+      statusCode: Number,
+      body: Object
+    }
+  }
   if (error.value) {
     console.error("Error:", error);
-  } else {
+  }
+  if(config.value.statusCode === 200 ){
     loading.value = false;
     alreadySubmited.value = true;
     transition.value = true;
     rsvpCookie.value = { value: "1" };
     await nextTick();
     confettiExplosion.value = true;
-  }
-};
-
-const sendEmail = async () => {
-  const info = {
-    From: "e-vents@sarpysevents.com",
-    To: "kouyoumdjianmike@gmail.com",
-    Subject: "Test",
-    TextBody: "Hello from Postmark!",
-  };
-  const { data, refresh, error } = useFetch("/api/email", {
-    method: 'POST',
-    body: info,
-  });
-  await refresh();
-  if (error.value){
-    console.error(error.value)
-  } else {
-    console.log(data.value)
   }
 };
 </script>

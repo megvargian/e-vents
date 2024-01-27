@@ -16,7 +16,7 @@ app.use(express.json());
 app.post('/api/email', async (req, res) => {
   try {
     const emailData = req.body;
-    const client = new postmark.ServerClient("c42bff0c-d914-4427-8b33-4aac648e2c83");
+    const client = new postmark.ServerClient(process.env.POSTMARK_API_KEY);
     console.log(emailData)
     const result = await client.sendEmail(emailData);
     console.log(result)

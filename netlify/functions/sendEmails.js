@@ -1,23 +1,17 @@
-const { ServerlessFunction } = require('@netlify/functions');
 const postmark = require('postmark');
 
-const handler = async (event) => {
-  const client = new postmark.ServerClient("c42bff0c-d914-4427-8b33-4aac648e2c83");
-
+exports.handler = async function (event) {
+  const client = new postmark.ServerClient(process.env.POSTMARK_API_KEY);
   try {
     const { body } = event;
     const { From, To, Subject, TextBody } = JSON.parse(body);
-
     const message = {
       From,
       To,
       Subject,
       TextBody
     };
-
     const result = await client.sendEmail(message);
-    console.log(message)
-    console.log(result)
     return {
       statusCode: 200,
       body: JSON.stringify(result),
@@ -29,5 +23,3 @@ const handler = async (event) => {
     };
   }
 };
-
-module.exports = new ServerlessFunction(handler);
