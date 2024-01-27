@@ -437,22 +437,22 @@ const submitRsvp = async () => {
     From: "e-vents@sarpysevents.com",
     To: "kouyoumdjianmike@gmail.com",
     Subject: "RSVP from E-vents",
-    HtmlBody: `
-      <p>Name/Names: ${showNumberOfPeopleAndNames.value
+    HtmlBody: `<p>Name/Names: ${showNumberOfPeopleAndNames.value
+        ? rsvp.value.names
+        : `there's no name`}</p><p>
+        Number of Guests: ${showNumberOfPeopleAndNames.value
+          ? String(rsvp.value.numberOfPeople)
+          : "0"
+        }</p><p>
+        Attending: ${rsvp.value.attendence}</p>`,
+    TextBody: `Name/Names: ${showNumberOfPeopleAndNames.value
         ? rsvp.value.names
         : `there's no name`}
-      </p>
-      <p>
         Number of Guests: ${showNumberOfPeopleAndNames.value
           ? String(rsvp.value.numberOfPeople)
           : "0"
         }
-      </p>
-      <p>
-        Attending: ${rsvp.value.attendence}
-      </p>
-    `,
-    TextBody: "Hello from E-vents!",
+        Attending: ${rsvp.value.attendence}`,
   };
   const { data, refresh, error } = useFetch("/.netlify/functions/sendEmails", {
     method: 'POST',
@@ -464,14 +464,18 @@ const submitRsvp = async () => {
 
   const config = data as {
     value: {
-      statusCode: Number,
-      body: Object
+      ErrorCode: Number,
+      Message: string,
+      MessageID: string,
+      SubmittedAt: string,
+      To: string,
     }
   }
   if (error.value) {
     console.error("Error:", error);
+    loading.value = false;
   }
-  if(config.value.statusCode === 200 ){
+  if(config.value.ErrorCode && config.value.Message === 'OK') {
     loading.value = false;
     alreadySubmited.value = true;
     transition.value = true;
