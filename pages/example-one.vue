@@ -474,8 +474,7 @@ const submitRsvp = async () => {
   if (error.value) {
     console.error("Error:", error);
     loading.value = false;
-  }
-  if(config.value.ErrorCode && config.value.Message === 'OK') {
+  } else {
     loading.value = false;
     alreadySubmited.value = true;
     transition.value = true;
