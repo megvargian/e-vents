@@ -34,18 +34,24 @@
             <span class="font-greatvibe">&</span>
             Lily RammouZ
           </h2>
-          <h2 class="font-amsterdam text-center ssm:text-base msm:text-2xl bg-white pt-12">
+          <h2
+            class="font-amsterdam text-center ssm:text-base msm:text-2xl bg-white pt-12"
+          >
             Dr. Rebel
             <span class="font-greatvibe">&</span>
             Josiane Hanna
           </h2>
           <div class="flex justify-between items-center m-0">
-            <div class="mx-3 font-peaxLight ssm:text-base msm:text-xl text-center p-8">
+            <div
+              class="mx-3 font-peaxLight ssm:text-base msm:text-xl text-center p-8"
+            >
               <h6>Request the honor of your presence at the wedding</h6>
               <h6>ceremony of their children</h6>
             </div>
           </div>
-          <h1 class="font-amsterdam font-bold ssm:text-2xl msm:text-3xl text-center">
+          <h1
+            class="font-amsterdam font-bold ssm:text-2xl msm:text-3xl text-center"
+          >
             Chris
             <span class="font-greatvibe font-semi-bold">&</span>
             Jessica
@@ -89,7 +95,9 @@
             alt="car"
           />
           <arrow-right class="absolute bottom-4 left-[43%]" />
-          <div class="bg-[#002e51] absolute custom-height bottom-0 left-0 w-full">
+          <div
+            class="bg-[#002e51] absolute custom-height bottom-0 left-0 w-full"
+          >
             <h4
               class="font-peaxBold ssm:text-base msm:text-2xl text-center text-white custom-margin flex justify-center"
             >
@@ -137,7 +145,9 @@
             <h5 class="ssm:text-base msm:text-2xl font-amsterdam">CJ</h5>
           </div>
           <div class="date flex justify-center align-middle mt-4 mb-5">
-            <h3 class="font-peaxBold ssm:text-xl msm:text-3xl text-center pt-12">
+            <h3
+              class="font-peaxBold ssm:text-xl msm:text-3xl text-center pt-12"
+            >
               For those who desire:
             </h3>
           </div>
@@ -166,20 +176,20 @@
       <SwiperSlide>
         <div class="page-start h-full w-full relative">
           <ConfettiExplosion
-              :particleCount="100"
-              :particleSize="5"
-              :duration="5000"
-              :force="0.3"
-              style="position: absolute; right: 0; top: 0;"
-              v-if="confettiExplosion"
+            :particleCount="100"
+            :particleSize="5"
+            :duration="5000"
+            :force="0.3"
+            style="position: absolute; right: 0; top: 0"
+            v-if="confettiExplosion"
           />
           <ConfettiExplosion
-              :particleCount="100"
-              :particleSize="5"
-              :duration="5000"
-              :force="0.3"
-              style="position: absolute; left: 0; top: 0;"
-              v-if="confettiExplosion"
+            :particleCount="100"
+            :particleSize="5"
+            :duration="5000"
+            :force="0.3"
+            style="position: absolute; left: 0; top: 0"
+            v-if="confettiExplosion"
           />
           <div class="initilas flex justify-end align-end mt-4 mx-4">
             <h5 class="ssm:text-base msm:text-2xl font-amsterdam">CJ</h5>
@@ -191,14 +201,18 @@
               transition ? ' page-enter-from hidden' : '',
             ]"
           >
-            <div class="date flex justify-center align-middle ssm:mt-2 msm:mt-4 mb-5">
-              <h3 class="font-peaxBold ssm:text-xl msm:text-3xl text-center pt-12">
+            <div
+              class="date flex justify-center align-middle ssm:mt-2 msm:mt-4 mb-5"
+            >
+              <h3
+                class="font-peaxBold ssm:text-xl msm:text-3xl text-center pt-12"
+              >
                 Kindly R.S.V.P <br />
                 Before July 30th
               </h3>
             </div>
             <div class="w-full px-2">
-              <form @submit.prevent="submitRsvp">
+              <form @submit.prevent="sendEmail">
                 <div>
                   <label
                     class="block font-peaxBold text-[#66c1eb] ssm:text-base msm:text-2xl py-2 px-4"
@@ -224,7 +238,10 @@
                 </div>
                 <div
                   class="block w-full"
-                  :class="!showNumberOfPeopleAndNames ? `opacity-30` : `opacity-100`">
+                  :class="
+                    !showNumberOfPeopleAndNames ? `opacity-30` : `opacity-100`
+                  "
+                >
                   <label
                     class="block font-peaxBold text-[#66c1eb] ssm:text-base msm:text-2xl py-2 px-4"
                     for="names"
@@ -238,7 +255,10 @@
                   />
                 </div>
                 <div
-                  :class="!showNumberOfPeopleAndNames ? `opacity-30` : `opacity-100`">
+                  :class="
+                    !showNumberOfPeopleAndNames ? `opacity-30` : `opacity-100`
+                  "
+                >
                   <label
                     class="block font-peaxBold text-[#66c1eb] ssm:text-base msm:text-2xl py-2 px-4"
                     for="numberOfPeople"
@@ -285,8 +305,7 @@
             :class="[
               alreadySubmited ? 'block' : 'hidden',
               transition ? '' : 'page-leave-to hidden',
-            ]
-              "
+            ]"
           >
             <div class="flex justify-center align-middle mt-4 mb-5">
               <h3 class="font-peaxBold text-3xl text-center pt-12">
@@ -308,7 +327,7 @@
             rel="noopener"
             href="https://calendar.google.com/calendar/render?action=TEMPLATE&dates=20220112T180000Z%2F20220112T200000Z&details=Learn%20all%20about%20the%20rules%20of%20the%20Motorway%20and%20how%20to%20access%20the%20fast%20lane.%0A%0Ahttps%3A%2F%2Fen.wikipedia.org%2Fwiki%2FGridlock_%28Doctor_Who%29&location=New%20Earth&text=Welcome%20to%20the%20Motorway"
             class="font-peaxBold ssm:text-base msm:text-2xl text-center text-white mt-5 bg-[#66c1e8] flex justify-center mx-auto rounded-[30px] w-64 py-3"
-            >
+          >
             <span>Add to your Google Calendar</span>
           </a>
           <a
@@ -316,7 +335,7 @@
             rel="noopener"
             href="https://outlook.office.com/calendar/0/deeplink/compose?body=Learn%20all%20about%20the%20rules%20of%20the%20Motorway%20and%20how%20to%20access%20the%20fast%20lane.%0A%0Ahttps%3A%2F%2Fen.wikipedia.org%2Fwiki%2FGridlock_%28Doctor_Who%29&enddt=2022-01-12T20%3A00%3A00%2B00%3A00&location=New%20Earth&path=%2Fcalendar%2Faction%2Fcompose&rru=addevent&startdt=2022-01-12T18%3A00%3A00%2B00%3A00&subject=Welcome%20to%20the%20Motorway"
             class="font-peaxBold ssm:text-base msm:text-2xl text-center text-white mt-5 bg-[#66c1e8] flex justify-center mx-auto rounded-[30px] w-64 py-3"
-            >
+          >
             <span>Add to your Outlook Calendar</span>
           </a>
           <a
@@ -324,7 +343,7 @@
             rel="noopener"
             href="https://calendar.aol.com/?desc=Learn%20all%20about%20the%20rules%20of%20the%20Motorway%20and%20how%20to%20access%20the%20fast%20lane.%0A%0Ahttps%3A%2F%2Fen.wikipedia.org%2Fwiki%2FGridlock_%28Doctor_Who%29&dur=&et=20220112T190000Z&in_loc=New%20Earth&st=20220112T170000Z&title=Welcome%20to%20the%20Motorway&v=60"
             class="font-peaxBold ssm:text-base msm:text-2xl text-center text-white mt-5 bg-[#66c1e8] flex justify-center mx-auto rounded-[30px] w-64 py-3"
-            >
+          >
             <span>Add to your AOL Calendar</span>
           </a>
           <a
@@ -332,7 +351,7 @@
             rel="noopener"
             href="https://calendar.yahoo.com/?desc=Learn%20all%20about%20the%20rules%20of%20the%20Motorway%20and%20how%20to%20access%20the%20fast%20lane.%0A%0Ahttps%3A%2F%2Fen.wikipedia.org%2Fwiki%2FGridlock_%28Doctor_Who%29&dur=&et=20220112T190000Z&in_loc=New%20Earth&st=20220112T170000Z&title=Welcome%20to%20the%20Motorway&v=60"
             class="font-peaxBold ssm:text-base msm:text-2xl text-center text-white mt-5 bg-[#66c1e8] flex justify-center mx-auto rounded-[30px] w-64 py-3"
-            >
+          >
             <span>Add to your Yahoo Calendar</span>
           </a>
           <arrow-right class="absolute bottom-4 left-[43%]" />
@@ -345,7 +364,9 @@
             <h5 class="ssm:text-base msm:text-2xl font-amsterdam">CJ</h5>
           </div>
           <div class="date flex justify-center align-middle mt-4 mb-5">
-            <h3 class="font-peaxBold ssm:text-xl msm:text-3xl text-center pt-24">
+            <h3
+              class="font-peaxBold ssm:text-xl msm:text-3xl text-center pt-24"
+            >
               See you there!<br />&amp;<br />Cheers to our happy <br />
               ever after!
             </h3>
@@ -417,8 +438,12 @@ const submitRsvp = async () => {
     method: "POST",
     body: {
       title: "this is a test",
-      name: showNumberOfPeopleAndNames.value ? rsvp.value.names : `there's no name`,
-      number_guests: showNumberOfPeopleAndNames.value ? String(rsvp.value.numberOfPeople) : '0',
+      name: showNumberOfPeopleAndNames.value
+        ? rsvp.value.names
+        : `there's no name`,
+      number_guests: showNumberOfPeopleAndNames.value
+        ? String(rsvp.value.numberOfPeople)
+        : "0",
       isattending: rsvp.value.attendence,
     },
     server: false,
@@ -434,6 +459,25 @@ const submitRsvp = async () => {
     rsvpCookie.value = { value: "1" };
     await nextTick();
     confettiExplosion.value = true;
+  }
+};
+
+const sendEmail = async () => {
+  const info = {
+    From: "e-vents@sarpysevents.com",
+    To: "kouyoumdjianmike@gmail.com",
+    Subject: "Test",
+    TextBody: "Hello from Postmark!",
+  };
+  const { data, refresh, error } = useFetch("/api/email", {
+    method: 'POST',
+    body: info,
+  });
+  await refresh();
+  if (error.value){
+    console.error(error.value)
+  } else {
+    console.log(data.value)
   }
 };
 </script>

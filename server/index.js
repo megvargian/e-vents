@@ -1,7 +1,7 @@
 // server/index.js
 const express = require('express');
 const { createServer } = require('http');
-const { saveEvent } = require('./calendar');
+const postmark = require('postmark');
 
 const app = express();
 app.use(function(req, res, next) {
@@ -13,13 +13,14 @@ app.use(function(req, res, next) {
 })
 app.use(express.json());
 
-app.post('/api/save-event', async (req, res) => {
+app.post('/api/email', async (req, res) => {
   try {
-    const eventData = req.body;
-    console.log(req.body) // Make sure to validate and sanitize the data
-    const savedEvent = await saveEvent(eventData);
-    console.log(savedEvent)
-    res.json(savedEvent);
+    const emailData = req.body;
+    const client = new postmark.ServerClient("c42bff0c-d914-4427-8b33-4aac648e2c83");
+    console.log(emailData)
+    const result = await client.sendEmail(emailData);
+    console.log(result)
+    res.json(200);
   } catch (err) {
     console.log(err)
     res.status(500).json({ error: 'Internal Server Error Something is wrong', statusMessage: 'test error' });

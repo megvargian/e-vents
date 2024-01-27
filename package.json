@@ -30,6 +30,7 @@
     "gsap": "^3.12.2",
     "netlify-cli": "^17.10.1",
     "nuxt-swiper": "^1.2.2",
+    "postmark": "^4.0.2",
     "react-tsparticles": "^2.12.2",
     "swiper": "^11.0.5",
     "tsparticles": "^2.12.0",
