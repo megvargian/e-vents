@@ -32,7 +32,7 @@
 }
 
 .full-custom-height {
-  height: 100vh;
+  height: 100dvh;
   max-width: 500px;
 }
 .typing {
@@ -249,7 +249,7 @@ section#sec_story .story_slide.helperSlide {
 
 @media (max-width: 600px) {
   .full-custom-height {
-    max-height: calc(100vh - 56px);
+    max-height: 100dvh;
     width: 100%;
     overflow: hidden;
   }
@@ -288,7 +288,7 @@ section#sec_story .story_slide.helperSlide {
 
 @media (max-height: 700px) {
   .full-custom-height {
-    max-height: calc(100vh - 80px);
+    max-height: 100dvh;
     width: 100%;
   }
   .custom-buttom{
