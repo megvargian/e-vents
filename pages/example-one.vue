@@ -434,8 +434,8 @@ watch(attendence, (newAttendence) => {
 const submitRsvp = async () => {
   loading.value = true;
   const info = {
-    From: "e-vents@sarpysevents.com",
-    To: "kouyoumdjianmike@gmail.com",
+    From: "sales@e-vents.me",
+    To: "kouyoumdjianmike@gmail.com, chris.m.rammouz@gmail.com",
     Subject: "RSVP from E-vents",
     HtmlBody: `<p>Name/Names: ${showNumberOfPeopleAndNames.value
         ? rsvp.value.names
