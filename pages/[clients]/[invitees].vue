@@ -10,15 +10,15 @@
           <h2
             class="font-amsterdam text-center ssm:text-base msm:text-2xl bg-white add-animation"
           >
-            <span>Dr.</span> <span>Martine</span>
+            <span>Dr. </span><span>{{ firstNameInvitee }}</span>
             <span>
               <p class="font-greatvibe"><br />&<br /></p>
             </span>
-            <span>Mrs. </span><span>Miranda</span> <span>Smith</span>
+            <span>Mrs. </span><span>{{ secondNameInvitee }}</span>
           </h2>
           <img
             class="w-[140px] absolute bottom-10 left-0 z-10"
-            src="../assets/images/car.svg"
+            src="~/assets/images/car.svg"
             alt="car"
           />
           <arrow-right class="absolute bottom-0 left-[43%]" />
@@ -58,7 +58,7 @@
           </h1>
           <img
             class="w-[140px] absolute left-40 z-10 custom-buttom"
-            src="../assets/images/car.svg"
+            src="~/assets/images/car.svg"
             alt="car"
           />
           <arrow-right class="absolute bottom-0 left-[43%]" />
@@ -80,7 +80,7 @@
           <div class="relative w-full h-[19rem]">
             <img
               class="w-full custom-church-height"
-              src="../assets/images/church.svg"
+              src="~/assets/images/church.svg"
               alt="church"
             />
             <p
@@ -91,7 +91,7 @@
           </div>
           <img
             class="w-[140px] absolute bottom-[30%] left-[50%] z-10"
-            src="../assets/images/car.svg"
+            src="~/assets/images/car.svg"
             alt="car"
           />
           <arrow-right class="absolute bottom-4 left-[43%]" />
@@ -132,7 +132,7 @@
           >
           <img
             class="w-100 h-100 custom-padding ssm:pt-28"
-            src="../assets/images/venue.png"
+            src="~/assets/images/venue.png"
             alt="venue"
           />
           <arrow-right class="absolute bottom-4 left-[43%]" />
@@ -154,7 +154,7 @@
           <div class="flex align-middle justify-center items-center pt-32">
             <img
               class="ssm:w-28 msm:w-32 ssm:w-28 msm:h-32"
-              src="../assets/images/whish.svg"
+              src="~/assets/images/whish.svg"
               alt="whish"
             />
             <h3
@@ -166,7 +166,7 @@
           </div>
           <img
             class="w-[140px] absolute custom-buttom left-40 z-10"
-            src="../assets/images/car.svg"
+            src="~/assets/images/car.svg"
             alt="car"
           />
           <arrow-right class="absolute bottom-4 left-[43%]" />
@@ -270,10 +270,12 @@
                       v-model="rsvp.numberOfPeople"
                       :disabled="!showNumberOfPeopleAndNames"
                     >
-                      <option value="1" selected>1</option>
-                      <option value="2">2</option>
-                      <option value="3">3</option>
-                      <option value="4">4</option>
+                    <option v-for = "people in numberOfPeople"
+                        :value = "people"
+                        :selected = "people === 1"
+                    >
+                        {{ people }}
+                    </option>
                     </select>
                     <div
                       class="absolute inset-y-0 right-2 flex items-center px-2 pointer-events-none w-10"
@@ -290,7 +292,7 @@
                   >
                     <img
                       v-if="loading"
-                      src="../assets/images/loading.svg"
+                      src="~/assets/images/loading.svg"
                       class="animate-spin loading-spinner w-6 h-6 flex m-auto"
                       alt="loading"
                     />
@@ -373,7 +375,7 @@
           </div>
           <img
             class="w-full h-[25rem] absolute left-[20%] custom-last-page-buttom z-10"
-            src="../assets/images/vacation.svg"
+            src="~/assets/images/vacation.svg"
             alt="vacation"
           />
           <div
@@ -389,6 +391,13 @@
 <script setup lang="ts">
 import ConfettiExplosion from "vue-confetti-explosion";
 
+const route = useRoute();
+const invitees = route.params.invitees;
+const arrayOfInveitee = route.params.invitees.split('and');
+const firstNameInvitee = arrayOfInveitee [0];
+const secondNameInvitee = arrayOfInveitee [1];
+const numberOfPeople = Number(route.query.numberOfPeople);
+console.log(numberOfPeople);
 const swiperOprions = {
   slidesPerView: 1,
   spaceBetween: 0,
@@ -412,13 +421,13 @@ const rsvpCookie = useCookie<{ value: string }>("0");
 const alreadySubmited = ref(false);
 const showNumberOfPeopleAndNames = ref(false);
 const confettiExplosion = ref(false);
-const googleCalendarExample =
-  ref(`https://calendar.google.com/calendar/render?action=TEMPLATE
-      &dates=20220112T180000Z%2F20220112T200000Z
-      &details=Looking%20Forword%20to%20see%20you%20at%20the%20Wedding%20and%20how%20to%20access%20the%20fast%20lane.
-      %0A%0Ahttps%3A%2F%2Fen.wikipedia.org%2Fwiki%2FGridlock_%28Doctor_Who%29
-      &location=New%20Earth
-      &text=Jim%20&%20Kathy%20Wedding`);
+// const googleCalendarExample =
+//   ref(`https://calendar.google.com/calendar/render?action=TEMPLATE
+//       &dates=20220112T180000Z%2F20220112T200000Z
+//       &details=Looking%20Forword%20to%20see%20you%20at%20the%20Wedding%20and%20how%20to%20access%20the%20fast%20lane.
+//       %0A%0Ahttps%3A%2F%2Fen.wikipedia.org%2Fwiki%2FGridlock_%28Doctor_Who%29
+//       &location=New%20Earth
+//       &text=Jim%20&%20Kathy%20Wedding`);
 const googleCalendar =
   ref(`https://calendar.google.com/calendar/render?action=TEMPLATE&dates=20220112T180000Z%2F20220112T200000Z&details=Looking%20forward%20to%20seeing%20you%20at%20the%20wedding!&location=New%20Earth&text=Jim%20And%20Kathy%20Wedding`);
 onMounted(() => {

@@ -1,11 +1,11 @@
 <template>
   <div>
     <TheHeader />
-    <div class="grid gap-8 grid-cols-1 lg:grid-cols-3 p-6">
+    <!-- <div class="grid gap-8 grid-cols-1 lg:grid-cols-3 p-6">
       <Post v-for="post in data" :key="post.uri" :post="post"></Post>
-    </div>
+    </div> -->
     <div class="grid gap-8 grid-cols-1 lg:grid-cols-3 p-6">
-      <NuxtLink
+      <!-- <NuxtLink
         to="/particles"
         class="flex items-center bg-gradient-to-r from-cyan-500 to-blue-500 p-8 rounded-lg text-white transition-all hover:-translate-y-1 hover:scale-105"
       >
@@ -28,7 +28,7 @@
         class="flex items-center bg-gradient-to-r from-cyan-500 to-blue-500 p-8 rounded-lg text-white transition-all hover:-translate-y-1 hover:scale-105"
       >
         See test gsap
-      </NuxtLink>
+      </NuxtLink> -->
       <NuxtLink
         to="/example-one"
         class="flex items-center bg-gradient-to-r from-cyan-500 to-blue-500 p-8 rounded-lg text-white transition-all hover:-translate-y-1 hover:scale-105"
