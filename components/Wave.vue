@@ -4,6 +4,7 @@
     :class="props.class"
   >
     <svg
+      class="wave"
       viewBox="0 0 500 150"
       preserveAspectRatio="none"
       style="height: 100%; width: 100%"
