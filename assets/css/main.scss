@@ -30,6 +30,27 @@
   font-weight: normal;
   font-style: normal;
 }
+@font-face {
+  font-family: "arapey-italic";
+  src: url("../fonts/arapey-italic.woff2") format("woff2"),
+    url("../fonts/arapey-italic.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "arapey-regular";
+  src: url("../fonts/arapey-regular.woff2") format("woff2"),
+    url("../fonts/arapey-regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "roxborough";
+  src: url("../fonts/roxborough-cf.woff2") format("woff2"),
+    url("../fonts/roxborough-cf.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
 
 .full-custom-height {
   height: 100dvh;
@@ -245,6 +266,12 @@ section#sec_story .story_slide.helperSlide {
 }
 .custom-last-page-height{
   height: 15rem;
+}
+.example-two{
+  font-family: 'roxborough', sans-serif;
+}
+.example-two span{
+  font-family: 'arapey-italic', sans-serif;
 }
 
 @media (max-width: 600px) {

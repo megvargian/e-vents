@@ -37,7 +37,7 @@ if (process.client) {
   //   // },
   // });
   gsap.to(".car", {
-    x: 0,
+    x: -100,
     y: 100,
     yPercent: -130,
     duration: 11,
