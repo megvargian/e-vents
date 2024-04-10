@@ -5,14 +5,25 @@
     <Swiper class="mainSwiper" :options="swiperOprions">
       <SwiperSlide>
         <div
-          class="page-start h-full w-full relative items-center flex justify-center"
+          class="page-start h-full w-full relative flex items-center justify-start"
         >
-          <img
-            class="absolute top-0 w-full h-auto left-0"
-            src="../assets/images/curtains-slide-1.svg"
-            alt="certains-slide-1"
-          />
-          <h1 class="w-full pl-5 text-left text-[5rem] leading-none">Welcome<br />to our <br /><span class="text-[#9D2A31]">love</span><br />story</h1>
+            <img
+              class="absolute top-0 w-full h-auto left-0"
+              src="../assets/images/mohammad-rawan/curtains-slide-1.svg"
+              alt="certains-slide-1"
+            />
+            <div class="block">
+              <h1 class="w-full pl-10 text-left text-[3.5rem] leading-none">Welcome<br />to our <br /><span class="text-[#9D2A31]">love</span><br />story</h1>
+            </div>
+            <div class="block absolute bottom-40 ssm:bottom-[12rem] msm:bottom-[15rem] lsm:bottom-60 right-0 pr-5">
+              <p class="text-[12px]">Swipe for more details</p>
+              <img class="w-[50px] h-[20px] float-right" src="../assets/images/mohammad-rawan/arrow-right-cropped.svg">
+            </div>
+            <img
+              class="absolute bottom-0 w-full h-auto left-0"
+              src="../assets/images/mohammad-rawan/bottom-background-1.svg"
+              alt="certains-slide-1"
+            />
         </div>
       </SwiperSlide>
       <SwiperSlide>
