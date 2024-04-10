@@ -51,10 +51,26 @@
   font-weight: normal;
   font-style: normal;
 }
+@font-face {
+  font-family: "modernline";
+  src: url("../fonts/modernline.OTF") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "modernline-bold";
+  src: url("../fonts/modernline-bold.OTF") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
 
 .full-custom-height {
   height: 100dvh;
   max-width: 500px;
+}
+.example-two.full-custom-height {
+  height: 100dvh;
+  max-width: 420px;
 }
 .typing {
   h6{
@@ -271,7 +287,13 @@ section#sec_story .story_slide.helperSlide {
   font-family: 'roxborough', sans-serif;
 }
 .example-two span{
-  font-family: 'arapey-italic', sans-serif;
+  font-family: 'modernline', sans-serif;
+}
+.set-moderline{
+  font-family: 'modernline', sans-serif;
+}
+.set-moderline-bold{
+  font-family: 'modernline-bold', sans-serif;
 }
 
 @media (max-width: 600px) {

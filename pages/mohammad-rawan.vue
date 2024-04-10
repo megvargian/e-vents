@@ -7,28 +7,57 @@
         <div
           class="page-start h-full w-full relative flex items-center justify-start"
         >
+          <img
+            class="absolute top-0 w-full h-auto left-0"
+            src="../assets/images/mohammad-rawan/curtains-slide-1.svg"
+            alt="certains-slide-1"
+          />
+          <div class="block">
+            <h1 class="w-full pl-10 text-left text-[3.5rem] leading-none">
+              Welcome<br />to our <br /><p class="text-[#9D2A31] set-moderline my-1 mt-5">love</p>story
+            </h1>
+          </div>
+          <div
+            class="block absolute bottom-[10.5rem] msm:bottom-[12rem] right-0 pr-5"
+          >
+            <p class="text-[12px]">Swipe for more details</p>
             <img
-              class="absolute top-0 w-full h-auto left-0"
-              src="../assets/images/mohammad-rawan/curtains-slide-1.svg"
-              alt="certains-slide-1"
+              class="w-[50px] h-[20px] float-right"
+              src="../assets/images/mohammad-rawan/arrow-right-cropped.svg"
             />
-            <div class="block">
-              <h1 class="w-full pl-10 text-left text-[3.5rem] leading-none">Welcome<br />to our <br /><span class="text-[#9D2A31]">love</span><br />story</h1>
-            </div>
-            <div class="block absolute bottom-40 ssm:bottom-[12rem] msm:bottom-[15rem] lsm:bottom-60 right-0 pr-5">
-              <p class="text-[12px]">Swipe for more details</p>
-              <img class="w-[50px] h-[20px] float-right" src="../assets/images/mohammad-rawan/arrow-right-cropped.svg">
-            </div>
-            <img
-              class="absolute bottom-0 w-full h-auto left-0"
-              src="../assets/images/mohammad-rawan/bottom-background-1.svg"
-              alt="certains-slide-1"
-            />
+          </div>
+          <img
+            class="absolute bottom-0 w-full h-auto left-0"
+            src="../assets/images/mohammad-rawan/bottom-background-1.svg"
+            alt="certains-slide-1"
+          />
         </div>
       </SwiperSlide>
       <SwiperSlide>
-        <div class="page-start h-full w-full relative">
-          <h1>second page</h1>
+        <div class="page-start h-full w-full relative flex items-center justify-center">
+          <img
+            class="absolute top-0 w-full h-auto left-0"
+            src="../assets/images/mohammad-rawan/curtains-slide-2.svg"
+            alt="certains-slide-2"
+          />
+          <div class="grid grid-cols-1 grid-rows-1 gap-2">
+            <h1 class="text-center set-moderline-bold text-[3rem]" style="line-height: 1.3;">
+              Mohammad <br/>
+              <span class="text-[#9D2A31]">and</span> <br />
+              Rawan
+            </h1>
+            <p class="text-center mb-4 pt-7">are getting married on</p>
+            <p class="text-center set-moderline font-bold text-[2rem]">29 June 2024</p>
+          </div>
+          <img
+            class="absolute bottom-[7.8rem] w-[7rem] h-auto right-0 z-10"
+            src="../assets/images/mohammad-rawan/train-1.svg"
+          >
+          <img
+            class="absolute bottom-0 w-full left-0"
+            src="../assets/images/mohammad-rawan/bottom-background-2.svg"
+            alt="bottom-background-2"
+          >
         </div>
       </SwiperSlide>
       <SwiperSlide>
@@ -114,7 +143,12 @@
                       v-model="rsvp.numberOfPeople"
                       :disabled="!showNumberOfPeopleAndNames"
                     >
-                      <option v-for="numbers in numberOfPeopleSet" :value="numbers">{{ numbers }}</option>
+                      <option
+                        v-for="numbers in numberOfPeopleSet"
+                        :value="numbers"
+                      >
+                        {{ numbers }}
+                      </option>
                     </select>
                     <div
                       class="absolute inset-y-0 right-2 flex items-center px-2 pointer-events-none w-10"
@@ -219,7 +253,7 @@ const googleCalendar = ref(
   `https://www.google.com/calendar/render?action=TEMPLATE&text=Mohammad%20And%20Rawan's%20Wedding&dates=20240629T163000Z/20240629T230000Z&details=Let's%20toast%20to%20love%20,%20laughter%20,%20and%20happily%20ever%20after%20!%20&location=%20The%20villa%20,%20WHPR+QJH%20,%20Dbaye%20,%20Lebanon&sf=true&output=xml`
 );
 onMounted(() => {
-  console.log(numberOfPeopleSet)
+  console.log(numberOfPeopleSet);
   if (rsvpCookie.value) {
     if (rsvpCookie.value.value === "1") {
       alreadySubmited.value = true;
