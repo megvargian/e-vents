@@ -25,6 +25,7 @@
     "@googleapis/calendar": "^9.4.0",
     "@nuxtjs/tailwindcss": "^6.8.0",
     "convert-excel-to-json": "^1.7.0",
+    "copy-to-clipboard": "^3.3.3",
     "express": "^4.18.2",
     "fs": "^0.0.1-security",
     "google-auth-library": "^9.4.1",
