@@ -148,7 +148,7 @@
             <a
               target="_blank"
               rel="noopener"
-              :href="googleCalendar"
+              href="https://www.google.com/maps/dir//WHPR%2BQJH,+Dbaye/@33.9369145,35.509223,12z/data=!4m8!4m7!1m0!1m5!1m1!1s0x151f3e4ba18470d1:0xfc7daaa40c837989!2m2!1d35.5916242!2d33.9369419?entry=ttu"
               class="set-arapey-regular text-[20px] text-center text-white bg-[#66c1e8] rounded-full py-2 px-10"
             >
               Add to Calendar
@@ -223,7 +223,7 @@
             >
           </div>
           <div
-            class="rsvpMain row-span-4"
+            class="rsvpMain row-span-4 z-10"
             :class="[
               alreadySubmited ? 'hidden' : '',
               transition ? ' page-enter-from hidden' : '',
@@ -444,7 +444,6 @@ const loading = ref(false);
 const transition = ref(false);
 const rsvpCookie = useCookie<{ value: string }>("0");
 const alreadySubmited = ref(false);
-// const showNumberOfPeopleAndNames = ref(false);
 const confettiExplosion = ref(false);
 const googleCalendar = ref(
   `https://www.google.com/calendar/render?action=TEMPLATE&text=Mohammad%20And%20Rawan's%20Wedding&dates=20240629T163000Z/20240629T230000Z&details=Let's%20toast%20to%20love%20,%20laughter%20,%20and%20happily%20ever%20after%20!%20&location=%20The%20villa%20,%20WHPR+QJH%20,%20Dbaye%20,%20Lebanon&sf=true&output=xml`
@@ -460,14 +459,6 @@ onMounted(() => {
     transition.value = true;
   }
 });
-
-// watch(attendence, (newAttendence) => {
-//   if (newAttendence === "yes") {
-//     showNumberOfPeopleAndNames.value = true;
-//   } else {
-//     showNumberOfPeopleAndNames.value = false;
-//   }
-// });
 
 const submitRsvp = async () => {
   loading.value = true;
