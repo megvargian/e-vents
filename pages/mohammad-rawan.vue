@@ -240,7 +240,7 @@
                     >Name(s)</label
                   >
                   <input
-                    class="rounded-[30px] font-peaxBold text-[#707070] ssm:text-base msm:text-xl ssm:py-2 msm:py-3 ssm:px-3 msm:px-5 custom-input-padding w-full border border-solid border-gray-700"
+                    class="rounded-[30px] text-[#707070] ssm:text-base msm:text-xl ssm:py-2 msm:py-3 ssm:px-3 msm:px-5 custom-input-padding w-full border border-solid border-gray-700"
                     type="text"
                     v-model="rsvp.names"
                   />
@@ -253,7 +253,7 @@
                   >
                   <div class="relative">
                     <select
-                      class="appearance-none rounded-[30px] font-peaxBold text-[#707070] ssm:text-base msm:text-xl ssm:py-2 msm:py-3 ssm:px-3 msm:px-5 custom-input-padding w-full border border-solid border-gray-700 bg-transparent outline-none focus:outline-none"
+                      class="appearance-none rounded-[30px] text-[#707070] ssm:text-base msm:text-xl ssm:py-2 msm:py-3 ssm:px-3 msm:px-5 custom-input-padding w-full border border-solid border-gray-700 bg-transparent outline-none focus:outline-none"
                       v-model="rsvp.numberOfPeople"
                     >
                       <option
@@ -278,7 +278,7 @@
                   >
                   <div class="relative">
                     <select
-                      class="appearance-none rounded-[30px] font-peaxBold text-[#707070] ssm:text-base msm:text-xl ssm:py-2 msm:py-3 ssm:px-3 msm:px-5 custom-input-padding w-full border border-solid border-gray-700 bg-transparent"
+                      class="appearance-none rounded-[30px] text-[#707070] ssm:text-base msm:text-xl ssm:py-2 msm:py-3 ssm:px-3 msm:px-5 custom-input-padding w-full border border-solid border-gray-700 bg-transparent"
                       id="attendence"
                       required
                       v-model="attendence"
@@ -295,7 +295,7 @@
                 </div>
                 <div>
                   <button
-                    class="font-peaxBold ssm:text-base msm:text-2xl text-center text-white mt-5 bg-[#66c1e8] flex justify-center mx-auto rounded-[30px] w-56 py-2"
+                    class="ssm:text-base msm:text-2xl text-center text-white mt-5 bg-[#66c1e8] flex justify-center mx-auto rounded-[30px] w-56 py-2"
                     :disabled="loading"
                     type="submit"
                   >
@@ -318,7 +318,7 @@
               ]"
             >
               <div class="flex justify-center align-middle mt-4 mb-5">
-                <h3 class="font-peaxBold text-3xl text-center pt-12">
+                <h3 class="text-3xl text-center pt-12">
                   Thank you <br />
                 </h3>
               </div>
