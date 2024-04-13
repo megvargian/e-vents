@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="28" height="28" viewBox="0 0 28 28">
+  <defs>
+    <filter id="Ellipse_1" x="0" y="0" width="28" height="28" filterUnits="userSpaceOnUse">
+      <feOffset dx="1" dy="1" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="0.5" result="blur"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="Group_5983" data-name="Group 5983" transform="translate(-221.5 -462.5)">
+    <g transform="matrix(1, 0, 0, 1, 221.5, 462.5)" filter="url(#Ellipse_1)">
+      <circle id="Ellipse_1-2" data-name="Ellipse 1" cx="12.5" cy="12.5" r="12.5" transform="translate(0.5 0.5)" fill="#879b5e"/>
+    </g>
+    <g id="copy-svgrepo-com" transform="translate(226.474 467.801)">
+      <path id="Path_9274" data-name="Path 9274" d="M14.96,6.706A1.706,1.706,0,0,0,13.254,5H8.706A1.706,1.706,0,0,0,7,6.706v6.823a1.706,1.706,0,0,0,1.706,1.706h4.548a1.706,1.706,0,0,0,1.706-1.706Zm-1.137,0a.569.569,0,0,0-.569-.569H8.706a.569.569,0,0,0-.569.569v6.823a.569.569,0,0,0,.569.569h4.548a.569.569,0,0,0,.569-.569Z" transform="translate(-1.726 -1.726)" fill="#fff" fill-rule="evenodd"/>
+      <path id="Path_9275" data-name="Path 9275" d="M4.706,2.137h5.686a.569.569,0,0,0,0-1.137H4.706A1.706,1.706,0,0,0,3,2.706v7.96a.569.569,0,1,0,1.137,0V2.706A.569.569,0,0,1,4.706,2.137Z" fill="#fff"/>
+    </g>
+  </g>
+</svg>
