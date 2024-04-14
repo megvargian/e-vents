@@ -51,7 +51,7 @@
           </div>
           <div class="relative">
             <img
-              class="absolute bottom-[8.8rem] w-[7rem] h-auto right-0 z-10 custom-train-slide-2"
+              class="absolute bottom-[7.8rem] w-[7rem] h-auto right-0 z-10 custom-train-slide-2"
               src="../assets/images/mohammad-rawan/train-1.svg"
             >
             <img
@@ -79,12 +79,12 @@
           </div>
           <div class="relative row-span-2">
             <img
-              class="absolute right-0 bottom-[7.7rem] w-[17.5rem] h-auto z-10 custom-train-station-slide-3"
+              class="absolute right-0 bottom-[7.7rem] w-[15.1rem] h-auto z-10 custom-train-station-slide-3"
               src="../assets/images/mohammad-rawan/train-station-screen-2.svg"
               alt="train-station-screen-2"
             >
             <img
-              class="absolute left-0 bottom-[8.8rem] w-[12.4rem] h-auto z-10 custom-train-slide-3"
+              class="absolute left-0 bottom-[7.8rem] w-[12.4rem] h-auto z-10 custom-train-slide-3"
               src="../assets/images/mohammad-rawan/train-screen-2.svg"
               alt="train-screen-2"
             >
@@ -135,7 +135,7 @@
               class="w-full h-full"
               src="../assets/images/mohammad-rawan/calendar.svg"
               alt="calendar">
-            <span class="pulse absolute right-[13.8%] bottom-[1%] msm:right-[13.3%]">
+            <span class="pulse absolute right-[13.5%] bottom-[1%] msm:right-[13.3%]">
               <img
                 class="color_o msm:w-10 msm:h-10 ssm:w-8 ssm:h-8"
                 src="../assets/images/mohammad-rawan/main-calendar-heart.svg"
@@ -143,19 +143,19 @@
               >
             </span>
           </div>
-          <div class="justify-center flex items-center custom-time-slide-6 pt-5" style="height: fit-content;">
+          <div class="justify-center flex items-center custom-time-slide-6 pt-7" style="height: fit-content;">
             <img
               src="../assets/images/mohammad-rawan/seven-oclock.svg"
               class="w-7 mr-4"
               alt="seven-oclock"
             >
-            <span class="text-[#9D2A31] text-[25px]">7:30 p.m</span>
+            <span class="text-[#9D2A31] text-[25px]">7:00 p.m</span>
           </div>
           <div class="justify-center flex items-center custom-bottom-slide-5" style="height: fit-content;">
             <a
               target="_blank"
               rel="noopener"
-              href="https://www.google.com/maps/dir//WHPR%2BQJH,+Dbaye/@33.9369145,35.509223,12z/data=!4m8!4m7!1m0!1m5!1m1!1s0x151f3e4ba18470d1:0xfc7daaa40c837989!2m2!1d35.5916242!2d33.9369419?entry=ttu"
+              :href="googleCalendar"
               class="set-arapey-regular text-[20px] text-center text-white bg-[#66c1e8] rounded-full py-2 px-10 z-10"
             >
               Add to Calendar
@@ -195,7 +195,7 @@
             <a
               target="_blank"
               rel="noopener"
-              :href="googleCalendar"
+              href="https://www.google.com/maps/dir//WHPR%2BQJH,+Dbaye/@33.9369145,35.509223,12z/data=!4m8!4m7!1m0!1m5!1m1!1s0x151f3e4ba18470d1:0xfc7daaa40c837989!2m2!1d35.5916242!2d33.9369419?entry=ttu"
               class="set-arapey-regular text-[20px] text-center text-white bg-[#66c1e8] rounded-full py-2 px-[4rem] custom-button-slide-6"
             >
               View on map
@@ -385,7 +385,7 @@
           </div>
           <div class="relative row-span-2">
             <img
-              class="absolute bottom-[8.8rem] z-10 right-[4rem] w-[4rem] couple-slide-8"
+              class="absolute bottom-[7.8rem] z-10 right-[4rem] w-[4rem] couple-slide-8"
               src="../assets/images/mohammad-rawan/couple-screen-7.svg">
             <img
               class="w-full bottom-0 fixed"
@@ -413,7 +413,7 @@
           </div>
           <div class="relative">
             <img
-              class="w-[15rem] absolute right-[1rem] z-10 bottom-[7.8rem] custom-trail-slide-9"
+              class="w-[15rem] absolute right-[1rem] z-10 bottom-[6.8rem] custom-trail-slide-9"
               src="../assets/images/mohammad-rawan/train-screen-9.svg"
               alt="train-screen-9"
             >
@@ -459,7 +459,7 @@ const rsvpCookie = useCookie<{ value: string }>("0");
 const alreadySubmited = ref(false);
 const confettiExplosion = ref(false);
 const googleCalendar = ref(
-  `https://www.google.com/calendar/render?action=TEMPLATE&text=Mohammad%20And%20Rawan's%20Wedding&dates=20240629T163000Z/20240629T230000Z&details=Let's%20toast%20to%20love%20,%20laughter%20,%20and%20happily%20ever%20after%20!%20&location=%20The%20villa%20,%20WHPR+QJH%20,%20Dbaye%20,%20Lebanon&sf=true&output=xml`
+  `https://www.google.com/calendar/render?action=TEMPLATE&text=Mohammad%20And%20Rawan's%20Wedding&dates=20240629T160000Z/20240629T230000Z&details=Let's%20toast%20to%20love%20,%20laughter%20,%20and%20happily%20ever%20after%20!%20&location=%20The%20villa%20,%20WHPR+QJH%20,%20Dbaye%20,%20Lebanon&sf=true&output=xml`
 );
 onMounted(() => {
   console.log(numberOfPeopleSet);
