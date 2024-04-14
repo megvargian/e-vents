@@ -263,6 +263,35 @@ section#sec_story .story_slide.helperSlide {
   }
 }
 
+@keyframes fa-beat {
+  0% {
+    transform: scale(1);
+  }
+  5% {
+      transform: scale(1.25);
+  }
+  20% {
+      transform: scale(1.15);
+  }
+  30% {
+      transform: scale(1.8);
+  }
+  45% {
+      transform: scale(1);
+  }
+  100% {
+      transform: scale(1);
+  }
+}
+.pulse{
+  animation: fa-beat 1.2s ease infinite;
+  padding: 0 5px;
+  color: #9D2A31;
+  z-index: -1;
+}
+.color_o{
+  color: #9D2A31;
+}
 // custom classes for desktop
 
 .custom-buttom{
@@ -300,6 +329,9 @@ section#sec_story .story_slide.helperSlide {
 }
 .set-roxborough{
   font-family: 'roxborough', sans-serif !important;
+}
+.text31382{
+  font-family: 'modernline-bold', sans-serif !important;
 }
 
 @media (max-width: 600px) {

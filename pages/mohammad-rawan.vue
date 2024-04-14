@@ -51,7 +51,7 @@
           </div>
           <div class="relative">
             <img
-              class="absolute bottom-[7.8rem] w-[7rem] h-auto right-0 z-10 custom-train-slide-2"
+              class="absolute bottom-[8.8rem] w-[7rem] h-auto right-0 z-10 custom-train-slide-2"
               src="../assets/images/mohammad-rawan/train-1.svg"
             >
             <img
@@ -79,12 +79,12 @@
           </div>
           <div class="relative row-span-2">
             <img
-              class="absolute right-0 bottom-[7.7rem] w-[15.1rem] h-auto z-10 custom-train-station-slide-3"
+              class="absolute right-0 bottom-[7.7rem] w-[17.5rem] h-auto z-10 custom-train-station-slide-3"
               src="../assets/images/mohammad-rawan/train-station-screen-2.svg"
               alt="train-station-screen-2"
             >
             <img
-              class="absolute left-0 bottom-[7.7rem] w-[12.4rem] h-auto z-10 custom-train-slide-3"
+              class="absolute left-0 bottom-[8.8rem] w-[12.4rem] h-auto z-10 custom-train-slide-3"
               src="../assets/images/mohammad-rawan/train-screen-2.svg"
               alt="train-screen-2"
             >
@@ -129,19 +129,27 @@
               alt="curtains-slide-3"
             >
           </div>
-          <div class="mx-10 row-span-2" style="height: fit-content;">
+          <div class="mx-10 row-span-2 relative" style="height: fit-content;">
+            <h1 class="set-moderline-bold text-[2rem] text-center text-[#9D2A31] absolute top-[5%] left-[38%]">June</h1>
             <img
-              class="w-full"
+              class="w-full h-full"
               src="../assets/images/mohammad-rawan/calendar.svg"
               alt="calendar">
+            <span class="pulse absolute right-[13.8%] bottom-[1%] msm:right-[13.3%]">
+              <img
+                class="color_o msm:w-10 msm:h-10 ssm:w-8 ssm:h-8"
+                src="../assets/images/mohammad-rawan/main-calendar-heart.svg"
+                alt="main-calendar-heart"
+              >
+            </span>
           </div>
-          <div class="justify-center flex items-center custom-time-slide-6" style="height: fit-content;">
+          <div class="justify-center flex items-center custom-time-slide-6 pt-5" style="height: fit-content;">
             <img
               src="../assets/images/mohammad-rawan/seven-oclock.svg"
-              class="w-8 mr-4"
+              class="w-7 mr-4"
               alt="seven-oclock"
             >
-            <span class="text-[#9D2A31] text-[30px]">7:30 p.m</span>
+            <span class="text-[#9D2A31] text-[25px]">7:30 p.m</span>
           </div>
           <div class="justify-center flex items-center custom-bottom-slide-5" style="height: fit-content;">
             <a
@@ -183,7 +191,7 @@
               src="../assets/images/mohammad-rawan/villa-vennue.svg"
               alt="villa-vennue">
           </div>
-          <div class="justify-center flex items-center">
+          <div class="justify-center flex items-center pt-3">
             <a
               target="_blank"
               rel="noopener"
@@ -377,7 +385,7 @@
           </div>
           <div class="relative row-span-2">
             <img
-              class="absolute bottom-[7.7rem] z-10 right-[4rem] w-[4rem] couple-slide-8"
+              class="absolute bottom-[8.8rem] z-10 right-[4rem] w-[4rem] couple-slide-8"
               src="../assets/images/mohammad-rawan/couple-screen-7.svg">
             <img
               class="w-full bottom-0 fixed"
@@ -405,7 +413,7 @@
           </div>
           <div class="relative">
             <img
-              class="w-[15rem] absolute right-[1rem] z-10 bottom-[6.8rem] custom-trail-slide-9"
+              class="w-[15rem] absolute right-[1rem] z-10 bottom-[7.8rem] custom-trail-slide-9"
               src="../assets/images/mohammad-rawan/train-screen-9.svg"
               alt="train-screen-9"
             >
