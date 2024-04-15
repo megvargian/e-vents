@@ -14,7 +14,7 @@
           />
           <div class="block">
             <h1 class="w-full pl-10 text-left text-[3.5rem] leading-none custom-title-slide-1">
-              Welcome<br />to our <br /><p class="text-[#9D2A31] set-moderline my-1 mt-5">love</p>story
+              Welcome<br />to our <br /><p class="text-[#9D2A31] set-moderline font-bold my-1 mt-5">love</p>story
             </h1>
           </div>
           <div
@@ -27,7 +27,7 @@
             />
           </div>
           <img
-            class="absolute bottom-0 w-full h-auto left-0"
+            class="absolute bottom-0 cutom-bottom w-full h-auto left-0"
             src="../assets/images/mohammad-rawan/bottom-background-1.svg"
             alt="certains-slide-1"
           />
@@ -51,11 +51,7 @@
           </div>
           <div class="relative">
             <img
-              class="absolute bottom-[7.8rem] w-[7rem] h-auto right-0 z-10 custom-train-slide-2"
-              src="../assets/images/mohammad-rawan/train-1.svg"
-            >
-            <img
-              class="w-full bottom-0 fixed"
+              class="w-full bottom-0 cutom-bottom fixed"
               src="../assets/images/mohammad-rawan/bottom-background-2.svg"
               alt="bottom-background-2"
             >
@@ -75,21 +71,11 @@
               src="../assets/images/mohammad-rawan/cloud.svg"
               alt="cloud"
             >
-            <p class="text-center text-[1.5rem] custom-text-slide-3">We're delighted to invite you <br> to our wedding as we dance <br> our way into <span class="text-[#9D2A31] pl-2">forever</span></p>
+            <p class="text-center text-[1.5rem] custom-text-slide-3">We're delighted to invite you <br> to our wedding as we dance <br> our way into <span class="text-[#9D2A31] pl-2 font-bold">forever</span></p>
           </div>
           <div class="relative row-span-2">
             <img
-              class="absolute right-0 bottom-[7.7rem] w-[15.1rem] h-auto z-10 custom-train-station-slide-3"
-              src="../assets/images/mohammad-rawan/train-station-screen-2.svg"
-              alt="train-station-screen-2"
-            >
-            <img
-              class="absolute left-0 bottom-[7.8rem] w-[12.4rem] h-auto z-10 custom-train-slide-3"
-              src="../assets/images/mohammad-rawan/train-screen-2.svg"
-              alt="train-screen-2"
-            >
-            <img
-              class="w-full bottom-0 fixed"
+              class="w-full bottom-0 cutom-bottom fixed"
               src="../assets/images/mohammad-rawan/bottom-background-3.svg"
               alt="bottom-background-3"
             >
@@ -104,16 +90,11 @@
               src="../assets/images/mohammad-rawan/curtains-slide-4.svg"
               alt="curtains-slide-3"
             >
-            <p class="text-center text-[2rem] custom-title-slide-4">It all started <br><span class="text-[#9D2A31] pl-2">here</span></p>
+            <p class="text-center text-[2rem] custom-title-slide-4">It all started <br><span class="text-[#9D2A31] font-bold pl-2">here</span></p>
           </div>
           <div class="relative row-span-2">
             <img
-              class="absolute left-0 bottom-[7.7rem] w-full h-auto z-10 custom-train-station-slide-4"
-              src="../assets/images/mohammad-rawan/train-station-screen-3.svg"
-              alt="train-station-slide-4"
-            >
-            <img
-              class="w-full bottom-0 fixed"
+              class="w-full bottom-0 cutom-bottom fixed"
               src="../assets/images/mohammad-rawan/bottom-background-4.svg"
               alt="bottom-background-3"
             >
@@ -130,7 +111,7 @@
             >
           </div>
           <div class="mx-10 row-span-2 relative" style="height: fit-content;">
-            <h1 class="set-moderline-bold text-[2rem] text-center text-[#9D2A31] absolute top-[5%] left-[38%]">June</h1>
+            <h1 class="set-moderline-bold font-bold text-[2rem] text-center text-[#9D2A31] absolute top-[5%] left-[36%]">June</h1>
             <img
               class="w-full h-full"
               src="../assets/images/mohammad-rawan/calendar.svg"
@@ -149,7 +130,7 @@
               class="w-7 mr-4"
               alt="seven-oclock"
             >
-            <span class="text-[#9D2A31] text-[25px]">7:00 p.m</span>
+            <span class="text-[#9D2A31] text-[25px] font-bold">7:00 p.m</span>
           </div>
           <div class="justify-center flex items-center custom-bottom-slide-5" style="height: fit-content;">
             <a
@@ -163,7 +144,7 @@
           </div>
           <div class="relative">
             <img
-              class="w-full bottom-0 fixed"
+              class="w-full bottom-0 cutom-bottom fixed"
               src="../assets/images/mohammad-rawan/bottom-background-5.svg"
               alt="bottom-background-3"
             >
@@ -180,8 +161,8 @@
             >
           </div>
           <div class="text-center row-span-1">
-            <h1 class="set-moderm text-[#9D2A31] text-[1.5rem] set-moderline custom-title-slide-6">
-              The Villa Vennue
+            <h1 class="set-moderm text-[#9D2A31] text-[1.5rem] set-moderline font-bold custom-title-slide-6">
+              The Villa Venue
             </h1>
             <p class="text-black set-arapey-regular text-[1rem] custom-sub-title-slide-6">Dbayeh - Lebanon</p>
           </div>
@@ -203,16 +184,7 @@
           </div>
           <div class="relative row-span-2">
             <img
-              class="absolute bottom-[7.75rem] left-[1.5rem] w-[4.5rem] z-10 custom-couple-slide-6"
-              src="../assets/images/mohammad-rawan/couple-screen-5.svg"
-              alt="couple-screen-5">
-            <img
-              class="absolute bottom-[10rem] left-[0.25rem] w-[4.5rem] custom-tree-slide-6"
-              src="../assets/images/mohammad-rawan/trees-screen-5.svg"
-              alt="trees-screen-5"
-            >
-            <img
-              class="w-full bottom-0 fixed"
+              class="w-full bottom-0 cutom-bottom fixed"
               src="../assets/images/mohammad-rawan/bottom-background-6.svg"
               alt="bottom-background-3"
             >
@@ -238,7 +210,7 @@
                 transition ? ' page-enter-from hidden' : '',
               ]"
             >
-              <h3 class="text-center text-[1.5rem] custom-title-slide-7">Kindly <span class="text-[#9D2A31]">RSVP</span> before June 1</h3>
+              <h3 class="text-center text-[1.5rem] custom-title-slide-7">Kindly <span class="text-[#9D2A31] font-bold">RSVP</span> before June 1</h3>
               <form @submit.prevent="submitRsvp">
                 <div>
                   <label
@@ -336,13 +308,7 @@
           <div class="row-span-2"></div>
           <div class="relative row-span-2">
             <img
-              class="absolute bottom-[8.5rem] z-10 left-[1rem] w-[4rem] custom-tree-slide-7"
-              src="../assets/images/mohammad-rawan/tree-screen-7.svg">
-            <img
-              class="absolute bottom-[11.5rem] right-[4.5rem] w-[5rem] custom-flying-hearts-slide-7"
-              src="../assets/images/mohammad-rawan/flying-hearts-screen-7.svg">
-            <img
-              class="w-full bottom-0 fixed"
+              class="w-full bottom-0 cutom-bottom fixed"
               src="../assets/images/mohammad-rawan/bottom-background-7.svg"
               alt="bottom-background-3"
             >
@@ -374,7 +340,7 @@
               </div>
               <div class="flex justify-between items-center pt-4 text-left col-span-2 custom-sub-text-slide-8">
                 <p class="font-bold">For transfers abroad:</p>
-                <img class="w-[5rem]" src="../assets/images/mohammad-rawan/bank-icon-bnp.svg">
+                <img class="w-[5rem] set-custom-width" src="../assets/images/mohammad-rawan/bank-icon-bnp.svg">
               </div>
               <div class="flex justify-between items-start text-left col-span-2 custom-sub-text-slide-8">
                 <p class="text-[.8rem]">IBAN: LU60 0030 3395 1569 4000 <br> BIC code: BGLLLULL <br> Account holder: <br> M. BADREDDINE MOHAMAD</p>
@@ -385,10 +351,7 @@
           </div>
           <div class="relative row-span-2">
             <img
-              class="absolute bottom-[7.8rem] z-10 right-[4rem] w-[4rem] couple-slide-8"
-              src="../assets/images/mohammad-rawan/couple-screen-7.svg">
-            <img
-              class="w-full bottom-0 fixed"
+              class="w-full bottom-0 cutom-bottom fixed"
               src="../assets/images/mohammad-rawan/bottom-background-8.svg"
               alt="bottom-background-3"
             >
@@ -406,19 +369,14 @@
           </div>
           <div>
             <div class="block">
-              <h1 class="w-full pl-8 text-left text-[3rem] leading-none custom-title-slide-9">
-                <p class="mb-2">Let's toast to</p><p class="text-[#9D2A31] set-moderline inline">love</p>, laughter, <br /> and happily <br /> ever after!
+              <h1 class="w-full pl-8 text-left text-[2.5rem] leading-none custom-title-slide-9">
+                <p class="mb-2">Let's toast to</p><p class="text-[#9D2A31] set-moderline inline font-bold">love</p>, laughter, <br /> and happily <br /> ever after!
               </h1>
             </div>
           </div>
           <div class="relative">
             <img
-              class="w-[15rem] absolute right-[1rem] z-10 bottom-[6.8rem] custom-trail-slide-9"
-              src="../assets/images/mohammad-rawan/train-screen-9.svg"
-              alt="train-screen-9"
-            >
-            <img
-              class="w-full bottom-0 fixed"
+              class="w-full bottom-0 cutom-bottom fixed"
               src="../assets/images/mohammad-rawan/bottom-background-9.svg"
               alt="bottom-background-3"
             >
@@ -431,7 +389,6 @@
 
 <script setup lang="ts">
 import CopyToClipboard from 'copy-to-clipboard';
-import ConfettiExplosion from "vue-confetti-explosion";
 const route = useRoute();
 const numberOfPeopleSet = route.query.numpp ? Number(route.query.numpp) : 4;
 const swiperOprions = {
@@ -457,7 +414,6 @@ const loading = ref(false);
 const transition = ref(false);
 const rsvpCookie = useCookie<{ value: string }>("0");
 const alreadySubmited = ref(false);
-const confettiExplosion = ref(false);
 const googleCalendar = ref(
   `https://www.google.com/calendar/render?action=TEMPLATE&text=Mohammad%20And%20Rawan's%20Wedding&dates=20240629T160000Z/20240629T230000Z&details=Let's%20toast%20to%20love%20,%20laughter%20,%20and%20happily%20ever%20after%20!%20&location=%20The%20villa%20,%20WHPR+QJH%20,%20Dbaye%20,%20Lebanon&sf=true&output=xml`
 );
@@ -523,8 +479,6 @@ const submitRsvp = async () => {
     alreadySubmited.value = true;
     transition.value = true;
     rsvpCookie.value = { value: "1" };
-    await nextTick();
-    confettiExplosion.value = true;
   }
 };
 

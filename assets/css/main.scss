@@ -527,7 +527,10 @@ section#sec_story .story_slide.helperSlide {
       font-size: 0.5rem;
     }
     img{
-      width: 1.7rem;
+      width: 2rem;
+    }
+    .set-custom-width{
+      width: 4rem !important;
     }
   }
   .custom-title-slide-9{
@@ -537,4 +540,10 @@ section#sec_story .story_slide.helperSlide {
     bottom: 5.7rem;
     width: 12rem;
   }
+  .cutom-bottom{
+    bottom: -10% !important;
+  }
+}
+.cutom-bottom{
+  bottom: -8% !important;
 }
