@@ -433,7 +433,7 @@ const submitRsvp = async () => {
   loading.value = true;
   const info = {
     From: "sales@e-vents.me",
-    To: "rawansahily@gmail.com, Mhd.badreddine@gmail.com, kouyoumdjianmike@gmail.com",
+    To: "rawansahily@gmail.com, Mhd.badreddine@gmail.com, kouyoumdjianmike@gmail.com, chris.m.rammouz@gmail.com",
     Subject: "RSVP from E-vents",
     HtmlBody: `<p>Name/Names: ${
       rsvp.value.names ? rsvp.value.names : `there's no name`
