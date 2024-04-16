@@ -111,14 +111,14 @@
             >
           </div>
           <div class="mx-10 row-span-2 relative" style="height: fit-content;">
-            <h1 class="set-moderline-bold font-bold text-[2rem] text-center text-[#9D2A31] absolute top-[5%] left-[36%]">June</h1>
+            <h1 class="set-moderline-bold font-bold  ssm:text-[2rem] msm:text-[2.5rem] text-[1.5rem] text-center text-[#9D2A31] absolute top-[5%] left-[36%]">June</h1>
             <img
               class="w-full h-full"
               src="../assets/images/mohammad-rawan/calendar.svg"
               alt="calendar">
             <span class="pulse absolute right-[13.5%] bottom-[1%] msm:right-[13.3%]">
               <img
-                class="color_o msm:w-10 msm:h-10 ssm:w-8 ssm:h-8"
+                class="color_o msm:w-10 msm:h-10 ssm:w-8 ssm:h-8 w-[1.6rem] h-[1.6rem]"
                 src="../assets/images/mohammad-rawan/main-calendar-heart.svg"
                 alt="main-calendar-heart"
               >
@@ -172,7 +172,7 @@
               src="../assets/images/mohammad-rawan/villa-vennue.svg"
               alt="villa-vennue">
           </div>
-          <div class="justify-center flex items-center pt-3">
+          <div class="text-center flex justify-center items-center pt-5">
             <a
               target="_blank"
               rel="noopener"
@@ -331,20 +331,20 @@
             <div class="grid grid-cols-2 grid-rows-3 gap-2 mx-[3rem]">
               <div class="flex justify-between items-center pt-4 text-left col-span-2 custom-sub-text-slide-8">
                 <p class="font-bold">For transfers within Lebanon:</p>
-                <img class="w-8 ml-2 mr-1" src="../assets/images/whish.svg">
+                <img class="w-10 ml-2 mr-1" src="../assets/images/whish.svg">
               </div>
               <div class="flex justify-between items-center text-left col-span-2 custom-sub-text-slide-8">
                 <p class="text-[.8rem]">Whish account number: <br> 20224125-03</p>
-                <img v-if="!copedTpClipboardWish" @click="copyToClipboardWish" class="w-7 ml-2" src="../assets/images/mohammad-rawan/copy-to-clipboard.svg">
+                <img v-if="!copedTpClipboardWish" @click="copyToClipboardWish" class="w-7 ml-2 cursor-pointer" src="../assets/images/mohammad-rawan/copy-to-clipboard.svg">
                 <img v-else class="w-6 ml-2" src="../assets/images/mohammad-rawan/checkmark.svg">
               </div>
               <div class="flex justify-between items-center pt-4 text-left col-span-2 custom-sub-text-slide-8">
                 <p class="font-bold">For transfers abroad:</p>
-                <img class="w-[5rem] set-custom-width" src="../assets/images/mohammad-rawan/bank-icon-bnp.svg">
+                <img class="w-[5rem] set-custom-width" src="../assets/images/mohammad-rawan/bank-icon-bnp-1.svg">
               </div>
               <div class="flex justify-between items-start text-left col-span-2 custom-sub-text-slide-8">
                 <p class="text-[.8rem]">IBAN: LU60 0030 3395 1569 4000 <br> BIC code: BGLLLULL <br> Account holder: <br> M. BADREDDINE MOHAMAD</p>
-                <img v-if="!copyedToClickBoardIBAN" @click="copyToClipboardIBAN" class="w-7 ml-2" src="../assets/images/mohammad-rawan/copy-to-clipboard.svg">
+                <img v-if="!copyedToClickBoardIBAN" @click="copyToClipboardIBAN" class="w-7 ml-2 cursor-pointer" src="../assets/images/mohammad-rawan/copy-to-clipboard.svg">
                 <img v-else class="w-6 ml-2" src="../assets/images/mohammad-rawan/checkmark.svg">
               </div>
             </div>
