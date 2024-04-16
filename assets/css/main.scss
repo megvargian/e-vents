@@ -633,3 +633,12 @@ section#sec_story .story_slide.helperSlide {
     right: 13.7% !important;
   }
 }
+
+@media (max-height: 950px){
+  .cutom-bottom{
+    bottom: -10% !important;
+  }
+  .custom-time-slide-6{
+    margin-top: 2rem;
+  }
+}

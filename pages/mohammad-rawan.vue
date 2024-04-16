@@ -172,7 +172,7 @@
               src="../assets/images/mohammad-rawan/villa-vennue.svg"
               alt="villa-vennue">
           </div>
-          <div class="text-center flex justify-center items-center pt-5">
+          <div class="text-center flex justify-center items-center pt-5 z-10">
             <a
               target="_blank"
               rel="noopener"
