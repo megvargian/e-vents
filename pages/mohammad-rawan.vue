@@ -331,7 +331,7 @@
             <div class="grid grid-cols-2 grid-rows-3 gap-2 mx-[3rem]">
               <div class="flex justify-between items-center pt-4 text-left col-span-2 custom-sub-text-slide-8">
                 <p class="font-bold">For transfers within Lebanon:</p>
-                <img class="w-10 ml-2 mr-1" src="../assets/images/whish.svg">
+                <img class="w-10 ml-2 mr-1" src="../assets/images/mohammad-rawan/whish.png">
               </div>
               <div class="flex justify-between items-center text-left col-span-2 custom-sub-text-slide-8">
                 <p class="text-[.8rem]">Whish account number: <br> 20224125-03</p>
