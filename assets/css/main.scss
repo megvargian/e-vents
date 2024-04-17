@@ -642,3 +642,21 @@ section#sec_story .story_slide.helperSlide {
     margin-top: 2rem;
   }
 }
+
+@media screen and (min-width: 992px){
+  .cutom-bottom{
+    bottom: -20% !important;
+  }
+  .custom-time-slide-6{
+    margin-top: 4rem;
+  }
+}
+
+@media (min-width: 1560px){
+  .cutom-bottom{
+    bottom: 0% !important;
+  }
+  .custom-time-slide-6{
+    margin-top: 2rem;
+  }
+}
