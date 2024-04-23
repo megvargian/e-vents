@@ -160,7 +160,7 @@
               alt="curtains-slide-3"
             >
           </div>
-          <div class="text-center row-span-1">
+          <div class="text-center row-span-1 mt-[8rem]">
             <h1 class="set-moderm text-[#9D2A31] text-[1.5rem] set-moderline font-bold custom-title-slide-6">
               The Villa Venue
             </h1>
@@ -172,7 +172,7 @@
               src="../assets/images/mohammad-rawan/villa-vennue.svg"
               alt="villa-vennue">
           </div>
-          <div class="text-center flex justify-center items-center pt-5 z-10">
+          <div class="text-center flex justify-center items-center mb-[10rem] z-10">
             <a
               target="_blank"
               rel="noopener"
