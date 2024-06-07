@@ -9,7 +9,7 @@
         See Example One
       </NuxtLink>
       <NuxtLink
-        to="/mohammad-rawan"
+        to="/example-two"
         class="flex items-center bg-gradient-to-r from-cyan-500 to-blue-500 p-8 rounded-lg text-white transition-all hover:-translate-y-1 hover:scale-105"
       >
         See Example two

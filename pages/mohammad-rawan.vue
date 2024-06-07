@@ -418,7 +418,6 @@ const googleCalendar = ref(
   `https://www.google.com/calendar/render?action=TEMPLATE&text=Mohammad%20And%20Rawan's%20Wedding&dates=20240629T160000Z/20240629T230000Z&details=Let's%20toast%20to%20love%20,%20laughter%20,%20and%20happily%20ever%20after%20!%20&location=%20The%20villa%20,%20WHPR+QJH%20,%20Dbaye%20,%20Lebanon&sf=true&output=xml`
 );
 onMounted(() => {
-  console.log(numberOfPeopleSet);
   if (rsvpCookie.value) {
     if (rsvpCookie.value.value === "1") {
       alreadySubmited.value = true;
