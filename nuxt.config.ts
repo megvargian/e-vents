@@ -6,11 +6,6 @@ export default defineNuxtConfig({
     "@hypernym/nuxt-anime",
     "nuxt-swiper",
   ],
-  runtimeConfig: {
-    public: {
-      wordpressUrl: "https://sarpysevents.com/graphql",
-    },
-  },
   anime: {
     composables: true,
   },
