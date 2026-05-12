@@ -22,7 +22,7 @@
     "vue3-particles": "^2.12.0"
   },
   "engines": {
-    "node": ">=20.19.0"
+    "node": ">=22.0.0"
   },
   "dependencies": {
     "@googleapis/calendar": "^9.4.0",
