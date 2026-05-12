@@ -203,8 +203,8 @@
                 transition ? '' : 'page-leave-to hidden',
               ]"
             >
-              <div class="rsvp-confirm">
-                <!-- decorative hearts -->
+              <!-- Attending: YES -->
+              <div v-if="attendence === 'yes'" class="rsvp-confirm">
                 <div class="rsvp-confirm__hearts" aria-hidden="true">
                   <img src="../assets/images/mohammad-rawan/main-calendar-heart.svg" class="rsvp-confirm__heart rsvp-confirm__heart--l" alt="" />
                   <img src="../assets/images/mohammad-rawan/main-calendar-heart.svg" class="rsvp-confirm__heart rsvp-confirm__heart--c" alt="" />
@@ -224,6 +224,34 @@
 
                 <p class="rsvp-confirm__sub">
                   Save the date and get ready for a night<br />full of love, laughter &amp; memories.
+                </p>
+
+                <div class="rsvp-confirm__badge">
+                  <img src="/favicon.png" class="w-3.5 h-3.5" alt="e-vents" />
+                  <span>powered by e-vents</span>
+                </div>
+              </div>
+
+              <!-- Attending: NO -->
+              <div v-else class="rsvp-confirm">
+                <div class="rsvp-confirm__hearts" aria-hidden="true">
+                  <img src="../assets/images/mohammad-rawan/main-calendar-heart.svg" class="rsvp-confirm__heart rsvp-confirm__heart--l" style="opacity:0.35;" alt="" />
+                  <img src="../assets/images/mohammad-rawan/main-calendar-heart.svg" class="rsvp-confirm__heart rsvp-confirm__heart--c" style="opacity:0.35;" alt="" />
+                  <img src="../assets/images/mohammad-rawan/main-calendar-heart.svg" class="rsvp-confirm__heart rsvp-confirm__heart--r" style="opacity:0.35;" alt="" />
+                </div>
+
+                <p class="rsvp-confirm__eyebrow">We heard you</p>
+
+                <h2 class="rsvp-confirm__title sk-moderline">
+                  You'll be<br />missed dearly
+                </h2>
+
+                <div class="rsvp-confirm__divider"></div>
+
+                <p class="rsvp-confirm__sub">
+                  We're sorry you can't make it,<br />
+                  but you'll always be in our hearts<br />
+                  on this special day. 🤍
                 </p>
 
                 <div class="rsvp-confirm__badge">
