@@ -1,4 +1,20 @@
 <template>
+  <!-- Desktop blocker — hidden on mobile, visible on md+ screens -->
+  <div class="desktop-blocker">
+    <div class="desktop-blocker__card">
+      <img src="/favicon.png" class="desktop-blocker__logo" alt="e-vents logo" />
+      <p class="desktop-blocker__title">Mobile Only</p>
+      <p class="desktop-blocker__msg">
+        This invitation is designed for mobile.<br />
+        Please open it on your phone for the best experience.
+      </p>
+      <div class="desktop-blocker__badge">
+        <img src="/favicon.png" class="w-4 h-4" alt="e-vents" />
+        <span>powered by e-vents</span>
+      </div>
+    </div>
+  </div>
+
   <section class="example-three relative flex m-auto full-custom-height overflow-hidden">
     <Swiper class="mainSwiper" :options="swiperOprions">
 
@@ -202,6 +218,21 @@
     </Swiper>
 
   </section>
+
+  <!-- ── Intro video overlay ───────────────────── -->
+  <!-- <Transition name="intro-fade">
+    <div v-if="showIntro" class="intro-overlay">
+      <video
+        class="intro-video"
+        autoplay
+        muted
+        playsinline
+        @ended="showIntro = false"
+      >
+        <source src="../assets/images/sako-kate/birds-1.mp4" type="video/mp4" />
+      </video>
+    </div>
+  </Transition> -->
 </template>
 
 <script setup lang="ts">
@@ -226,6 +257,8 @@ const swiperOprions = {
   },
   allowSlidePrev: false,
 };
+
+const showIntro = ref(true);
 
 const attendence = ref('');
 const rsvp = ref({
@@ -292,10 +325,10 @@ const submitRsvp = async () => {
   font-family: 'roxborough', sans-serif;
 }
 .sk-moderline {
-  font-family: 'modernline', sans-serif;
+  font-family: 'garadab', sans-serif;
 }
 .sk-moderline-bold {
-  font-family: 'modernline-bold', sans-serif;
+  font-family: 'garadab', sans-serif;
 }
 .sk-title-1 {
   font-family: 'roxborough', sans-serif;
@@ -354,6 +387,7 @@ const submitRsvp = async () => {
   font-size: 14px;
   color: #5a4a3a;
   outline: none;
+  background-color: transparent;
 }
 .sk-input:focus {
   border-color: #8a9a6a;
@@ -362,5 +396,93 @@ const submitRsvp = async () => {
 @media (max-width: 380px) {
   .sk-polaroid { width: 115px; }
   .sk-polaroid-inner { width: 99px; height: 120px; }
+}
+
+/* ── Intro video overlay ─────────────────────── */
+.intro-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background: transparent;
+  pointer-events: none;
+}
+
+.intro-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  mix-blend-mode: multiply;
+}
+
+.intro-fade-leave-active {
+  transition: opacity 0.8s ease;
+}
+.intro-fade-leave-to {
+  opacity: 0;
+}
+
+/* ── Desktop blocker ─────────────────────────── */
+.desktop-blocker {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  /* Hide the invitation content on desktop */
+  .example-three {
+    display: none !important;
+  }
+
+  /* Show the blocker */
+  .desktop-blocker {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: #f9f6f1;
+  }
+
+  .desktop-blocker__card {
+    text-align: center;
+    padding: 3rem 4rem;
+    background: white;
+    border-radius: 24px;
+    box-shadow: 0 8px 40px rgba(0, 0, 0, 0.10);
+    max-width: 420px;
+  }
+
+  .desktop-blocker__logo {
+    width: 72px;
+    height: 72px;
+    margin: 0 auto 1.25rem;
+    display: block;
+  }
+
+  .desktop-blocker__title {
+    font-family: 'modernline-bold', sans-serif;
+    font-size: 2rem;
+    color: #7a6e5a;
+    margin-bottom: 0.75rem;
+  }
+
+  .desktop-blocker__msg {
+    font-family: 'arapey-regular', sans-serif;
+    font-size: 1rem;
+    color: #5a4a3a;
+    line-height: 1.7;
+    margin-bottom: 2rem;
+  }
+
+  .desktop-blocker__badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: #f0ece5;
+    border-radius: 999px;
+    padding: 6px 16px;
+    font-family: 'arapey-regular', sans-serif;
+    font-size: 11px;
+    letter-spacing: 0.08em;
+    color: #7a6e5a;
+  }
 }
 </style>
