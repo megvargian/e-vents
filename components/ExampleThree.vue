@@ -447,7 +447,7 @@ const submitRsvp = async () => {
 
   const info = {
     From: 'sales@e-vents.me',
-    To: 'kouyoumdjianmike@gmail.com',
+    To: 'kouyoumdjianmike@gmail.com, Rfnz0803@gmail.com, Sarkismanoufar@gmail.com',
     Subject: `New RSVP – ${guestName} (${isAttending})`,
     HtmlBody,
     TextBody,
