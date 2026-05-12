@@ -4,12 +4,13 @@ exports.handler = async function (event) {
   const client = new postmark.ServerClient(process.env.POSTMARK_API_KEY_PROD);
   try {
     const { body } = event;
-    const { From, To, Subject, TextBody } = JSON.parse(body);
+    const { From, To, Subject, HtmlBody, TextBody } = JSON.parse(body);
     const message = {
       From,
       To,
       Subject,
-      TextBody
+      HtmlBody,
+      TextBody,
     };
     const result = await client.sendEmail(message);
     return {

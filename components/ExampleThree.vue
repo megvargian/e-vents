@@ -54,7 +54,7 @@
           <div class="relative z-[2] pt-6 px-5 flex-1 flex flex-col">
             <p class="text-center text-[0.85rem] tracking-widest mb-3 text-[#7a6e5a]">ONCE UPON A TIME...</p>
             <h1 class="text-center sk-moderline-bold text-[2.2rem] leading-snug mb-1">
-              Sako<br />
+              Sarkis<br />
               <span class="text-[#7a6e5a] text-[1.8rem]">and</span>
               <br />Kate
             </h1>
@@ -89,6 +89,7 @@
             <p class="text-[0.85rem] tracking-widest mb-4 text-[#7a6e5a]">MARK YOUR CALENDAR</p>
             <div class="mx-10 relative w-full" style="height: fit-content;">
               <h1 class="sk-moderline-bold font-bold text-[2.2rem] text-center text-[#7a6e5a] absolute top-[5%] left-[36%]">June</h1>
+              <!-- date 14 is highlighted on the calendar SVG via the heart marker -->
               <img class="w-full h-full" src="../assets/images/mohammad-rawan/calendar.svg" alt="calendar" />
               <span class="pulse absolute right-[13.5%] bottom-[1%]">
                 <img class="w-8 h-8" src="../assets/images/mohammad-rawan/main-calendar-heart.svg" alt="heart" />
@@ -114,11 +115,28 @@
           <!-- content -->
           <div class="relative z-[2] w-full flex flex-col items-center flex-1 pt-10 px-4">
             <p class="text-[0.85rem] tracking-widest mb-2 text-[#7a6e5a]">WHERE LOVE BLOOMS</p>
-            <h1 class="sk-moderline-bold text-[#7a6e5a] text-[1.8rem] text-center">The Garden Venue</h1>
-            <p class="text-center text-[1rem] mt-1 mb-4">Your City · Country</p>
+
+            <!-- Church -->
+            <div class="flex items-center gap-2 mb-1">
+              <span class="text-[#b0b890] text-[0.75rem] tracking-widest uppercase">Church</span>
+            </div>
+            <h2 class="sk-moderline-bold text-[#7a6e5a] text-[1.5rem] text-center leading-snug mb-0.5">Vartanants Church</h2>
+            <p class="text-center text-[0.85rem] text-[#5a4a3a] mb-4">Borj Hammoud</p>
+
+            <!-- Divider -->
+            <div class="w-10 h-px bg-[#b0b890] mb-4"></div>
+
+            <!-- Reception venue -->
+            <div class="flex items-center gap-2 mb-1">
+              <span class="text-[#b0b890] text-[0.75rem] tracking-widest uppercase">Reception</span>
+            </div>
+            <h1 class="sk-moderline-bold text-[#7a6e5a] text-[1.8rem] text-center leading-snug">Les Talus</h1>
+            <p class="text-center text-[1rem] mt-0.5 mb-4">Okaibey</p>
+
             <img class="w-full max-w-[280px]" src="../assets/images/mohammad-rawan/villa-vennue.svg" alt="venue" />
-            <div class="mt-4">
-              <a target="_blank" rel="noopener" href="https://www.google.com/maps" class="sk-btn">View on Map</a>
+            <div class="mt-4 flex gap-3 flex-wrap justify-center">
+              <a target="_blank" rel="noopener" href="https://www.google.com/maps?sca_esv=902c31b61ac8c1b2&biw=1707&bih=898&output=search&q=vartanants+church+in+bourj+hammoud&source=lnms&fbs=ADc_l-aN0CWEZBOHjofHoaMMDiKpaEWjvZ2Py1XXV8d8KvlI3jljrY5CkLlk8Dq3IvwBz-QW4YybSII6dXtsWvAIaofKcjC4qmxZMOCagUIH_lLb_gBLeLkvOzcvgCMBL-wubokUVBLrYutNM25jALO_5MRGNq4blmfAEZmOz56etFMCWbvAFuwYvcOtda0jdHQZGD_1ropMY-yu7NLK2eHbpNhgT0OPyg&entry=mc&ved=1t:200715&ictx=111" class="sk-btn" style="font-size:13px;padding:7px 22px;">Church Map</a>
+              <a target="_blank" rel="noopener" href="https://www.google.com/maps?gs_lcrp=EgZjaHJvbWUyBggAEEUYOTIJCAEQIRgKGKABMgkIAhAhGAoYoAEyCQgDECEYChigATIJCAQQIRgKGKABMgcIBRAhGI8CMgcIBhAhGI8CMgcIBxAhGI8C0gEJMTM2MzFqMGo3qAIAsAIA&um=1&ie=UTF-8&fb=1&gl=lb&sa=X&geocode=Kb3X-vIMRB8VMSkiACYYaf2x&daddr=3M26%2BF5C,+Lebanon,+Okaybeh" class="sk-btn" style="font-size:13px;padding:7px 22px;">Venue Map</a>
             </div>
           </div>
         </div>
@@ -140,7 +158,7 @@
               ]"
             >
               <h3 class="text-center text-[1.4rem] mb-4 mt-2">
-                Kindly <span class="text-[#7a6e5a] font-bold sk-moderline">RSVP</span> before June 1
+                Kindly <span class="text-[#7a6e5a] font-bold sk-moderline">RSVP</span> before June 7
               </h3>
               <form @submit.prevent="submitRsvp">
                 <div>
@@ -181,11 +199,38 @@
             <div
               class="thankYou text-center"
               :class="[
-                alreadySubmited ? 'block' : 'hidden',
+                alreadySubmited ? 'flex' : 'hidden',
                 transition ? '' : 'page-leave-to hidden',
               ]"
             >
-              <h3 class="text-2xl text-center pt-12">Thank you!</h3>
+              <div class="rsvp-confirm">
+                <!-- decorative hearts -->
+                <div class="rsvp-confirm__hearts" aria-hidden="true">
+                  <img src="../assets/images/mohammad-rawan/main-calendar-heart.svg" class="rsvp-confirm__heart rsvp-confirm__heart--l" alt="" />
+                  <img src="../assets/images/mohammad-rawan/main-calendar-heart.svg" class="rsvp-confirm__heart rsvp-confirm__heart--c" alt="" />
+                  <img src="../assets/images/mohammad-rawan/main-calendar-heart.svg" class="rsvp-confirm__heart rsvp-confirm__heart--r" alt="" />
+                </div>
+
+                <p class="rsvp-confirm__eyebrow">You're on the list</p>
+
+                <h2 class="rsvp-confirm__title sk-moderline">
+                  We can't wait<br />to celebrate<br />with you!
+                </h2>
+
+                <div class="rsvp-confirm__divider"></div>
+
+                <p class="rsvp-confirm__date">June 14, 2026 &nbsp;·&nbsp; 7:00 p.m</p>
+                <p class="rsvp-confirm__date" style="font-size:0.78rem;margin-top:-6px;">Les Talus · Okaibey</p>
+
+                <p class="rsvp-confirm__sub">
+                  Save the date and get ready for a night<br />full of love, laughter &amp; memories.
+                </p>
+
+                <div class="rsvp-confirm__badge">
+                  <img src="/favicon.png" class="w-3.5 h-3.5" alt="e-vents" />
+                  <span>powered by e-vents</span>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -272,7 +317,7 @@ const rsvpCookie = useCookie<{ value: string }>('sk-rsvp');
 const alreadySubmited = ref(false);
 
 const googleCalendar = ref(
-  `https://www.google.com/calendar/render?action=TEMPLATE&text=Sako%20And%20Kate%27s%20Wedding&dates=20260614T160000Z/20260614T230000Z&details=Let%27s%20toast%20to%20love%2C%20laughter%2C%20and%20happily%20ever%20after!&sf=true&output=xml`
+  `https://www.google.com/calendar/render?action=TEMPLATE&text=Sarkis%20%26%20Kate%27s%20Wedding&dates=20260614T160000Z/20260614T230000Z&details=Church%3A%20Vartanants%20Church%2C%20Borj%20Hammoud%0AReception%3A%20Les%20Talus%2C%20Okaibey&location=Les%20Talus%2C%20Okaibey&sf=true&output=xml`
 );
 
 onMounted(() => {
@@ -288,16 +333,96 @@ onMounted(() => {
 
 const submitRsvp = async () => {
   loading.value = true;
+
+  const guestName   = rsvp.value.names          || 'Not provided';
+  const guestCount  = String(rsvp.value.numberOfPeople) || '0';
+  const isAttending = attendence.value === 'yes' ? '✅ Yes, attending' : '❌ No, not attending';
+
+  const HtmlBody = `
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>New RSVP – Sako &amp; Kate</title>
+</head>
+<body style="margin:0;padding:0;background:#f5f0eb;font-family:'Georgia',serif;">
+  <table width="100%" cellpadding="0" cellspacing="0" style="background:#f5f0eb;padding:40px 0;">
+    <tr>
+      <td align="center">
+        <table width="560" cellpadding="0" cellspacing="0" style="background:#ffffff;border-radius:16px;overflow:hidden;box-shadow:0 4px 24px rgba(0,0,0,0.08);max-width:560px;width:100%;">
+
+          <!-- Header -->
+          <tr>
+            <td style="background:linear-gradient(135deg,#8a9a6a 0%,#b0b890 100%);padding:36px 40px 28px;text-align:center;">
+              <img src="https://e-vents.me/favicon.png" width="52" height="52" alt="e-vents" style="border-radius:50%;margin-bottom:14px;display:block;margin-left:auto;margin-right:auto;" />
+              <h1 style="margin:0;color:#ffffff;font-size:26px;font-weight:normal;letter-spacing:2px;">New RSVP Received</h1>
+              <p style="margin:6px 0 0;color:rgba(255,255,255,0.85);font-size:13px;letter-spacing:1px;">SARKIS &amp; KATE &nbsp;·&nbsp; JUNE 14, 2026</p>
+            </td>
+          </tr>
+
+          <!-- Body -->
+          <tr>
+            <td style="padding:36px 40px 20px;">
+              <p style="margin:0 0 24px;color:#5a4a3a;font-size:15px;line-height:1.6;">A guest has responded to the wedding invitation. Here are their details:</p>
+
+              <!-- Info table -->
+              <table width="100%" cellpadding="0" cellspacing="0" style="border-collapse:collapse;">
+                <tr>
+                  <td style="padding:12px 16px;background:#f9f6f1;border-radius:10px 10px 0 0;border-bottom:1px solid #e8e0d8;">
+                    <span style="font-size:11px;letter-spacing:0.15em;text-transform:uppercase;color:#8a9a6a;">Name(s)</span><br />
+                    <span style="font-size:16px;color:#3a3028;font-weight:bold;">${guestName}</span>
+                  </td>
+                </tr>
+                <tr>
+                  <td style="padding:12px 16px;background:#f9f6f1;border-bottom:1px solid #e8e0d8;">
+                    <span style="font-size:11px;letter-spacing:0.15em;text-transform:uppercase;color:#8a9a6a;">Number of Guests</span><br />
+                    <span style="font-size:16px;color:#3a3028;font-weight:bold;">${guestCount}</span>
+                  </td>
+                </tr>
+                <tr>
+                  <td style="padding:12px 16px;background:#f9f6f1;border-radius:0 0 10px 10px;">
+                    <span style="font-size:11px;letter-spacing:0.15em;text-transform:uppercase;color:#8a9a6a;">Attending</span><br />
+                    <span style="font-size:16px;color:#3a3028;font-weight:bold;">${isAttending}</span>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+
+          <!-- Divider -->
+          <tr>
+            <td style="padding:0 40px;">
+              <hr style="border:none;border-top:1px solid #e8e0d8;margin:4px 0 20px;" />
+            </td>
+          </tr>
+
+          <!-- Footer -->
+          <tr>
+            <td style="padding:0 40px 36px;text-align:center;">
+              <p style="margin:0 0 16px;color:#7a6e5a;font-size:13px;line-height:1.6;">This notification was sent automatically via the wedding invitation platform.</p>
+              <a href="https://e-vents.me" style="display:inline-flex;align-items:center;gap:6px;background:#f0ece5;border-radius:999px;padding:7px 18px;text-decoration:none;font-size:11px;letter-spacing:0.1em;color:#7a6e5a;font-family:Arial,sans-serif;">
+                <img src="https://e-vents.me/favicon.png" width="14" height="14" alt="" style="vertical-align:middle;" />
+                powered by e-vents.me
+              </a>
+            </td>
+          </tr>
+
+        </table>
+      </td>
+    </tr>
+  </table>
+</body>
+</html>`;
+
+  const TextBody = `New RSVP – Sarkis & Kate\n\nName(s): ${guestName}\nNumber of Guests: ${guestCount}\nAttending: ${attendence.value}\n\npowered by e-vents.me`;
+
   const info = {
     From: 'sales@e-vents.me',
     To: 'kouyoumdjianmike@gmail.com',
-    Subject: 'RSVP from E-vents – Sako & Kate',
-    HtmlBody: `<p>Name/Names: ${rsvp.value.names ? rsvp.value.names : `there's no name`}</p>
-      <p>Number of Guests: ${String(rsvp.value.numberOfPeople) ? String(rsvp.value.numberOfPeople) : '0'}</p>
-      <p>Attending: ${rsvp.value.attendence}</p>`,
-    TextBody: `Name/Names: ${rsvp.value.names ? rsvp.value.names : `there's no name`}
-      Number of Guests: ${String(rsvp.value.numberOfPeople) ? String(rsvp.value.numberOfPeople) : '0'}
-      Attending: ${rsvp.value.attendence}`,
+    Subject: `New RSVP – ${guestName} (${isAttending})`,
+    HtmlBody,
+    TextBody,
   };
 
   const { data, refresh, error } = useFetch('/.netlify/functions/sendEmails', {
@@ -325,10 +450,10 @@ const submitRsvp = async () => {
   font-family: 'roxborough', sans-serif;
 }
 .sk-moderline {
-  font-family: 'garadab', sans-serif;
+  font-family: 'modernline', sans-serif;
 }
 .sk-moderline-bold {
-  font-family: 'garadab', sans-serif;
+  font-family: 'modernline-bold', sans-serif;
 }
 .sk-title-1 {
   font-family: 'roxborough', sans-serif;
@@ -396,6 +521,98 @@ const submitRsvp = async () => {
 @media (max-width: 380px) {
   .sk-polaroid { width: 115px; }
   .sk-polaroid-inner { width: 99px; height: 120px; }
+}
+
+/* ── RSVP confirmation card ────────────────── */
+.thankYou {
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  padding: 0 1.5rem;
+}
+
+.rsvp-confirm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0;
+  animation: rsvp-rise 0.7s ease both;
+}
+
+@keyframes rsvp-rise {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.rsvp-confirm__hearts {
+  display: flex;
+  align-items: flex-end;
+  gap: 6px;
+  margin-bottom: 1.1rem;
+}
+.rsvp-confirm__heart { opacity: 0.85; }
+.rsvp-confirm__heart--l { width: 18px; height: 18px; animation: pulse-heart 2.4s ease-in-out infinite; }
+.rsvp-confirm__heart--c { width: 28px; height: 28px; animation: pulse-heart 2.0s ease-in-out infinite; }
+.rsvp-confirm__heart--r { width: 18px; height: 18px; animation: pulse-heart 2.6s ease-in-out infinite; }
+
+@keyframes pulse-heart {
+  0%, 100% { transform: scale(1); }
+  50%       { transform: scale(1.2); }
+}
+
+.rsvp-confirm__eyebrow {
+  font-family: 'arapey-regular', sans-serif;
+  font-size: 0.75rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #8a9a6a;
+  margin-bottom: 0.65rem;
+}
+
+.rsvp-confirm__title {
+  font-size: 2.2rem;
+  line-height: 1.25;
+  color: #5a4a3a;
+  margin-bottom: 1rem;
+}
+
+.rsvp-confirm__divider {
+  width: 48px;
+  height: 1.5px;
+  background: #b0b890;
+  border-radius: 2px;
+  margin-bottom: 0.85rem;
+}
+
+.rsvp-confirm__date {
+  font-family: 'arapey-regular', sans-serif;
+  font-size: 0.9rem;
+  color: #7a6e5a;
+  margin-bottom: 0.75rem;
+  letter-spacing: 0.05em;
+}
+
+.rsvp-confirm__sub {
+  font-family: 'arapey-regular', sans-serif;
+  font-size: 0.88rem;
+  color: #5a4a3a;
+  line-height: 1.65;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.rsvp-confirm__badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  background: rgba(255,255,255,0.65);
+  border-radius: 999px;
+  padding: 5px 14px;
+  font-family: 'arapey-regular', sans-serif;
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  color: #7a6e5a;
 }
 
 /* ── Intro video overlay ─────────────────────── */
