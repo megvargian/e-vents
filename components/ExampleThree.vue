@@ -76,7 +76,7 @@
               <p class="set-moderline-bold text-[3rem] leading-none">Kate</p>
             </div>
             <div class="flex items-center mt-10 gap-3">
-              <span class="text-[#7a6e5a] text-[1.4rem] font-bold set-moderline">7:00 p.m</span>
+              <span class="text-[#7a6e5a] text-[1.4rem] font-bold set-moderline">5:00 p.m</span>
             </div>
             <div class="mt-5">
               <a target="_blank" rel="noopener" :href="googleCalendar" class="sk-btn">Add to Calendar</a>
@@ -91,7 +91,7 @@
           <img class="absolute inset-0 w-full h-full object-cover object-bottom z-0" src="../assets/images/sako-kate/4.webp" alt="" aria-hidden="true" />
           <div class="absolute inset-0 bg-white/40 z-[1]"></div>
           <div class="relative z-[2] w-full flex flex-col items-center justify-start flex-1 pt-8 px-4">
-            <p class="text-[0.85rem] tracking-widest mb-4 text-[#7a6e5a]">MARK YOUR CALENDAR</p>
+            <p class="text-[1.2rem] tracking-widest mb-4 text-[#7a6e5a]">MARK YOUR CALENDAR</p>
             <div class="mx-10 relative w-full" style="height: fit-content;">
               <h1 class="set-moderline-bold font-bold text-[2.2rem] text-center text-[#7a6e5a] absolute top-[5%] left-[36%]">June</h1>
               <img class="w-full h-full" src="../assets/images/mohammad-rawan/calendar.svg" alt="calendar" />
@@ -123,12 +123,12 @@
             <div class="flex items-center justify-between gap-3">
               <div class="flex-1">
                 <div class="flex items-center gap-1 mb-0.5">
-                  <span class="text-[#c46e6e] text-[0.85rem]">📍</span>
-                  <span class="font-['arapey-regular'] text-[0.85rem] font-bold text-[#5a4a3a]">Vartanants Church</span>
+                  <span class="text-[#c46e6e] text-[1.2rem]">📍</span>
+                  <span class="font-['arapey-regular'] text-[1.2rem] font-bold text-[#5a4a3a]">Vartanants Church</span>
                 </div>
                 <p class="font-['arapey-regular'] text-[0.75rem] text-[#7a6e5a] mb-1 pl-5">Borj Hammoud</p>
                 <p class="sk-title-1 text-[2.4rem] leading-none text-[#5a4a3a]">Church</p>
-                <p class="font-['arapey-regular'] text-[0.85rem] text-[#7a6e5a] mt-1">7:00 PM</p>
+                <p class="font-['arapey-regular'] text-[1.2rem] text-[#7a6e5a] mt-1">7:00 PM</p>
                 <a target="_blank" rel="noopener" href="https://www.google.com/maps?sca_esv=902c31b61ac8c1b2&biw=1707&bih=898&output=search&q=vartanants+church+in+bourj+hammoud&source=lnms&fbs=ADc_l-aN0CWEZBOHjofHoaMMDiKpaEWjvZ2Py1XXV8d8KvlI3jljrY5CkLlk8Dq3IvwBz-QW4YybSII6dXtsWvAIaofKcjC4qmxZMOCagUIH_lLb_gBLeLkvOzcvgCMBL-wubokUVBLrYutNM25jALO_5MRGNq4blmfAEZmOz56etFMCWbvAFuwYvcOtda0jdHQZGD_1ropMY-yu7NLK2eHbpNhgT0OPyg&entry=mc&ved=1t:200715&ictx=111" class="sk-btn mt-2 inline-block" style="font-size:12px;padding:5px 16px;">Church Map</a>
               </div>
               <img class="w-[140px] flex-shrink-0 drop-shadow-sm" src="../assets/images/sako-kate/church.svg" alt="church" />
@@ -142,12 +142,12 @@
               <img class="w-[120px] flex-shrink-0 drop-shadow-sm" src="../assets/images/sako-kate/drinks.svg" alt="reception" />
               <div class="flex-2">
                 <div class="flex items-center gap-1 mb-0.5">
-                  <span class="text-[#c46e6e] text-[0.85rem]">📍</span>
-                  <span class="font-['arapey-regular'] text-[0.85rem] font-bold text-[#5a4a3a]">Les Talus</span>
+                  <span class="text-[#c46e6e] text-[1.2rem]">📍</span>
+                  <span class="font-['arapey-regular'] text-[1.2rem] font-bold text-[#5a4a3a]">Les Talus</span>
                 </div>
                 <p class="font-['arapey-regular'] text-[0.75rem] text-[#7a6e5a] mb-1 pl-5">Okaibey</p>
                 <p class="sk-title-1 set-moderline-bold text-[2.4rem] leading-none text-[#5a4a3a]">Welcome Reception</p>
-                <p class="font-['arapey-regular'] text-[0.85rem] text-[#7a6e5a] mt-1">7:00 PM</p>
+                <p class="font-['arapey-regular'] text-[1.2rem] text-[#7a6e5a] mt-1">7:00 PM</p>
                 <a target="_blank" rel="noopener" href="https://www.google.com/maps?gs_lcrp=EgZjaHJvbWUyBggAEEUYOTIJCAEQIRgKGKABMgkIAhAhGAoYoAEyCQgDECEYChigATIJCAQQIRgKGKABMgcIBRAhGI8CMgcIBhAhGI8CMgcIBxAhGI8C0gEJMTM2MzFqMGo3qAIAsAIA&um=1&ie=UTF-8&fb=1&gl=lb&sa=X&geocode=Kb3X-vIMRB8VMSkiACYYaf2x&daddr=3M26%2BF5C,+Lebanon,+Okaybeh" class="sk-btn mt-2 inline-block" style="font-size:12px;padding:5px 16px;">Venue Map</a>
               </div>
             </div>
@@ -155,12 +155,12 @@
             <div class="flex items-center justify-between gap-3 pt-10">
               <div class="flex-1">
                 <div class="flex items-center gap-1 mb-0.5">
-                  <span class="text-[#c46e6e] text-[0.85rem]">📍</span>
-                  <span class="font-['arapey-regular'] text-[0.85rem] font-bold text-[#5a4a3a]">Les Talus</span>
+                  <span class="text-[#c46e6e] text-[1.2rem]">📍</span>
+                  <span class="font-['arapey-regular'] text-[1.2rem] font-bold text-[#5a4a3a]">Les Talus</span>
                 </div>
                 <p class="font-['arapey-regular'] text-[0.75rem] text-[#7a6e5a] mb-1 pl-5">Okaibey</p>
                 <p class="sk-title-1 text-[2.4rem] leading-none text-[#5a4a3a]">Wedding Celebration</p>
-                <p class="font-['arapey-regular'] text-[0.85rem] text-[#7a6e5a] mt-1">8:00 PM</p>
+                <p class="font-['arapey-regular'] text-[1.2rem] text-[#7a6e5a] mt-1">8:00 PM</p>
                 <a target="_blank" rel="noopener" href="https://www.google.com/maps?gs_lcrp=EgZjaHJvbWUyBggAEEUYOTIJCAEQIRgKGKABMgkIAhAhGAoYoAEyCQgDECEYChigATIJCAQQIRgKGKABMgcIBRAhGI8CMgcIBhAhGI8CMgcIBxAhGI8C0gEJMTM2MzFqMGo3qAIAsAIA&um=1&ie=UTF-8&fb=1&gl=lb&sa=X&geocode=Kb3X-vIMRB8VMSkiACYYaf2x&daddr=3M26%2BF5C,+Lebanon,+Okaybeh" class="sk-btn mt-2 inline-block" style="font-size:12px;padding:5px 16px;">Venue Map</a>
               </div>
               <img class="w-[120px] flex-shrink-0 drop-shadow-sm" src="../assets/images/sako-kate/cake.svg" alt="reception" />
@@ -217,7 +217,7 @@
 
       <!-- ── SLIDE 6 · RSVP Form ────────────────── -->
       <LazySwiperSlide>
-        <div class="page-start h-full w-full relative flex flex-col overflow-hidden">
+        <div class="page-start h-full w-full relative flex flex-col overflow-hisdden">
           <!-- full-cover background -->
           <img class="absolute inset-0 w-full h-full object-cover object-bottom z-0" src="../assets/images/sako-kate/6.webp" alt="" aria-hidden="true" />
           <div class="absolute inset-0 bg-white/40 z-[1]"></div>
@@ -367,7 +367,7 @@
 
   <!-- ── Background music ─────────────────────── -->
   <audio ref="audioRef" loop preload="auto">
-    <source src="../assets/music/sako-kate/background.mp3" type="audio/mpeg" />
+    <source src="../assets/music/sako-kate/background-opt.mp3" type="audio/mpeg" />
   </audio>
 
   <!-- Floating music toggle button -->
@@ -782,7 +782,7 @@ const submitRsvp = async () => {
   height: 1.5px;
   background: #b0b890;
   border-radius: 2px;
-  margin-bottom: 0.85rem;
+  margin-bottom: 1.2rem;
 }
 
 .rsvp-confirm__date {
