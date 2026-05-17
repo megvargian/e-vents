@@ -363,7 +363,7 @@
   </button>
 
   <!-- ── Cloud curtain opening animation ──────── -->
-  <Transition name="cloud-fade" :duration="1700">
+  <Transition name="cloud-fade" :duration="3000">
     <div v-if="showClouds" class="cloud-curtain" aria-hidden="true">
       <!-- Left cloud half – covers full screen, bumpy right edge at center -->
       <div class="cloud-panel cloud-panel--left">
