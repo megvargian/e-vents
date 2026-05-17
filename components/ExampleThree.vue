@@ -22,16 +22,17 @@
       <LazySwiperSlide>
         <div class="page-start h-full w-full relative flex items-center justify-start overflow-hidden">
           <!-- slide background -->
-          <img class="absolute inset-0 w-full h-full object-cover object-bottom z-0" src="../assets/images/sako-kate/slide-1-1.jpg" alt="" aria-hidden="true" />
+          <img class="absolute inset-0 w-full h-full object-cover object-bottom z-0" src="../assets/images/sako-kate/1.webp" alt="" aria-hidden="true" />
           <!-- soft overlay so text is always legible -->
-          <div class="absolute inset-0 bg-white/30 z-[1]"></div>
+          <div class="absolute inset-0 bg-white/40 z-[1]"></div>
           <!-- content -->
-          <div class="block pl-10 relative z-[2]">
-            <h1 class="w-full text-left text-[3.5rem] leading-none sk-title-1">
-              Welcome<br />to our <br />
-              <span class="text-[#7a6e5a] sk-moderline font-bold my-1 mt-5 block">love</span>
-              story
-            </h1>
+          <div class="block px-8 absolute inset-0 z-[2] text-center flex flex-col items-center justify-start pt-12">
+            <p class="text-[2.6rem] leading-snug set-moderline-bold mb-4">Dear guests!</p>
+            <p class="font-['arapey-regular'] text-[1.2rem] leading-relaxed text-[#3a3228]">
+              On this special day,<br />
+              it is very important for us to be surrounded<br />
+              by the people closest and dearest to our hearts.
+            </p>
           </div>
           <div class="block absolute bottom-[20rem] right-0 pr-5 z-[2]">
             <p class="text-[12px] text-right">Swipe for more details</p>
@@ -44,52 +45,55 @@
         </div>
       </LazySwiperSlide>
 
-      <!-- ── SLIDE 2 · Baby Images ──────────────── -->
+      <!-- ── SLIDE 2 · Invite + Calendar + Names ── -->
       <LazySwiperSlide>
-        <div class="page-start h-full w-full relative flex flex-col overflow-hidden">
+        <div class="page-start h-full w-full relative flex flex-col items-center overflow-hidden">
           <!-- full-cover background -->
-          <img class="absolute inset-0 w-full h-full object-cover object-bottom z-0" src="../assets/images/sako-kate/slide-2-2.jpg" alt="" aria-hidden="true" />
+          <img class="absolute inset-0 w-full h-full object-cover object-bottom z-0" src="../assets/images/sako-kate/3.webp" alt="" aria-hidden="true" />
           <div class="absolute inset-0 bg-white/40 z-[1]"></div>
           <!-- content -->
-          <div class="relative z-[2] pt-6 px-5 flex-1 flex flex-col">
-            <p class="text-center text-[0.85rem] tracking-widest mb-3 text-[#7a6e5a]">ONCE UPON A TIME...</p>
-            <h1 class="text-center sk-moderline-bold text-[2.2rem] leading-snug mb-1">
-              Sarkis<br />
-              <span class="text-[#7a6e5a] text-[1.8rem]">and</span>
-              <br />Kate
-            </h1>
-            <p class="text-center text-[0.9rem] mb-5 text-[#7a6e5a]">two little hearts, one destiny</p>
-            <!-- polaroid frames -->
-            <!-- <div class="flex justify-center items-start gap-5">
-              <div class="sk-polaroid" style="transform: rotate(-4deg)">
-                <div class="sk-polaroid-inner">
-                  <img class="w-full h-full object-cover" src="../assets/images/example-three/baby-sako.jpg" alt="Sako as a child" />
-                </div>
-                <p class="sk-polaroid-name">Sako</p>
-              </div>
-              <div class="sk-polaroid" style="transform: rotate(3.5deg); margin-top: 18px">
-                <div class="sk-polaroid-inner">
-                  <img class="w-full h-full object-cover" src="../assets/images/example-three/baby-kate.jpg" alt="Kate as a child" />
-                </div>
-                <p class="sk-polaroid-name">Kate</p>
-              </div>
-            </div> -->
+          <div class="relative z-[2] w-full flex flex-col items-center flex-1 pt-6 pb-4 px-6">
+            <!-- top: invite text + date -->
+            <div class="text-center">
+              <p class="font-['arapey-regular'] text-[0.95rem] text-[#3a3228] leading-snug">With great joy we invite you</p>
+              <p class="font-['arapey-regular'] text-[0.95rem] font-bold text-[#3a3228]">The 14 of June, 2026</p>
+            </div>
+
+            <!-- calendar (reuse same markup as slide 3) -->
+            <div class="mx-6 relative w-full" style="height: fit-content;">
+              <!-- <h2 class="set-moderline-bold font-bold text-[2.2rem] text-center text-[#7a6e5a] absolute top-[5%] left-[36%]">June</h2> -->
+              <img class="w-full h-full" src="../assets/images/sako-kate/calendar.svg" alt="calendar" />
+              <!-- <span class="pulse absolute right-[13.5%] bottom-[1%]">
+                <img class="w-8 h-8" src="../assets/images/mohammad-rawan/main-calendar-heart.svg" alt="heart" />
+              </span> -->
+            </div>
+
+            <!-- bottom: names in cursive -->
+            <div class="text-center">
+              <p class="font-['arapey-regular'] text-[0.9rem] text-[#5a4a3a] mb-7">to the wedding celebration of</p>
+              <p class="set-moderline-bold text-[3rem] leading-none">Sarkis</p>
+              <p class="font-['arapey-regular'] text-[1.4rem] text-[#7a6e5a] my-0.5">&amp;</p>
+              <p class="set-moderline-bold text-[3rem] leading-none">Kate</p>
+            </div>
+            <div class="flex items-center mt-10 gap-3">
+              <span class="text-[#7a6e5a] text-[1.4rem] font-bold set-moderline">7:00 p.m</span>
+            </div>
+            <div class="mt-5">
+              <a target="_blank" rel="noopener" :href="googleCalendar" class="sk-btn">Add to Calendar</a>
+            </div>
           </div>
         </div>
       </LazySwiperSlide>
 
       <!-- ── SLIDE 3 · Date ─────────────────────── -->
-      <LazySwiperSlide>
+      <!-- <LazySwiperSlide>
         <div class="page-start h-full w-full relative flex flex-col items-center overflow-hidden">
-          <!-- full-cover background -->
-          <img class="absolute inset-0 w-full h-full object-cover object-bottom z-0" src="../assets/images/sako-kate/slide-3-3.jpg" alt="" aria-hidden="true" />
+          <img class="absolute inset-0 w-full h-full object-cover object-bottom z-0" src="../assets/images/sako-kate/4.webp" alt="" aria-hidden="true" />
           <div class="absolute inset-0 bg-white/40 z-[1]"></div>
-          <!-- content -->
           <div class="relative z-[2] w-full flex flex-col items-center justify-start flex-1 pt-8 px-4">
             <p class="text-[0.85rem] tracking-widest mb-4 text-[#7a6e5a]">MARK YOUR CALENDAR</p>
             <div class="mx-10 relative w-full" style="height: fit-content;">
-              <h1 class="sk-moderline-bold font-bold text-[2.2rem] text-center text-[#7a6e5a] absolute top-[5%] left-[36%]">June</h1>
-              <!-- date 14 is highlighted on the calendar SVG via the heart marker -->
+              <h1 class="set-moderline-bold font-bold text-[2.2rem] text-center text-[#7a6e5a] absolute top-[5%] left-[36%]">June</h1>
               <img class="w-full h-full" src="../assets/images/mohammad-rawan/calendar.svg" alt="calendar" />
               <span class="pulse absolute right-[13.5%] bottom-[1%]">
                 <img class="w-8 h-8" src="../assets/images/mohammad-rawan/main-calendar-heart.svg" alt="heart" />
@@ -97,57 +101,126 @@
             </div>
             <div class="flex items-center mt-4 gap-3">
               <img class="w-6" src="../assets/images/mohammad-rawan/seven-oclock.svg" alt="time" />
-              <span class="text-[#7a6e5a] text-[1.4rem] font-bold sk-moderline">7:00 p.m</span>
+              <span class="text-[#7a6e5a] text-[1.4rem] font-bold set-moderline">7:00 p.m</span>
             </div>
             <div class="mt-4">
               <a target="_blank" rel="noopener" :href="googleCalendar" class="sk-btn">Add to Calendar</a>
             </div>
           </div>
         </div>
-      </LazySwiperSlide>
+      </LazySwiperSlide> -->
 
       <!-- ── SLIDE 4 · Location ─────────────────── -->
       <LazySwiperSlide>
         <div class="page-start h-full w-full relative flex flex-col items-center overflow-hidden">
           <!-- full-cover background -->
-          <img class="absolute inset-0 w-full h-full object-cover object-bottom z-0" src="../assets/images/sako-kate/slide-4-4.jpg" alt="" aria-hidden="true" />
+          <img class="absolute inset-0 w-full h-full object-cover object-bottom z-0" src="../assets/images/sako-kate/2.webp" alt="" aria-hidden="true" />
           <div class="absolute inset-0 bg-white/40 z-[1]"></div>
           <!-- content -->
-          <div class="relative z-[2] w-full flex flex-col items-center flex-1 pt-10 px-4">
-            <p class="text-[0.85rem] tracking-widest mb-2 text-[#7a6e5a]">WHERE LOVE BLOOMS</p>
+          <div class="relative z-[2] w-full flex flex-col flex-1 pt-6 pb-4 px-5 gap-4">
 
-            <!-- Church -->
-            <div class="flex items-center gap-2 mb-1">
-              <span class="text-[#b0b890] text-[0.75rem] tracking-widest uppercase">Church</span>
+            <!-- ── Church / Ceremony ── -->
+            <div class="flex items-center justify-between gap-3">
+              <div class="flex-1">
+                <div class="flex items-center gap-1 mb-0.5">
+                  <span class="text-[#c46e6e] text-[0.85rem]">📍</span>
+                  <span class="font-['arapey-regular'] text-[0.85rem] font-bold text-[#5a4a3a]">Vartanants Church</span>
+                </div>
+                <p class="font-['arapey-regular'] text-[0.75rem] text-[#7a6e5a] mb-1 pl-5">Borj Hammoud</p>
+                <p class="sk-title-1 text-[2.4rem] leading-none text-[#5a4a3a]">Church</p>
+                <p class="font-['arapey-regular'] text-[0.85rem] text-[#7a6e5a] mt-1">7:00 PM</p>
+                <a target="_blank" rel="noopener" href="https://www.google.com/maps?sca_esv=902c31b61ac8c1b2&biw=1707&bih=898&output=search&q=vartanants+church+in+bourj+hammoud&source=lnms&fbs=ADc_l-aN0CWEZBOHjofHoaMMDiKpaEWjvZ2Py1XXV8d8KvlI3jljrY5CkLlk8Dq3IvwBz-QW4YybSII6dXtsWvAIaofKcjC4qmxZMOCagUIH_lLb_gBLeLkvOzcvgCMBL-wubokUVBLrYutNM25jALO_5MRGNq4blmfAEZmOz56etFMCWbvAFuwYvcOtda0jdHQZGD_1ropMY-yu7NLK2eHbpNhgT0OPyg&entry=mc&ved=1t:200715&ictx=111" class="sk-btn mt-2 inline-block" style="font-size:12px;padding:5px 16px;">Church Map</a>
+              </div>
+              <img class="w-[140px] flex-shrink-0 drop-shadow-sm" src="../assets/images/sako-kate/church.svg" alt="church" />
             </div>
-            <h2 class="sk-moderline-bold text-[#7a6e5a] text-[1.5rem] text-center leading-snug mb-0.5">Vartanants Church</h2>
-            <p class="text-center text-[0.85rem] text-[#5a4a3a] mb-4">Borj Hammoud</p>
 
-            <!-- Divider -->
-            <div class="w-10 h-px bg-[#b0b890] mb-4"></div>
+            <!-- divider -->
+            <div class="mt-10"></div>
 
-            <!-- Reception venue -->
-            <div class="flex items-center gap-2 mb-1">
-              <span class="text-[#b0b890] text-[0.75rem] tracking-widest uppercase">Reception</span>
+            <!-- ── Reception ── -->
+            <div class="flex items-center justify-between gap-3">
+              <img class="w-[120px] flex-shrink-0 drop-shadow-sm" src="../assets/images/sako-kate/drinks.svg" alt="reception" />
+              <div class="flex-2">
+                <div class="flex items-center gap-1 mb-0.5">
+                  <span class="text-[#c46e6e] text-[0.85rem]">📍</span>
+                  <span class="font-['arapey-regular'] text-[0.85rem] font-bold text-[#5a4a3a]">Les Talus</span>
+                </div>
+                <p class="font-['arapey-regular'] text-[0.75rem] text-[#7a6e5a] mb-1 pl-5">Okaibey</p>
+                <p class="sk-title-1 set-moderline-bold text-[2.4rem] leading-none text-[#5a4a3a]">Welcome Reception</p>
+                <p class="font-['arapey-regular'] text-[0.85rem] text-[#7a6e5a] mt-1">7:00 PM</p>
+                <a target="_blank" rel="noopener" href="https://www.google.com/maps?gs_lcrp=EgZjaHJvbWUyBggAEEUYOTIJCAEQIRgKGKABMgkIAhAhGAoYoAEyCQgDECEYChigATIJCAQQIRgKGKABMgcIBRAhGI8CMgcIBhAhGI8CMgcIBxAhGI8C0gEJMTM2MzFqMGo3qAIAsAIA&um=1&ie=UTF-8&fb=1&gl=lb&sa=X&geocode=Kb3X-vIMRB8VMSkiACYYaf2x&daddr=3M26%2BF5C,+Lebanon,+Okaybeh" class="sk-btn mt-2 inline-block" style="font-size:12px;padding:5px 16px;">Venue Map</a>
+              </div>
             </div>
-            <h1 class="sk-moderline-bold text-[#7a6e5a] text-[1.8rem] text-center leading-snug">Les Talus</h1>
-            <p class="text-center text-[1rem] mt-0.5 mb-4">Okaibey</p>
 
-            <img class="w-full max-w-[280px]" src="../assets/images/mohammad-rawan/villa-vennue.svg" alt="venue" />
-            <div class="mt-4 flex gap-3 flex-wrap justify-center">
-              <a target="_blank" rel="noopener" href="https://www.google.com/maps?sca_esv=902c31b61ac8c1b2&biw=1707&bih=898&output=search&q=vartanants+church+in+bourj+hammoud&source=lnms&fbs=ADc_l-aN0CWEZBOHjofHoaMMDiKpaEWjvZ2Py1XXV8d8KvlI3jljrY5CkLlk8Dq3IvwBz-QW4YybSII6dXtsWvAIaofKcjC4qmxZMOCagUIH_lLb_gBLeLkvOzcvgCMBL-wubokUVBLrYutNM25jALO_5MRGNq4blmfAEZmOz56etFMCWbvAFuwYvcOtda0jdHQZGD_1ropMY-yu7NLK2eHbpNhgT0OPyg&entry=mc&ved=1t:200715&ictx=111" class="sk-btn" style="font-size:13px;padding:7px 22px;">Church Map</a>
-              <a target="_blank" rel="noopener" href="https://www.google.com/maps?gs_lcrp=EgZjaHJvbWUyBggAEEUYOTIJCAEQIRgKGKABMgkIAhAhGAoYoAEyCQgDECEYChigATIJCAQQIRgKGKABMgcIBRAhGI8CMgcIBhAhGI8CMgcIBxAhGI8C0gEJMTM2MzFqMGo3qAIAsAIA&um=1&ie=UTF-8&fb=1&gl=lb&sa=X&geocode=Kb3X-vIMRB8VMSkiACYYaf2x&daddr=3M26%2BF5C,+Lebanon,+Okaybeh" class="sk-btn" style="font-size:13px;padding:7px 22px;">Venue Map</a>
+            <div class="flex items-center justify-between gap-3 pt-10">
+              <div class="flex-1">
+                <div class="flex items-center gap-1 mb-0.5">
+                  <span class="text-[#c46e6e] text-[0.85rem]">📍</span>
+                  <span class="font-['arapey-regular'] text-[0.85rem] font-bold text-[#5a4a3a]">Les Talus</span>
+                </div>
+                <p class="font-['arapey-regular'] text-[0.75rem] text-[#7a6e5a] mb-1 pl-5">Okaibey</p>
+                <p class="sk-title-1 text-[2.4rem] leading-none text-[#5a4a3a]">Wedding Celebration</p>
+                <p class="font-['arapey-regular'] text-[0.85rem] text-[#7a6e5a] mt-1">8:00 PM</p>
+                <a target="_blank" rel="noopener" href="https://www.google.com/maps?gs_lcrp=EgZjaHJvbWUyBggAEEUYOTIJCAEQIRgKGKABMgkIAhAhGAoYoAEyCQgDECEYChigATIJCAQQIRgKGKABMgcIBRAhGI8CMgcIBhAhGI8CMgcIBxAhGI8C0gEJMTM2MzFqMGo3qAIAsAIA&um=1&ie=UTF-8&fb=1&gl=lb&sa=X&geocode=Kb3X-vIMRB8VMSkiACYYaf2x&daddr=3M26%2BF5C,+Lebanon,+Okaybeh" class="sk-btn mt-2 inline-block" style="font-size:12px;padding:5px 16px;">Venue Map</a>
+              </div>
+              <img class="w-[120px] flex-shrink-0 drop-shadow-sm" src="../assets/images/sako-kate/cake.svg" alt="reception" />
+            </div>
+
+          </div>
+        </div>
+      </LazySwiperSlide>
+      <!-- ── SLIDE 5 · Gift / Bank details ──────── -->
+      <LazySwiperSlide>
+        <div class="page-start h-full w-full relative flex flex-col overflow-hidden">
+          <img class="absolute inset-0 w-full h-full object-cover object-bottom z-0" src="../assets/images/sako-kate/5.webp" alt="" aria-hidden="true" />
+          <div class="absolute inset-0 bg-white/40 z-[1]"></div>
+          <div class="relative z-[2] flex flex-col flex-1 px-6 pt-8 pb-4">
+            <p class="text-center text-[0.8rem] tracking-widest mb-1 text-[#7a6e5a]">WEDDING GIFT</p>
+            <h2 class="text-center set-moderline text-[1.8rem] text-[#5a4a3a] mb-1">With Love</h2>
+            <p class="text-center text-[0.82rem] text-[#7a6e5a] mb-5 leading-relaxed">
+              Your presence is the greatest gift.<br />
+              However, if you wish to honor us,<br />
+              please find the details below:
+            </p>
+
+            <!-- Whish -->
+            <div class="gift-row">
+              <div class="gift-row__label">
+                <span class="gift-row__caption">Within Lebanon</span>
+                <img class="w-10" src="../assets/images/mohammad-rawan/whish.png" alt="Whish" />
+              </div>
+              <div class="gift-row__details">
+                <p class="gift-row__text">Whish account number:<br /><strong>30654592-03</strong></p>
+                <img v-if="!copiedWhish" @click="copyWhish" class="w-7 cursor-pointer flex-shrink-0" src="../assets/images/mohammad-rawan/copy-to-clipboard.svg" alt="copy" />
+                <img v-else class="w-6 flex-shrink-0" src="../assets/images/mohammad-rawan/checkmark.svg" alt="copied" />
+              </div>
+            </div>
+
+            <div class="gift-divider"></div>
+
+            <!-- Bank IBAN -->
+            <div class="gift-row">
+              <div class="gift-row__label">
+                <span class="gift-row__caption">International transfer</span>
+              </div>
+              <div class="gift-row__details">
+                <p class="gift-row__text">
+                  IBAN: <strong>QA53BBME00000000000232359001</strong><br />
+                </p>
+                <img v-if="!copiedIBAN" @click="copyIBAN" class="w-7 cursor-pointer flex-shrink-0" src="../assets/images/mohammad-rawan/copy-to-clipboard.svg" alt="copy" />
+                <img v-else class="w-6 flex-shrink-0" src="../assets/images/mohammad-rawan/checkmark.svg" alt="copied" />
+              </div>
             </div>
           </div>
         </div>
       </LazySwiperSlide>
 
-      <!-- ── SLIDE 5 · RSVP Form ────────────────── -->
+      <!-- ── SLIDE 6 · RSVP Form ────────────────── -->
       <LazySwiperSlide>
         <div class="page-start h-full w-full relative flex flex-col overflow-hidden">
           <!-- full-cover background -->
-          <img class="absolute inset-0 w-full h-full object-cover object-bottom z-0" src="../assets/images/sako-kate/slide-5-5.jpg" alt="" aria-hidden="true" />
-          <div class="absolute inset-0 bg-white/45 z-[1]"></div>
+          <img class="absolute inset-0 w-full h-full object-cover object-bottom z-0" src="../assets/images/sako-kate/6.webp" alt="" aria-hidden="true" />
+          <div class="absolute inset-0 bg-white/40 z-[1]"></div>
           <!-- content -->
           <div class="rsvpMain relative z-[2] flex-1 px-4 flex flex-col justify-center">
             <div
@@ -157,8 +230,8 @@
                 transition ? ' page-enter-from hidden' : '',
               ]"
             >
-              <h3 class="text-center text-[1.4rem] mb-4 mt-2">
-                Kindly <span class="text-[#7a6e5a] font-bold sk-moderline">RSVP</span> before June 7
+              <h3 class="text-center text-[1.4rem] mb-4 mt-2 sk-title-1 text-[#5a4a3a]">
+                We kindly ask you <br> to confirm your attendance <br> by the 2 of July 2026
               </h3>
               <form @submit.prevent="submitRsvp">
                 <div>
@@ -213,7 +286,7 @@
 
                 <p class="rsvp-confirm__eyebrow">You're on the list</p>
 
-                <h2 class="rsvp-confirm__title sk-moderline">
+                <h2 class="rsvp-confirm__title set-moderline">
                   We can't wait<br />to celebrate<br />with you!
                 </h2>
 
@@ -242,7 +315,7 @@
 
                 <p class="rsvp-confirm__eyebrow">We heard you</p>
 
-                <h2 class="rsvp-confirm__title sk-moderline">
+                <h2 class="rsvp-confirm__title set-moderline">
                   You'll be<br />missed dearly
                 </h2>
 
@@ -264,71 +337,23 @@
         </div>
       </LazySwiperSlide>
 
-      <!-- ── SLIDE 6 · Gift / Bank details ──────── -->
-      <LazySwiperSlide>
-        <div class="page-start h-full w-full relative flex flex-col overflow-hidden">
-          <img class="absolute inset-0 w-full h-full object-cover object-bottom z-0" src="../assets/images/sako-kate/slide-5.jpg" alt="" aria-hidden="true" />
-          <div class="absolute inset-0 bg-white/50 z-[1]"></div>
-          <div class="relative z-[2] flex flex-col flex-1 px-6 pt-8 pb-4">
-            <p class="text-center text-[0.8rem] tracking-widest mb-1 text-[#7a6e5a]">WEDDING GIFT</p>
-            <h2 class="text-center sk-moderline text-[1.8rem] text-[#5a4a3a] mb-1">With Love</h2>
-            <p class="text-center text-[0.82rem] text-[#7a6e5a] mb-5 leading-relaxed">
-              Your presence is the greatest gift.<br />
-              However, if you wish to honor us,<br />
-              please find the details below:
-            </p>
-
-            <!-- Whish -->
-            <div class="gift-row">
-              <div class="gift-row__label">
-                <span class="gift-row__caption">Within Lebanon</span>
-                <img class="w-10" src="../assets/images/mohammad-rawan/whish.png" alt="Whish" />
-              </div>
-              <div class="gift-row__details">
-                <p class="gift-row__text">Whish account number:<br /><strong>30654592-03</strong></p>
-                <img v-if="!copiedWhish" @click="copyWhish" class="w-7 cursor-pointer flex-shrink-0" src="../assets/images/mohammad-rawan/copy-to-clipboard.svg" alt="copy" />
-                <img v-else class="w-6 flex-shrink-0" src="../assets/images/mohammad-rawan/checkmark.svg" alt="copied" />
-              </div>
-            </div>
-
-            <div class="gift-divider"></div>
-
-            <!-- Bank IBAN -->
-            <div class="gift-row">
-              <div class="gift-row__label">
-                <span class="gift-row__caption">International transfer</span>
-              </div>
-              <div class="gift-row__details">
-                <p class="gift-row__text">
-                  IBAN: <strong>QA53BBME00000000000232359001</strong><br />
-                  BIC: <strong>BLILBBBX</strong><br />
-                  Account holder: <strong>Sarkis Manoufar</strong>
-                </p>
-                <img v-if="!copiedIBAN" @click="copyIBAN" class="w-7 cursor-pointer flex-shrink-0" src="../assets/images/mohammad-rawan/copy-to-clipboard.svg" alt="copy" />
-                <img v-else class="w-6 flex-shrink-0" src="../assets/images/mohammad-rawan/checkmark.svg" alt="copied" />
-              </div>
-            </div>
-          </div>
-        </div>
-      </LazySwiperSlide>
-
       <!-- ── SLIDE 7 · Thank You ──────────────── -->
       <LazySwiperSlide>
         <div class="page-start h-full w-full relative flex items-center justify-start overflow-hidden">
           <!-- full-cover background -->
-          <img class="absolute inset-0 w-full h-full object-cover object-bottom z-0" src="../assets/images/sako-kate/slide-6-6.jpg" alt="" aria-hidden="true" />
-          <div class="absolute inset-0 bg-white/30 z-[1]"></div>
+          <img class="absolute inset-0 w-full h-full object-cover object-bottom z-0" src="../assets/images/sako-kate/7.webp" alt="" aria-hidden="true" />
+          <div class="absolute inset-0 bg-white/40 z-[1]"></div>
           <!-- content -->
           <div class="relative z-[2] pl-8 pt-8">
             <h1 class="w-full text-left text-[2.4rem] leading-snug">
               <p class="mb-2">Let&rsquo;s toast to</p>
-              <span class="text-[#7a6e5a] sk-moderline inline font-bold">love</span>,
+              <span class="text-[#7a6e5a] set-moderline inline font-bold">love</span>,
               laughter, <br /> and happily <br /> ever after!
             </h1>
           </div>
           <!-- powered by badge -->
           <div class="absolute bottom-4 w-full flex justify-center z-[2]">
-            <div class="flex items-center gap-1.5 bg-white/60 rounded-full px-3 py-1">
+            <div class="flex items-center gap-1.5 bg-white/40 rounded-full px-3 py-1">
               <img src="/favicon.png" class="w-4 h-4" alt="e-vents" />
               <span class="text-[10px] text-[#7a6e5a] tracking-widest">powered by e-vents</span>
             </div>
@@ -624,10 +649,10 @@ const submitRsvp = async () => {
 .example-three {
   font-family: 'roxborough', sans-serif;
 }
-.sk-moderline {
+.set-moderline {
   font-family: 'modernline', sans-serif;
 }
-.sk-moderline-bold {
+.set-moderline-bold {
   font-family: 'modernline-bold', sans-serif;
 }
 .sk-title-1 {
