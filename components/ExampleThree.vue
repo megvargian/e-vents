@@ -264,7 +264,55 @@
         </div>
       </LazySwiperSlide>
 
-      <!-- ── SLIDE 6 · Thank You ────────────────── -->
+      <!-- ── SLIDE 6 · Gift / Bank details ──────── -->
+      <LazySwiperSlide>
+        <div class="page-start h-full w-full relative flex flex-col overflow-hidden">
+          <img class="absolute inset-0 w-full h-full object-cover object-bottom z-0" src="../assets/images/sako-kate/slide-5.jpg" alt="" aria-hidden="true" />
+          <div class="absolute inset-0 bg-white/50 z-[1]"></div>
+          <div class="relative z-[2] flex flex-col flex-1 px-6 pt-8 pb-4">
+            <p class="text-center text-[0.8rem] tracking-widest mb-1 text-[#7a6e5a]">WEDDING GIFT</p>
+            <h2 class="text-center sk-moderline text-[1.8rem] text-[#5a4a3a] mb-1">With Love</h2>
+            <p class="text-center text-[0.82rem] text-[#7a6e5a] mb-5 leading-relaxed">
+              Your presence is the greatest gift.<br />
+              However, if you wish to honor us,<br />
+              please find the details below:
+            </p>
+
+            <!-- Whish -->
+            <div class="gift-row">
+              <div class="gift-row__label">
+                <span class="gift-row__caption">Within Lebanon</span>
+                <img class="w-10" src="../assets/images/mohammad-rawan/whish.png" alt="Whish" />
+              </div>
+              <div class="gift-row__details">
+                <p class="gift-row__text">Whish account number:<br /><strong>30654592-03</strong></p>
+                <img v-if="!copiedWhish" @click="copyWhish" class="w-7 cursor-pointer flex-shrink-0" src="../assets/images/mohammad-rawan/copy-to-clipboard.svg" alt="copy" />
+                <img v-else class="w-6 flex-shrink-0" src="../assets/images/mohammad-rawan/checkmark.svg" alt="copied" />
+              </div>
+            </div>
+
+            <div class="gift-divider"></div>
+
+            <!-- Bank IBAN -->
+            <div class="gift-row">
+              <div class="gift-row__label">
+                <span class="gift-row__caption">International transfer</span>
+              </div>
+              <div class="gift-row__details">
+                <p class="gift-row__text">
+                  IBAN: <strong>QA53BBME00000000000232359001</strong><br />
+                  BIC: <strong>BLILBBBX</strong><br />
+                  Account holder: <strong>Sarkis Manoufar</strong>
+                </p>
+                <img v-if="!copiedIBAN" @click="copyIBAN" class="w-7 cursor-pointer flex-shrink-0" src="../assets/images/mohammad-rawan/copy-to-clipboard.svg" alt="copy" />
+                <img v-else class="w-6 flex-shrink-0" src="../assets/images/mohammad-rawan/checkmark.svg" alt="copied" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </LazySwiperSlide>
+
+      <!-- ── SLIDE 7 · Thank You ──────────────── -->
       <LazySwiperSlide>
         <div class="page-start h-full w-full relative flex items-center justify-start overflow-hidden">
           <!-- full-cover background -->
@@ -292,20 +340,69 @@
 
   </section>
 
-  <!-- ── Intro video overlay ───────────────────── -->
-  <!-- <Transition name="intro-fade">
-    <div v-if="showIntro" class="intro-overlay">
-      <video
-        class="intro-video"
-        autoplay
-        muted
-        playsinline
-        @ended="showIntro = false"
-      >
-        <source src="../assets/images/sako-kate/birds-1.mp4" type="video/mp4" />
-      </video>
+  <!-- ── Background music ─────────────────────── -->
+  <audio ref="audioRef" loop preload="auto">
+    <source src="../assets/music/sako-kate/background.mp3" type="audio/mpeg" />
+  </audio>
+
+  <!-- Floating music toggle button -->
+  <button
+    class="music-btn"
+    :class="{ 'music-btn--playing': isPlaying }"
+    @click="toggleMusic"
+    :aria-label="isPlaying ? 'Pause music' : 'Play music'"
+  >
+    <!-- Musical note icon -->
+    <svg v-if="!isPlaying" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="18" height="18">
+      <path d="M9 3v10.55A4 4 0 1 0 11 17V7h4V3H9z"/>
+    </svg>
+    <!-- Pause bars icon -->
+    <svg v-else xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="18" height="18">
+      <path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/>
+    </svg>
+  </button>
+
+  <!-- ── Cloud curtain opening animation ──────── -->
+  <Transition name="cloud-fade" :duration="1700">
+    <div v-if="showClouds" class="cloud-curtain" aria-hidden="true">
+      <!-- Left cloud half – covers full screen, bumpy right edge at center -->
+      <div class="cloud-panel cloud-panel--left">
+        <svg class="cloud-shape" viewBox="0 0 400 800" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M 0,0 L 200,0
+               Q 278,48  200,98
+               Q 288,156 200,208
+               Q 270,260 200,314
+               Q 284,368 200,420
+               Q 272,474 200,526
+               Q 282,580 200,632
+               Q 268,684 200,736
+               Q 280,778 200,800
+               L 0,800 Z"
+            fill="rgba(255,255,255,0.90)"
+          />
+        </svg>
+      </div>
+      <!-- Right cloud half – mirrors left -->
+      <div class="cloud-panel cloud-panel--right">
+        <svg class="cloud-shape" viewBox="0 0 400 800" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M 400,0 L 200,0
+               Q 122,48  200,98
+               Q 112,156 200,208
+               Q 130,260 200,314
+               Q 116,368 200,420
+               Q 128,474 200,526
+               Q 118,580 200,632
+               Q 132,684 200,736
+               Q 120,778 200,800
+               L 400,800 Z"
+            fill="rgba(255,255,255,0.90)"
+          />
+        </svg>
+      </div>
     </div>
-  </Transition> -->
+  </Transition>
 </template>
 
 <script setup lang="ts">
@@ -333,6 +430,36 @@ const swiperOprions = {
 
 const showIntro = ref(true);
 
+// ── Cloud curtain ────────────────────────
+const showClouds = ref(true);
+
+// ── Background music ─────────────────────────
+const audioRef = ref<HTMLAudioElement | null>(null);
+const isPlaying = ref(false);
+
+const toggleMusic = () => {
+  const audio = audioRef.value;
+  if (!audio) return;
+  if (isPlaying.value) {
+    audio.pause();
+    isPlaying.value = false;
+  } else {
+    audio.play().then(() => { isPlaying.value = true; }).catch(() => {});
+  }
+};
+
+// Start music on first user interaction (bypasses autoplay block)
+const startMusicOnce = () => {
+  const audio = audioRef.value;
+  if (!audio || isPlaying.value) return;
+  audio.volume = 0.4;
+  audio.play().then(() => {
+    isPlaying.value = true;
+    document.removeEventListener('touchstart', startMusicOnce);
+    document.removeEventListener('click', startMusicOnce);
+  }).catch(() => {});
+};
+
 const attendence = ref('');
 const rsvp = ref({
   names: '',
@@ -357,7 +484,27 @@ onMounted(() => {
   if (alreadySubmited.value) {
     transition.value = true;
   }
+
+  // Start music on first tap or click
+  document.addEventListener('touchstart', startMusicOnce, { once: true });
+  document.addEventListener('click', startMusicOnce, { once: true });
+
+  // Open cloud curtain after a short hold so the user sees it part
+  setTimeout(() => { showClouds.value = false; }, 1200);
 });
+
+// ── Gift clipboard ────────────────────────
+const copiedWhish = ref(false);
+const copiedIBAN  = ref(false);
+
+const copyWhish = () => {
+  navigator.clipboard.writeText('30654592-03');
+  copiedWhish.value = true;
+};
+const copyIBAN = () => {
+  navigator.clipboard.writeText('QA53BBME00000000000232359001');
+  copiedIBAN.value = true;
+};
 
 const submitRsvp = async () => {
   loading.value = true;
@@ -730,4 +877,140 @@ const submitRsvp = async () => {
     color: #7a6e5a;
   }
 }
+
+/* ── Music toggle button ─────────────────────── */
+.music-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.15);
+  color: #7a6e5a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s;
+}
+.music-btn:active {
+  transform: scale(0.92);
+}
+.music-btn--playing {
+  background: rgba(138, 154, 106, 0.85);
+  color: #fff;
+}
+
+/* Animated equalizer bars shown when playing */
+.music-btn__bars {
+  display: flex;
+  align-items: flex-end;
+  gap: 2px;
+  height: 14px;
+  margin-left: 4px;
+}
+.music-btn__bars span {
+  display: block;
+  width: 3px;
+  border-radius: 2px;
+  background: #fff;
+  animation: eq-bar 0.8s ease-in-out infinite alternate;
+}
+.music-btn__bars span:nth-child(1) { height: 6px;  animation-delay: 0s; }
+.music-btn__bars span:nth-child(2) { height: 14px; animation-delay: 0.2s; }
+.music-btn__bars span:nth-child(3) { height: 8px;  animation-delay: 0.4s; }
+
+@keyframes eq-bar {
+  from { transform: scaleY(0.4); }
+  to   { transform: scaleY(1); }
+}
+
+/* ── Gift slide ──────────────────────────────── */
+.gift-row {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 4px;
+}
+.gift-row__label {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.gift-row__caption {
+  font-family: 'arapey-regular', sans-serif;
+  font-size: 11px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #8a9a6a;
+  font-weight: bold;
+}
+.gift-row__details {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 10px;
+}
+.gift-row__text {
+  font-family: 'arapey-regular', sans-serif;
+  font-size: 0.82rem;
+  color: #5a4a3a;
+  line-height: 1.6;
+}
+.gift-divider {
+  width: 100%;
+  height: 1px;
+  background: #d6cfc5;
+  margin: 12px 0;
+}
+
+/* ── Cloud curtain ───────────────────────────── */
+.cloud-curtain {
+  position: fixed;
+  inset: 0;
+  z-index: 9998;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+/* Both panels are full-screen, stacked — left exits left, right exits right */
+.cloud-panel {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.cloud-panel--left {
+  filter: drop-shadow(6px 0 18px rgba(140,140,140,0.28));
+}
+.cloud-panel--right {
+  filter: drop-shadow(-6px 0 18px rgba(140,140,140,0.28));
+}
+
+.cloud-shape {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+/* Exit: panels slide apart, then curtain fades out */
+.cloud-fade-leave-active .cloud-panel--left,
+.cloud-fade-leave-active .cloud-panel--right {
+  transition: transform 1.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.cloud-fade-leave-active {
+  transition: opacity 0.35s ease 1.3s;
+}
+.cloud-fade-leave-to {
+  opacity: 0;
+}
+.cloud-fade-leave-to .cloud-panel--left  { transform: translateX(-100%); }
+.cloud-fade-leave-to .cloud-panel--right { transform: translateX(100%); }
 </style>
