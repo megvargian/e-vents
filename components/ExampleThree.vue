@@ -510,9 +510,20 @@ onMounted(() => {
     transition.value = true;
   }
 
-  // Start music on first tap or click
-  document.addEventListener('touchstart', startMusicOnce, { once: true });
-  document.addEventListener('click', startMusicOnce, { once: true });
+  // Pre-set volume so it's ready before any play() call
+  nextTick(() => {
+    const audio = audioRef.value;
+    if (!audio) return;
+    audio.volume = 0.4;
+    // Try autoplay immediately (works on desktop / returning visitors)
+    audio.play().then(() => {
+      isPlaying.value = true;
+    }).catch(() => {
+      // Browser blocked autoplay — play on the very first interaction
+      document.addEventListener('touchstart', startMusicOnce, { once: true });
+      document.addEventListener('click', startMusicOnce, { once: true });
+    });
+  });
 
   // Open cloud curtain after a short hold so the user sees it part
   setTimeout(() => { showClouds.value = false; }, 1200);
