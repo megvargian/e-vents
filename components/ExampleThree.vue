@@ -128,7 +128,7 @@
                 </div>
                 <p class="font-['arapey-regular'] text-[0.7rem] text-[#7a6e5a] pl-4 leading-none mb-0.5">Borj Hammoud</p>
                 <p class="sk-title-1 text-[2rem] leading-none text-[#5a4a3a]">Church</p>
-                <p class="font-['arapey-regular'] text-[1.8rem] font-extrabold text-[#5a4a3a] mt-0.5 tracking-wide">7:00 PM</p>
+                <p class="font-['arapey-regular'] text-[1.8rem] font-extrabold text-[#5a4a3a] mt-0.5 tracking-wide">5:00 PM</p>
                 <a target="_blank" rel="noopener" href="https://www.google.com/maps?sca_esv=902c31b61ac8c1b2&biw=1707&bih=898&output=search&q=vartanants+church+in+bourj+hammoud&source=lnms&fbs=ADc_l-aN0CWEZBOHjofHoaMMDiKpaEWjvZ2Py1XXV8d8KvlI3jljrY5CkLlk8Dq3IvwBz-QW4YybSII6dXtsWvAIaofKcjC4qmxZMOCagUIH_lLb_gBLeLkvOzcvgCMBL-wubokUVBLrYutNM25jALO_5MRGNq4blmfAEZmOz56etFMCWbvAFuwYvcOtda0jdHQZGD_1ropMY-yu7NLK2eHbpNhgT0OPyg&entry=mc&ved=1t:200715&ictx=111" class="sk-btn mt-1 inline-block" style="font-size:11px;padding:4px 14px;">Church Map</a>
               </div>
               <img class="w-[100px] flex-shrink-0 drop-shadow-sm" src="../assets/images/sako-kate/church.svg" alt="church" />
