@@ -75,9 +75,9 @@
               <p class="font-['arapey-regular'] text-[1.4rem] text-[#7a6e5a] my-0.5">&amp;</p>
               <p class="set-moderline-bold text-[3rem] leading-none">Kate</p>
             </div>
-            <div class="flex items-center mt-10 gap-3">
+            <!-- <div class="flex items-center mt-10 gap-3">
               <span class="text-[#7a6e5a] text-[1.4rem] font-bold set-moderline">5:00 p.m</span>
-            </div>
+            </div> -->
             <div class="mt-5">
               <a target="_blank" rel="noopener" :href="googleCalendar" class="sk-btn">Add to Calendar</a>
             </div>
@@ -117,53 +117,57 @@
           <img class="absolute inset-0 w-full h-full object-cover object-bottom z-0" src="../assets/images/sako-kate/2.webp" alt="" aria-hidden="true" />
           <div class="absolute inset-0 bg-white/40 z-[1]"></div>
           <!-- content -->
-          <div class="relative z-[2] w-full flex flex-col flex-1 pt-6 pb-4 px-5 gap-4">
+          <div class="relative z-[2] w-full flex flex-col flex-1 pt-3 pb-2 px-4 gap-2">
 
             <!-- ── Church / Ceremony ── -->
-            <div class="flex items-center justify-between gap-3">
-              <div class="flex-1">
-                <div class="flex items-center gap-1 mb-0.5">
-                  <span class="text-[#c46e6e] text-[1.2rem]">📍</span>
-                  <span class="font-['arapey-regular'] text-[1.2rem] font-bold text-[#5a4a3a]">Vartanants Church</span>
+            <div class="flex items-center justify-between gap-2">
+              <div class="flex-1 min-w-0">
+                <div class="flex items-center gap-1">
+                  <span class="text-[#c46e6e] text-[0.8rem]">📍</span>
+                  <span class="font-['arapey-regular'] text-[0.85rem] font-bold text-[#5a4a3a] truncate">Vartanants Church</span>
                 </div>
-                <p class="font-['arapey-regular'] text-[0.75rem] text-[#7a6e5a] mb-1 pl-5">Borj Hammoud</p>
-                <p class="sk-title-1 text-[2.4rem] leading-none text-[#5a4a3a]">Church</p>
-                <p class="font-['arapey-regular'] text-[1.2rem] text-[#7a6e5a] mt-1">7:00 PM</p>
-                <a target="_blank" rel="noopener" href="https://www.google.com/maps?sca_esv=902c31b61ac8c1b2&biw=1707&bih=898&output=search&q=vartanants+church+in+bourj+hammoud&source=lnms&fbs=ADc_l-aN0CWEZBOHjofHoaMMDiKpaEWjvZ2Py1XXV8d8KvlI3jljrY5CkLlk8Dq3IvwBz-QW4YybSII6dXtsWvAIaofKcjC4qmxZMOCagUIH_lLb_gBLeLkvOzcvgCMBL-wubokUVBLrYutNM25jALO_5MRGNq4blmfAEZmOz56etFMCWbvAFuwYvcOtda0jdHQZGD_1ropMY-yu7NLK2eHbpNhgT0OPyg&entry=mc&ved=1t:200715&ictx=111" class="sk-btn mt-2 inline-block" style="font-size:12px;padding:5px 16px;">Church Map</a>
+                <p class="font-['arapey-regular'] text-[0.7rem] text-[#7a6e5a] pl-4 leading-none mb-0.5">Borj Hammoud</p>
+                <p class="sk-title-1 text-[2rem] leading-none text-[#5a4a3a]">Church</p>
+                <p class="font-['arapey-regular'] text-[1.8rem] font-extrabold text-[#5a4a3a] mt-0.5 tracking-wide">7:00 PM</p>
+                <a target="_blank" rel="noopener" href="https://www.google.com/maps?sca_esv=902c31b61ac8c1b2&biw=1707&bih=898&output=search&q=vartanants+church+in+bourj+hammoud&source=lnms&fbs=ADc_l-aN0CWEZBOHjofHoaMMDiKpaEWjvZ2Py1XXV8d8KvlI3jljrY5CkLlk8Dq3IvwBz-QW4YybSII6dXtsWvAIaofKcjC4qmxZMOCagUIH_lLb_gBLeLkvOzcvgCMBL-wubokUVBLrYutNM25jALO_5MRGNq4blmfAEZmOz56etFMCWbvAFuwYvcOtda0jdHQZGD_1ropMY-yu7NLK2eHbpNhgT0OPyg&entry=mc&ved=1t:200715&ictx=111" class="sk-btn mt-1 inline-block" style="font-size:11px;padding:4px 14px;">Church Map</a>
               </div>
-              <img class="w-[140px] flex-shrink-0 drop-shadow-sm" src="../assets/images/sako-kate/church.svg" alt="church" />
+              <img class="w-[100px] flex-shrink-0 drop-shadow-sm" src="../assets/images/sako-kate/church.svg" alt="church" />
             </div>
 
             <!-- divider -->
-            <div class="mt-10"></div>
+            <div class="w-full h-px bg-[#d6cfc5]"></div>
 
-            <!-- ── Reception ── -->
-            <div class="flex items-center justify-between gap-3">
-              <img class="w-[120px] flex-shrink-0 drop-shadow-sm" src="../assets/images/sako-kate/drinks.svg" alt="reception" />
-              <div class="flex-2">
-                <div class="flex items-center gap-1 mb-0.5">
-                  <span class="text-[#c46e6e] text-[1.2rem]">📍</span>
-                  <span class="font-['arapey-regular'] text-[1.2rem] font-bold text-[#5a4a3a]">Les Talus</span>
+            <!-- ── Welcome Reception ── -->
+            <div class="flex items-center justify-between gap-2">
+              <img class="w-[90px] flex-shrink-0 drop-shadow-sm" src="../assets/images/sako-kate/drinks.svg" alt="drinks" />
+              <div class="flex-1 min-w-0 text-right">
+                <div class="flex items-center justify-end gap-1">
+                  <span class="font-['arapey-regular'] text-[0.85rem] font-bold text-[#5a4a3a] truncate">Les Talus</span>
+                  <span class="text-[#c46e6e] text-[0.8rem]">📍</span>
                 </div>
-                <p class="font-['arapey-regular'] text-[0.75rem] text-[#7a6e5a] mb-1 pl-5">Okaibey</p>
-                <p class="sk-title-1 set-moderline-bold text-[2.4rem] leading-none text-[#5a4a3a]">Welcome Reception</p>
-                <p class="font-['arapey-regular'] text-[1.2rem] text-[#7a6e5a] mt-1">7:00 PM</p>
-                <a target="_blank" rel="noopener" href="https://www.google.com/maps?gs_lcrp=EgZjaHJvbWUyBggAEEUYOTIJCAEQIRgKGKABMgkIAhAhGAoYoAEyCQgDECEYChigATIJCAQQIRgKGKABMgcIBRAhGI8CMgcIBhAhGI8CMgcIBxAhGI8C0gEJMTM2MzFqMGo3qAIAsAIA&um=1&ie=UTF-8&fb=1&gl=lb&sa=X&geocode=Kb3X-vIMRB8VMSkiACYYaf2x&daddr=3M26%2BF5C,+Lebanon,+Okaybeh" class="sk-btn mt-2 inline-block" style="font-size:12px;padding:5px 16px;">Venue Map</a>
+                <p class="font-['arapey-regular'] text-[0.7rem] text-[#7a6e5a] pr-4 leading-none mb-0.5">Okaibey</p>
+                <p class="sk-title-1 text-[2rem] leading-none text-[#5a4a3a]">Welcome<br/>Reception</p>
+                <p class="font-['arapey-regular'] text-[1.8rem] font-extrabold text-[#5a4a3a] mt-0.5 tracking-wide">7:00 PM</p>
+                <a target="_blank" rel="noopener" href="https://www.google.com/maps?gs_lcrp=EgZjaHJvbWUyBggAEEUYOTIJCAEQIRgKGKABMgkIAhAhGAoYoAEyCQgDECEYChigATIJCAQQIRgKGKABMgcIBRAhGI8CMgcIBhAhGI8CMgcIBxAhGI8C0gEJMTM2MzFqMGo3qAIAsAIA&um=1&ie=UTF-8&fb=1&gl=lb&sa=X&geocode=Kb3X-vIMRB8VMSkiACYYaf2x&daddr=3M26%2BF5C,+Lebanon,+Okaybeh" class="sk-btn mt-1 inline-block" style="font-size:11px;padding:4px 14px;">Venue Map</a>
               </div>
             </div>
 
-            <div class="flex items-center justify-between gap-3 pt-10">
-              <div class="flex-1">
-                <div class="flex items-center gap-1 mb-0.5">
-                  <span class="text-[#c46e6e] text-[1.2rem]">📍</span>
-                  <span class="font-['arapey-regular'] text-[1.2rem] font-bold text-[#5a4a3a]">Les Talus</span>
+            <!-- divider -->
+            <div class="w-full h-px bg-[#d6cfc5]"></div>
+
+            <!-- ── Wedding Celebration ── -->
+            <div class="flex items-center justify-between gap-2">
+              <div class="flex-1 min-w-0">
+                <div class="flex items-center gap-1">
+                  <span class="text-[#c46e6e] text-[0.8rem]">📍</span>
+                  <span class="font-['arapey-regular'] text-[0.85rem] font-bold text-[#5a4a3a] truncate">Les Talus</span>
                 </div>
-                <p class="font-['arapey-regular'] text-[0.75rem] text-[#7a6e5a] mb-1 pl-5">Okaibey</p>
-                <p class="sk-title-1 text-[2.4rem] leading-none text-[#5a4a3a]">Wedding Celebration</p>
-                <p class="font-['arapey-regular'] text-[1.2rem] text-[#7a6e5a] mt-1">8:00 PM</p>
-                <a target="_blank" rel="noopener" href="https://www.google.com/maps?gs_lcrp=EgZjaHJvbWUyBggAEEUYOTIJCAEQIRgKGKABMgkIAhAhGAoYoAEyCQgDECEYChigATIJCAQQIRgKGKABMgcIBRAhGI8CMgcIBhAhGI8CMgcIBxAhGI8C0gEJMTM2MzFqMGo3qAIAsAIA&um=1&ie=UTF-8&fb=1&gl=lb&sa=X&geocode=Kb3X-vIMRB8VMSkiACYYaf2x&daddr=3M26%2BF5C,+Lebanon,+Okaybeh" class="sk-btn mt-2 inline-block" style="font-size:12px;padding:5px 16px;">Venue Map</a>
+                <p class="font-['arapey-regular'] text-[0.7rem] text-[#7a6e5a] pl-4 leading-none mb-0.5">Okaibey</p>
+                <p class="sk-title-1 text-[2rem] leading-none text-[#5a4a3a]">Wedding<br/>Celebration</p>
+                <p class="font-['arapey-regular'] text-[1.8rem] font-extrabold text-[#5a4a3a] mt-0.5 tracking-wide">8:00 PM</p>
+                <a target="_blank" rel="noopener" href="https://www.google.com/maps?gs_lcrp=EgZjaHJvbWUyBggAEEUYOTIJCAEQIRgKGKABMgkIAhAhGAoYoAEyCQgDECEYChigATIJCAQQIRgKGKABMgcIBRAhGI8CMgcIBhAhGI8CMgcIBxAhGI8C0gEJMTM2MzFqMGo3qAIAsAIA&um=1&ie=UTF-8&fb=1&gl=lb&sa=X&geocode=Kb3X-vIMRB8VMSkiACYYaf2x&daddr=3M26%2BF5C,+Lebanon,+Okaybeh" class="sk-btn mt-1 inline-block" style="font-size:11px;padding:4px 14px;">Venue Map</a>
               </div>
-              <img class="w-[120px] flex-shrink-0 drop-shadow-sm" src="../assets/images/sako-kate/cake.svg" alt="reception" />
+              <img class="w-[90px] flex-shrink-0 drop-shadow-sm" src="../assets/images/sako-kate/cake.svg" alt="celebration" />
             </div>
 
           </div>
@@ -630,7 +634,7 @@ const submitRsvp = async () => {
 
   const info = {
     From: 'sales@e-vents.me',
-    To: 'kouyoumdjianmike@gmail.com, Rfnz0803@gmail.com, Sarkismanoufar@gmail.com',
+    To: 'Rfnz0803@gmail.com, Sarkismanoufar@gmail.com',
     Subject: `New RSVP – ${guestName} (${isAttending})`,
     HtmlBody,
     TextBody,
