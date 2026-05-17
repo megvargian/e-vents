@@ -22,7 +22,7 @@
       <LazySwiperSlide>
         <div class="page-start h-full w-full relative flex items-center justify-start overflow-hidden">
           <!-- slide background -->
-          <img class="absolute inset-0 w-full h-full object-cover object-bottom z-0" src="../assets/images/sako-kate/slide-1.jpg" alt="" aria-hidden="true" />
+          <img class="absolute inset-0 w-full h-full object-cover object-bottom z-0" src="../assets/images/sako-kate/slide-1-1.jpg" alt="" aria-hidden="true" />
           <!-- soft overlay so text is always legible -->
           <div class="absolute inset-0 bg-white/30 z-[1]"></div>
           <!-- content -->
@@ -48,7 +48,7 @@
       <LazySwiperSlide>
         <div class="page-start h-full w-full relative flex flex-col overflow-hidden">
           <!-- full-cover background -->
-          <img class="absolute inset-0 w-full h-full object-cover object-bottom z-0" src="../assets/images/sako-kate/slide-3.jpg" alt="" aria-hidden="true" />
+          <img class="absolute inset-0 w-full h-full object-cover object-bottom z-0" src="../assets/images/sako-kate/slide-2-2.jpg" alt="" aria-hidden="true" />
           <div class="absolute inset-0 bg-white/40 z-[1]"></div>
           <!-- content -->
           <div class="relative z-[2] pt-6 px-5 flex-1 flex flex-col">
@@ -82,7 +82,7 @@
       <LazySwiperSlide>
         <div class="page-start h-full w-full relative flex flex-col items-center overflow-hidden">
           <!-- full-cover background -->
-          <img class="absolute inset-0 w-full h-full object-cover object-bottom z-0" src="../assets/images/sako-kate/slide-2.jpg" alt="" aria-hidden="true" />
+          <img class="absolute inset-0 w-full h-full object-cover object-bottom z-0" src="../assets/images/sako-kate/slide-3-3.jpg" alt="" aria-hidden="true" />
           <div class="absolute inset-0 bg-white/40 z-[1]"></div>
           <!-- content -->
           <div class="relative z-[2] w-full flex flex-col items-center justify-start flex-1 pt-8 px-4">
@@ -110,7 +110,7 @@
       <LazySwiperSlide>
         <div class="page-start h-full w-full relative flex flex-col items-center overflow-hidden">
           <!-- full-cover background -->
-          <img class="absolute inset-0 w-full h-full object-cover object-bottom z-0" src="../assets/images/sako-kate/slide-4.jpg" alt="" aria-hidden="true" />
+          <img class="absolute inset-0 w-full h-full object-cover object-bottom z-0" src="../assets/images/sako-kate/slide-4-4.jpg" alt="" aria-hidden="true" />
           <div class="absolute inset-0 bg-white/40 z-[1]"></div>
           <!-- content -->
           <div class="relative z-[2] w-full flex flex-col items-center flex-1 pt-10 px-4">
@@ -146,7 +146,7 @@
       <LazySwiperSlide>
         <div class="page-start h-full w-full relative flex flex-col overflow-hidden">
           <!-- full-cover background -->
-          <img class="absolute inset-0 w-full h-full object-cover object-bottom z-0" src="../assets/images/sako-kate/slide-5.jpg" alt="" aria-hidden="true" />
+          <img class="absolute inset-0 w-full h-full object-cover object-bottom z-0" src="../assets/images/sako-kate/slide-5-5.jpg" alt="" aria-hidden="true" />
           <div class="absolute inset-0 bg-white/45 z-[1]"></div>
           <!-- content -->
           <div class="rsvpMain relative z-[2] flex-1 px-4 flex flex-col justify-center">
@@ -268,7 +268,7 @@
       <LazySwiperSlide>
         <div class="page-start h-full w-full relative flex items-center justify-start overflow-hidden">
           <!-- full-cover background -->
-          <img class="absolute inset-0 w-full h-full object-cover object-bottom z-0" src="../assets/images/sako-kate/slide-6.jpg" alt="" aria-hidden="true" />
+          <img class="absolute inset-0 w-full h-full object-cover object-bottom z-0" src="../assets/images/sako-kate/slide-6-6.jpg" alt="" aria-hidden="true" />
           <div class="absolute inset-0 bg-white/30 z-[1]"></div>
           <!-- content -->
           <div class="relative z-[2] pl-8 pt-8">
