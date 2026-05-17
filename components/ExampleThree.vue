@@ -209,7 +209,7 @@
               </div>
               <div class="gift-row__details">
                 <p class="gift-row__text">
-                  IBAN: <strong>QA53BBME00000000000232359001</strong><br />
+                  IBAN: <strong>QA53BBME000000000002323590001</strong><br />
                 </p>
                 <img v-if="!copiedIBAN" @click="copyIBAN" class="w-7 cursor-pointer flex-shrink-0" src="../assets/images/mohammad-rawan/copy-to-clipboard.svg" alt="copy" />
                 <img v-else class="w-6 flex-shrink-0" src="../assets/images/mohammad-rawan/checkmark.svg" alt="copied" />
