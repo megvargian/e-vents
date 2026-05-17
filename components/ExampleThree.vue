@@ -71,7 +71,7 @@
             <!-- bottom: names in cursive -->
             <div class="text-center">
               <p class="font-['arapey-regular'] text-[0.9rem] text-[#5a4a3a] mb-7">to the wedding celebration of</p>
-              <p class="set-moderline-bold text-[3rem] leading-none">Sarkis</p>
+              <p class="set-moderline-bold text-[3rem] leading-none">Sako</p>
               <p class="font-['arapey-regular'] text-[1.4rem] text-[#7a6e5a] my-0.5">&amp;</p>
               <p class="set-moderline-bold text-[3rem] leading-none">Kate</p>
             </div>
@@ -497,7 +497,7 @@ const rsvpCookie = useCookie<{ value: string }>('sk-rsvp');
 const alreadySubmited = ref(false);
 
 const googleCalendar = ref(
-  `https://www.google.com/calendar/render?action=TEMPLATE&text=Sarkis%20%26%20Kate%27s%20Wedding&dates=20260614T160000Z/20260614T230000Z&details=Church%3A%20Vartanants%20Church%2C%20Borj%20Hammoud%0AReception%3A%20Les%20Talus%2C%20Okaibey&location=Les%20Talus%2C%20Okaibey&sf=true&output=xml`
+  `https://www.google.com/calendar/render?action=TEMPLATE&text=Sako%20%26%20Kate%27s%20Wedding&dates=20260614T160000Z/20260614T230000Z&details=Church%3A%20Vartanants%20Church%2C%20Borj%20Hammoud%0AReception%3A%20Les%20Talus%2C%20Okaibey&location=Les%20Talus%2C%20Okaibey&sf=true&output=xml`
 );
 
 onMounted(() => {
@@ -538,7 +538,7 @@ const copyWhish = () => {
   copiedWhish.value = true;
 };
 const copyIBAN = () => {
-  navigator.clipboard.writeText('QA53BBME00000000000232359001');
+  navigator.clipboard.writeText('QA53BBME000000000002323590001');
   copiedIBAN.value = true;
 };
 
@@ -568,7 +568,7 @@ const submitRsvp = async () => {
             <td style="background:linear-gradient(135deg,#8a9a6a 0%,#b0b890 100%);padding:36px 40px 28px;text-align:center;">
               <img src="https://e-vents.me/favicon.png" width="52" height="52" alt="e-vents" style="border-radius:50%;margin-bottom:14px;display:block;margin-left:auto;margin-right:auto;" />
               <h1 style="margin:0;color:#ffffff;font-size:26px;font-weight:normal;letter-spacing:2px;">New RSVP Received</h1>
-              <p style="margin:6px 0 0;color:rgba(255,255,255,0.85);font-size:13px;letter-spacing:1px;">SARKIS &amp; KATE &nbsp;·&nbsp; JUNE 14, 2026</p>
+              <p style="margin:6px 0 0;color:rgba(255,255,255,0.85);font-size:13px;letter-spacing:1px;">SARKo &amp; KATE &nbsp;·&nbsp; JUNE 14, 2026</p>
             </td>
           </tr>
 
@@ -626,7 +626,7 @@ const submitRsvp = async () => {
 </body>
 </html>`;
 
-  const TextBody = `New RSVP – Sarkis & Kate\n\nName(s): ${guestName}\nNumber of Guests: ${guestCount}\nAttending: ${attendence.value}\n\npowered by e-vents.me`;
+  const TextBody = `New RSVP – Sako & Kate\n\nName(s): ${guestName}\nNumber of Guests: ${guestCount}\nAttending: ${attendence.value}\n\npowered by e-vents.me`;
 
   const info = {
     From: 'sales@e-vents.me',
