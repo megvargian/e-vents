@@ -235,7 +235,7 @@
               ]"
             >
               <h3 class="text-center text-[1.4rem] mb-4 mt-2 sk-title-1 text-[#5a4a3a]">
-                We kindly ask you <br> to confirm your attendance <br> by the 2 of July 2026
+                We kindly ask you <br> to confirm your attendance <br> by the 2 of June 2026
               </h3>
               <form @submit.prevent="submitRsvp">
                 <div>
